@@ -4,19 +4,27 @@
 
 ##### Grupo 3 - Caso 1
 
-- Oscar Guillermo
+- Oscar Guillermo Sierro Lozano
 
-- Karen Johana
+- Karen Johana Caicedo Arias
 
-- Nicolas Obregon
+- Nicolas Obregon Rojas
 
-- Yeferson Esmid
+- Yeferson Esmid Heredia Perdomo
+
+- Jhon Sebastián Molina Fierro
 
 ---
 
 ### ¿Cuál es el problema?
 
-Debido al uso arcaico de gestión de las citas por llamadas telefónica y ventilla para atención al cliente, se genera una gran obtaculización en la movilización de las citas de manera eficiente, junto con filas obstructivas. Ademas, los pacientes no tiene la información clara de la cita o algun tipo de recordatorio, dando a lugar, un gran número de personas ausentes o perdidas. 
+La gestión de citas médicas en clínicas y hospitales presenta actualmente
+múltiples dificultades: la congestión en la atención por ventanilla o teléfono,
+la alta frecuencia de errores en la asignación de citas y la elevada
+inasistencia de pacientes por falta de confirmaciones y recordatorios. Estas
+deficiencias afectan tanto a los usuarios como al personal médico y
+administrativo, generando retrasos, pérdida de tiempo y una baja eficiencia en
+los procesos de atención en salud.
 
 ---
 
@@ -24,18 +32,40 @@ Debido al uso arcaico de gestión de las citas por llamadas telefónica y ventil
 
 - Los clientes
 
-- La recepsionista
-
 - El médico
+
+- Personal administrativo
+
+- Servicios externos
 
 ---
 
 ### ¿Qué funcionalidades principales debe cubrir el sistema?
 
-El sistema debe cumplir con la disponibilidad de los profesionales aptos filtrando por un calendario de manera individual para cada usuario, da la capacidad de seleccionar fecha y hora, con una verificación de paciente registrado y mención de su seguro de tener uno.
+•  Registro de pacientes.
 
-Tiene la capacidad de manejar todo por medio de recordatorios (MSM, Whatsapp, Correo) ya sea para confirmación de pago o para recordar la cita, y asistencia de pago. Finalmente con la opción de cancelación o reprogramación según la preferencia del paciente y el médico puede ver en su agenda la lista de pacientes programados.
+•  Consulta de disponibilidad de médicos y especialidades en tiempo real.
+
+•  Reserva de citas evitando doble asignación.
+
+•  Validación de seguros.
+
+•  Pagos en línea para tele consultas.
+
+•  Confirmaciones automáticas y recordatorios de citas.
+
+•  Cancelación o reprogramación de citas bajo reglas definidas.
+
+•  Agenda digital para médicos con lista de pacientes confirmados y alertas clínicas.
+
+•  Supervisión de bitácora de cambios y gestión de excepciones por parte del personal administrativo.
+
+•  Automatización de notificaciones y recordatorios mediante programación orientada eventos.
 
 ---
 
-- REVISIÓN DE ERRORES Y ENTREGA PARA EL MIERCOLES 27 DE AGOSTO EN GRUPO TALLER [Identificación de problemas y diseño de soluciones tecnológica]([Entrar al sitio | Corhuila Digital](https://virtual.corhuila.edu.co/uh/mod/assign/view.php?id=63303))
+### Solución
+
+La solución tecnológica consiste en implementar un sistema web para la gestión de citas médicas en línea que resuelva los problemas actuales de congestión, errores en la asignación y alta inasistencia de pacientes. Este sistema estará dirigido a pacientes, médicos y personal administrativo. Los pacientes podrán registrarse, consultar la disponibilidad de médicos y especialidades en un calendario en tiempo real, podrán reservar citas, validar seguros, realizar pagos en línea para teleconsultas, recibir confirmaciones automáticas y recordatorios antes de la cita, así como cancelar o reprogramar con reglas definidas. Los médicos accederán a su agenda digital con la lista de pacientes confirmados y alertas clínicas relevantes, mientras que el personal administrativo podrá supervisar la bitácora de cambios y gestionar excepciones.
+La solución se desarrollará con una arquitectura por capas bajo el modelo cliente-servidor: una capa de presentación web para la interacción de usuarios, una capa de negocio (backend) que gestione la lógica, una capa de acceso a datos encargada de la comunicación con el sistema de almacenamiento, y finalmente la base de datos, que garantizará la integridad y persistencia de la información.
+Se planifica la implementación de un modelo orientado a servicios que permita gestionar de forma eficiente las notificaciones y la integración con una pasarela de pagos confiable. Este enfoque busca optimizar tiempos y costos operativos, además de facilitar la ampliación de funcionalidades en futuras etapas del desarrollo.
