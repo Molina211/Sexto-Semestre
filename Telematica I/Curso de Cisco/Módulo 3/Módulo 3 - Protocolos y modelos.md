@@ -734,8 +734,6 @@ La capa de **enlace de datos** se encarga del “viaje corto”: Pasar los datos
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-00-40-51-image.png" title="" alt="" data-align="center">
 
-
-
 ### Dirección lógica de capa 3
 
 La **capa de red (capa 3)** usa **direcciones IP** para enviar paquetes desde el dispositivo de origen hasta el dispositivo de destino, ya sea dentro de la misma red o entre redes diferentes.
@@ -753,8 +751,6 @@ La **capa de red (capa 3)** usa **direcciones IP** para enviar paquetes desde el
   2. **Porción de host / ID de interfaz:** identifica un **dispositivo específico** dentro de esa red.
 
 - La **máscara de subred (IPv4)** o **longitud del prefijo (IPv6)** indica cuál parte de la dirección es de red y cuál es de host.
-
-
 
 Conceptos a tener en cuenta:
 
@@ -794,8 +790,6 @@ En pocas palabras:
 
 - **Máscara de subred / longitud de prefijo:** Nos dice dónde termina la red y empieza el host.
 
-
-
 ### Dispositivos en la misma red
 
 Si la porción de red de la dirección IP de origen y de destino es **igual**, significa que ambos dispositivos están en la misma red.
@@ -834,8 +828,6 @@ Cuando el emisor y el receptor están en la misma red, la trama de enlace de dat
 
 Cuando un dispositivo se comunica con otro en una red remota, la dirección de la capa de red (IP) indica el destino final del paquete, mientras que la dirección de la capa de enlace de datos (MAC) se utiliza para enviar la trama al siguiente dispositivo en la ruta, normalmente un router, dentro de cada red por la que pasa el paquete.
 
-
-
 ### Función de las direcciones de la capa de red
 
 Cuando el emisor y el receptor están en redes diferentes, las direcciones IP muestran que los hosts pertenecen a redes distintas:
@@ -866,8 +858,6 @@ Es fundamental que cada host tenga configurada la IP del gateway predeterminado,
 
 En resumen, la IP indica el destino final, la **MAC** y el **gateway** permiten que los datos salgan de tu red y lleguen correctamente al destino.
 
-
-
 ### Direcciones de enlace de datos
 
 La dirección física (MAC) de la capa de enlace de datos tiene la función de enviar la trama de una interfaz de red a otra dentro de la misma red.
@@ -895,8 +885,6 @@ La dirección física (MAC) de la capa de enlace de datos tiene la función de e
 - Cada vez que el paquete cruza un router, se elimina la MAC anterior y se pone una nueva, porque la trama solo funciona de NIC a NIC en la misma red.
 
 La MAC mueve la trama en cada salto local, mientras que la IP guía el paquete hasta el destino final.
-
-
 
 **Flujo de datos**
 
