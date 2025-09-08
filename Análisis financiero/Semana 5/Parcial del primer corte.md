@@ -1,0 +1,5 @@
+# Parcial del primer corte
+
+---
+
+
