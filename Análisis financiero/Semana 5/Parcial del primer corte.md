@@ -1,5 +1,3 @@
 # Parcial del primer corte
 
----
-
 
