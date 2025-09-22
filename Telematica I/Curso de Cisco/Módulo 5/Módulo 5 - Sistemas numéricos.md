@@ -127,8 +127,6 @@ El método decimal a binario para cada octeto de una dirección IPv4 se basa en 
 
 Resultado: **11000000**
 
-
-
 #### Direcciones IPv4
 
 Los routers y computadoras entienden binario**, mientras que los humanos usamos decimal. Por eso es clave dominar ambos sistemas y su aplicación en redes.
@@ -184,8 +182,6 @@ Cada x = 1 hexteto = 16 bits = 4 dígitos hexadecimales.
   - `1000` en binario = 8 en hex.
 
 168 (decimal) = A8 (hexadecimal).
-
-
 
 #### Conversión hexadecimal a decimal
 
