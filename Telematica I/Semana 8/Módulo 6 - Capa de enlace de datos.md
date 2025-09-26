@@ -30,8 +30,6 @@ La capa de enlace de datos (Capa 2 del modelo OSI) se encarga de que la comunica
 
 La capa de enlace de datos prepara los datos de red para la red física.
 
-
-
 - **Nodo en redes:** Un nodo es cualquier dispositivo conectado a la red que puede manejar datos. Puede ser un dispositivo final (PC, laptop, celular) o un dispositivo intermediario (switch, router, etc.).
 
 - **Función de la capa de enlace de datos:**
@@ -269,8 +267,6 @@ El regalo nunca cambia (el paquete IP siempre es el mismo), lo único que cambia
 
 *La capa de enlace de datos es responsable de controlar la transferencia de tramas en todos los medios.*
 
-
-
 #### Estándares de la capa de enlace de datos
 
 El IETF (Internet Engineering Task Force) se encarga de protocolos como IP, TCP, HTTP, etc., que son capas superiores (red, transporte, aplicación). Pero no regula cómo viajan los bits por el cable o por el aire.
@@ -290,38 +286,6 @@ Ese trabajo lo hacen organismos especializados en normas de hardware y transmisi
 ---
 
 ### Topologías
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 LLC puede hacer que los protocolos capa 3 puedan pasar a capa 2
 Encapsulamiento en de direccionamiento es la capa MAC
