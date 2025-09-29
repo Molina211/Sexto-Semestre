@@ -62,8 +62,6 @@ El LLC conecta software y protocolos de red con el hardware, mientras que MAC ge
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-17-15-image.png" title="" alt="" data-align="center">
 
-
-
 #### Subcapa MAC
 
 La subcapa MAC (IEEE 802.3) cumple dos funciones principales:
@@ -114,8 +112,6 @@ La subcapa MAC organiza los datos en tramas y controla cómo se accede al medio 
 
 - Resultado: Comunicaciones más rápidas, estables y eficientes.
 
-
-
 #### Campos de trama de Ethernet
 
 El rango válido de una trama Ethernet es 64–1518 bytes; fuera de ese rango se descarta automáticamente.
@@ -130,14 +126,14 @@ El rango válido de una trama Ethernet es 64–1518 bytes; fuera de ese rango se
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-24-47-image.png" title="" alt="" data-align="center">
 
-| **Campo**                                   | **Descripción resumida y explicada**                                                                                                |
-| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Preámbulo y Delimitador de inicio (8 B)** | Sirve para sincronizar la comunicación entre emisor y receptor. Indica el inicio de la trama.                                       |
-| **Dirección MAC de destino (6 B)**          | Identifica el dispositivo receptor. Puede ser unicast (uno), multicast (grupo) o broadcast (todos).                                 |
-| **Dirección MAC de origen (6 B)**           | Identifica la NIC del emisor, es decir, quién envía la trama.                                                                       |
-| **Tipo/Longitud (2 B)**                     | Indica qué protocolo de capa superior está encapsulado (IPv4=0x800, IPv6=0x86DD, ARP=0x806).                                        |
-| **Datos (46 - 1500 B)**                     | Contiene la información real (ej. un paquete IPv4). Si es pequeño, se agrega relleno (pad) hasta llegar al mínimo de 64 B de trama. |
-| **Secuencia de verificación FCS (4 B)**     | Campo de detección de errores usando CRC. Si los cálculos no coinciden, la trama se descarta.                                       |
+| **Campo**                                   | **Descripción resumida y explicada**                                                                                                                                |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Preámbulo y Delimitador de inicio (8 B)** | Sirve para sincronizar la comunicación entre emisor y receptor. Indica el inicio de la trama.                                                                       |
+| **Dirección MAC de destino (6 B)**          | Identifica el dispositivo receptor. Puede ser unicast (uno), multicast (grupo) o broadcast (todos).                                                                 |
+| **Dirección MAC de origen (6 B)**           | Identifica la NIC del emisor, es decir, quién envía la trama.                                                                                                       |
+| **Tipo/Longitud (2 B)**                     | Indica qué protocolo de capa superior está encapsulado (IPv4=0x800, IPv6=0x86DD, ARP=0x806). Tambien puede ser denominado este compo como EtherType, Type o Lenght. |
+| **Datos (46 - 1500 B)**                     | Contiene la información real (ej. un paquete IPv4). Si es pequeño, se agrega relleno (pad) hasta llegar al mínimo de 64 B de trama.                                 |
+| **Secuencia de verificación FCS (4 B)**     | Campo de detección de errores usando CRC. Si los cálculos no coinciden, la trama se descarta.                                                                       |
 
 ---
 
@@ -145,7 +141,13 @@ El rango válido de una trama Ethernet es 64–1518 bytes; fuera de ese rango se
 
 IPv4 se representa en decimal y binario, en cambio la IPv6 y direcciones MAC se representan en hexadecimal. En Hexadecimal usa dígitos 0–9 y letras A–F (16 símbolos), en relación, la mejor forma de expresarlo será 1 dígito hex = 4 bits binarios.
 
-Dirección MAC → 48 bits → expresada con 12 dígitos hexadecimales.
+**Dirección MAC → 48 bits → 6 Bytes (6 bloques) → expresada con 12 dígitos hexadecimales.**
+
+Direcciones posibles: 2^48 ≈ 281 billones.
+
+También existe una variante de **64 bits (8 bytes)** llamada **EUI-64**, pero no es la que se usa normalmente en Ethernet/Wi-Fi.
+
+
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-29-29-image.png" title="" alt="" data-align="center">
 
@@ -162,8 +164,6 @@ En hexadecimal se muestran los ceros iniciales para completar el byte (ej: `0000
 - `73₁₆`
 
 Para convertir entre decimal y hex, lo más práctico es pasar primero por binario.
-
-
 
 #### Dirección MAC y hexadecimal
 
@@ -199,8 +199,6 @@ El fabricante debe evitar duplicados, pero a veces ocurren por:
 
 Si pasa, la solución es cambiar la MAC (nueva tarjeta de red o ajuste en software).
 
-
-
 #### Procesamiento de tramas
 
 - Cada tarjeta de red (NIC) viene con una dirección física única llamada MAC (Media Access Control).
@@ -209,15 +207,11 @@ Si pasa, la solución es cambiar la MAC (nueva tarjeta de red o ajuste en softwa
 
 - Ejemplo: `00:1A:2B:3C:4D:5E`.
 
-
-
 **Cómo funciona en el arranque**
 
 - Cuando el computador enciende, la tarjeta de red copia su dirección MAC desde la ROM hacia la RAM, para que el sistema operativo la use.
 
 - Es como si la tarjeta dijera: *“Esta es mi identificación, guárdala para comunicarte en la red”*.
-
-
 
 **Origen y destino en una trama Ethernet**
 
@@ -237,8 +231,6 @@ La trama Ethernet llevará:
 
 - **Destino:** `AA:BB:CC:DD:EE:02`.
 
-
-
 **Cambio de dirección MAC**
 
 Aunque la dirección está grabada, los sistemas modernos permiten modificarla temporalmente en software.
@@ -246,8 +238,6 @@ Aunque la dirección está grabada, los sistemas modernos permiten modificarla t
 - Esto se usa, por ejemplo, para conectarse a una red que filtra dispositivos por MAC.
 
 - Pero por eso el filtrado por MAC no es totalmente seguro, ya que se puede suplantar.
-
-
 
 Al final la NIC revisa la MAC de destino de cada trama recibida.
 
@@ -262,8 +252,6 @@ Al final la NIC revisa la MAC de destino de cada trama recibida.
   - **Multicast** → solo si el host es miembro del grupo.
 
 - Todo dispositivo en Ethernet (PC, servidor, impresora, móvil, router) tiene NIC y dirección MAC.
-
-
 
 #### Dirección MAC de unicast
 
@@ -289,8 +277,6 @@ Una dirección MAC de unicast es la dirección única que se utiliza cuando se e
 3. **Regla importante**
 - La MAC de origen siempre es unicast, porque identifica de manera única al dispositivo que envía la trama.
 
-
-
 #### Dirección MAC broadcast
 
 El Broadcast en Ethernet es la trama que va a todos los dispositivos de la LAN con su dirección MAC destino: **FF:FF:FF:FF:FF:FF** mientras el switch la envía por todos los puertos, menos por donde llegó. El router no la reenvía (se queda en la red local) y en IPv4, la dirección de destino con todos los bits en 1 indica “para todos en la red”.
@@ -310,8 +296,6 @@ El Broadcast en Ethernet es la trama que va a todos los dispositivos de la LAN c
 4. Todos los hosts de la LAN reciben la trama y la procesan porque la MAC es broadcast.
 
 5. Finalmente el Router no reenvía porque el broadcast queda limitado al dominio de broadcast (la red local).
-
-
 
 #### Dirección MAC de multicast
 
@@ -337,4 +321,124 @@ Routers: No reenvían multicast, salvo que tengan activado el enrutamiento de mu
 
 La IP multicast siempre se traduce a una MAC multicast para poder entregarse en la LAN.
 
-El origen siempre es unicast, el destino es multicast.
+---
+
+### Tabla de direcciones MAC
+
+Un switch Ethernet de Capa 2 usa las direcciones MAC* para decidir a qué puerto reenviar una trama, no analiza qué protocolo va dentro de la trama (IPv4, ARP, IPv6, etc.), solo mira las direcciones MAC de origen y destino. Mantiene una tabla de direcciones MAC, donde asocia cada MAC aprendida con el puerto por el que llegó.
+
+Al recibir una trama:
+
+- Si conoce la MAC destino en su tabla → la envía solo por el puerto correspondiente.
+
+- Si no la conoce → la envía por todos los puertos (excepto el de entrada), hasta aprenderla.
+
+Esto lo diferencia de un hub, que simplemente copia y reenvía todos los bits a todos los puertos sin filtrar, causando congestión.
+
+<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-26-16-35-41-image.png" title="" alt="" data-align="center">
+
+
+
+#### Switch, Aprendiendo y Reenviando
+
+El switch aprende dinámicamente las direcciones MAC observando la MAC de origen de las tramas recibidas en cada puerto y las guarda en su tabla. Luego, al recibir una trama, busca la MAC de destino en esa tabla y la reenvía por el puerto correspondiente.
+
+**Examinar la dirección MAC de Origen**
+
+1. **Recepción de la trama:** 
+   Cada vez que llega una trama al switch, este primero mira la dirección MAC de origen (quién la envía) y el puerto de entrada*.
+
+2. **Aprendizaje (cuando es nueva):**
+   
+   - Si esa MAC de origen no está registrada en la tabla del switch, se crea una**entrada nueva:
+     
+     - Dirección MAC → Puerto de entrada. 
+       Esto permite que el switch sepa en qué puerto está conectado ese dispositivo.
+
+3. **Actualización (cuando ya existe):**
+   
+   - Si la MAC de origen ya estaba registrada en la tabla, el switch reinicia o actualiza el temporizador de esa entrada (por defecto dura 5 minutos en la mayoría de switches).
+   
+   - Así evita que entradas antiguas se queden ocupando memoria si un dispositivo deja de enviar tramas.
+
+4. **Reemplazo (cuando cambia de puerto):**
+   
+   - Si la MAC ya estaba, pero en otro puerto, el switch la considera una situación nueva.
+   
+   - La entrada anterior se sobrescribe con el puerto más reciente.
+   
+   - Esto refleja que el dispositivo cambió de lugar en la red.
+
+**Ejemplo:**
+
+- Cuando **PC-A** envía una trama hacia **PC-D**, el switch lee la MAC de PC-A.
+
+- Si no estaba en la tabla, la agrega con el puerto por donde entró la trama.
+
+- Así, el switch ya sabe en qué puerto está PC-A para futuras comunicaciones.
+
+<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-26-16-40-59-image.png" title="" alt="" data-align="center">
+
+**Buscar dirección MAC de destino**
+
+Cuando una trama entra al switch, además de revisar la MAC de origen, también se fija en la MAC de destino para decidir por dónde reenviar la trama.
+
+---
+
+1. **Destino unicast (una sola máquina)**
+- El switch busca la MAC de destino en su tabla de direcciones MAC:
+  
+  - Si encuentra coincidencia → sabe en qué puerto está ese dispositivo y envía la trama solo por ese puerto (esto se llama unicast directo).
+  
+  - Si no encuentra coincidencia → el switch desconoce dónde está el dispositivo, entonces reenvía la trama por todos los puertos excepto el de entrad**.
+    
+    - Esto se llama unicast desconocida (porque la MAC de destino aún no está en la tabla).
+2. **Destino broadcast**
+- Si la trama es para todas las máquinas (MAC ff:ff:ff:ff:ff:ff), el switch la envía por todos los puertos excepto el de entrada.
+3. **Destino multicast**
+- Si la trama tiene una dirección de multicast (para un grupo de dispositivos específicos), también se envía por todos los puertos excepto el de entrada, salvo que el switch tenga configuraciones especiales para optimizar este tráfico.
+
+**Ejemplo:**
+
+- Supongamos que **PC-A** quiere enviar algo a **PC-D**.
+
+- El switch no tiene la MAC de PC-D en la tabla, entonces reenvía la trama a todos los puertos (menos el de entrada).
+
+- Cuando PC-D responde, el switch aprenderá su dirección de origen y la registrará en la tabla con el puerto correspondiente.
+
+
+
+#### Filtrado de tramas
+
+El switch va aprendiendo y llenando su tabla de direcciones MAC al examinar las tramas recibidas. 
+Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto correspondiente, en lugar de difundirla a todos.
+
+**PC-D responde a PC-A**
+
+- La trama de respuesta de PC-D → PC-A llega al puerto 4 del switch.
+
+- El switch examina la MAC de origen (PC-D) y ve que no está en la tabla.
+
+- Agrega la entrada: `MAC PC-D → Puerto 4`
+
+![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-09-26-16-48-24-image.png)
+
+**Switch reenvía hacia PC-A**
+
+- Ahora revisa la MAC de destino (PC-A) de esa trama.
+
+- Como ya la tiene registrada en la tabla (MAC PC-A → Puerto 1), la envía solo por el puerto 1, evitando mandar la trama a todos los puertos.
+
+<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-26-16-47-56-image.png" title="" alt="" data-align="center">
+
+**PC-A envía otra trama a PC-D**
+
+- Cuando PC-A envía de nuevo, el switch revisa la MAC de origen (PC-A).
+
+- Como ya estaba en la tabla, no crea una entrada nueva, pero sí reinicia el temporizador de 5 minutos para mantenerla actualizada.
+
+- Después, revisa la MAC de destino (PC-D).
+
+- Como ya sabe que PC-D está en el puerto 4, envía la trama directamente por ese puerto.
+
+![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-09-26-16-47-42-image.png)
