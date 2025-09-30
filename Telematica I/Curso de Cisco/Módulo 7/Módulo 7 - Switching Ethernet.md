@@ -112,6 +112,40 @@ La subcapa MAC organiza los datos en tramas y controla cómo se accede al medio 
 
 - Resultado: Comunicaciones más rápidas, estables y eficientes.
 
+##### CONCEPTOS
+
+**CSMA/CD (Carrier Sense Multiple Access with Collision Detection)** Acceso múltiple por detección de portadora con detección de colisiones.
+
+- **Contexto:** Usado principalmente en Ethernet (cableado).
+
+- **Funcionamiento:**
+  
+  1. Un dispositivo escucha el canal antes de transmitir (Carrier Sense).
+  
+  2. Si el canal está libre, transmite (Multiple Access).
+  
+  3. Mientras transmite, sigue escuchando para detectar si hay colisiones (Collision Detection).
+  
+  4. Si detecta una colisión, detiene la transmisión, envía una señal de colisión (jam signal), y espera un tiempo aleatorio antes de volver a intentarlo (backoff exponencial).
+
+En pocas palabras, transmite y detecta colisiones para reintentar.
+
+**CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)** Acceso múltiple por detección de portadora con evitación de colisiones.
+
+- **Contexto:** Usado en Wi-Fi (IEEE 802.11).
+
+- **Funcionamiento:**
+  
+  1. Un dispositivo escucha el canal antes de transmitir.
+  
+  2. Si está libre, espera un tiempo aleatorio (backoff) antes de transmitir, para reducir la probabilidad de colisiones.
+  
+  3. Puede usar mecanismos de solicitud y confirmación (RTS/CTS: Request to Send / Clear to Send) para reservar el canal y evitar choques.
+  
+  4. Luego transmite los datos y espera confirmación (ACK).
+
+En pocas palabras, transmite intentando evitar colisiones desde antes de enviar.
+
 #### Campos de trama de Ethernet
 
 El rango válido de una trama Ethernet es 64–1518 bytes; fuera de ese rango se descarta automáticamente.
@@ -123,6 +157,8 @@ El rango válido de una trama Ethernet es 64–1518 bytes; fuera de ese rango se
 - Más de 1518 bytes → se considera trama jumbo; muchos switches y NIC modernos la soportan.
 
 - Tramas fuera de este rango se descartan por ser inválidas (colisiones o ruido).
+
+En Data tambien viene la información de pisos superiores, no solo los datos.
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-24-47-image.png" title="" alt="" data-align="center">
 
@@ -146,8 +182,6 @@ IPv4 se representa en decimal y binario, en cambio la IPv6 y direcciones MAC se 
 Direcciones posibles: 2^48 ≈ 281 billones.
 
 También existe una variante de **64 bits (8 bytes)** llamada **EUI-64**, pero no es la que se usa normalmente en Ethernet/Wi-Fi.
-
-
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-29-29-image.png" title="" alt="" data-align="center">
 
@@ -325,7 +359,7 @@ La IP multicast siempre se traduce a una MAC multicast para poder entregarse en 
 
 ### Tabla de direcciones MAC
 
-Un switch Ethernet de Capa 2 usa las direcciones MAC* para decidir a qué puerto reenviar una trama, no analiza qué protocolo va dentro de la trama (IPv4, ARP, IPv6, etc.), solo mira las direcciones MAC de origen y destino. Mantiene una tabla de direcciones MAC, donde asocia cada MAC aprendida con el puerto por el que llegó.
+Un switch Ethernet de Capa 2 usa las direcciones MAC para decidir a qué puerto reenviar una trama, no analiza qué protocolo va dentro de la trama (IPv4, ARP, IPv6, etc.), solo mira las direcciones MAC de origen y destino. Mantiene una tabla de direcciones MAC, donde asocia cada MAC aprendida con el puerto por el que llegó.
 
 Al recibir una trama:
 
@@ -336,8 +370,6 @@ Al recibir una trama:
 Esto lo diferencia de un hub, que simplemente copia y reenvía todos los bits a todos los puertos sin filtrar, causando congestión.
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-26-16-35-41-image.png" title="" alt="" data-align="center">
-
-
 
 #### Switch, Aprendiendo y Reenviando
 
@@ -406,8 +438,6 @@ Cuando una trama entra al switch, además de revisar la MAC de origen, también 
 
 - Cuando PC-D responde, el switch aprenderá su dirección de origen y la registrará en la tabla con el puerto correspondiente.
 
-
-
 #### Filtrado de tramas
 
 El switch va aprendiendo y llenando su tabla de direcciones MAC al examinar las tramas recibidas. 
@@ -442,3 +472,187 @@ Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto c
 - Como ya sabe que PC-D está en el puerto 4, envía la trama directamente por ese puerto.
 
 ![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-09-26-16-47-42-image.png)
+
+---
+
+### Velocidades y métodos de reenvío del Switch
+
+Los switches Cisco utilizan dos métodos de reenvío de tramas: store-and-forward y cut-through.
+
+**Store-and-Forward (almacenamiento y envío)**
+
+- El switch recibe la trama completa antes de reenviarla.
+
+- Calcula el CRC (Cyclic Redundancy Check) para verificar si hay errores.
+
+- Si la trama es válida, la reenvía al puerto correspondiente; si tiene errores, la descarta.
+
+- **Ventajas**:
+  
+  - Garantiza que solo se reenvíen tramas correctas.
+  
+  - Reduce el consumo de ancho de banda por tramas dañadas.
+  
+  - Permite aplicar QoS (Calidad de Servicio), muy útil en redes con aplicaciones sensibles al retardo, como VoIP.
+
+- **Desventaja**:
+  
+  - Introduce más latencia, ya que debe esperar a recibir toda la trama antes de enviarla.
+
+**Cut-Through (método de corte)**
+
+- El switch no espera la trama completa. Apenas lee la dirección de destino, empieza a reenviarla.
+
+- **Ventajas**:
+  
+  - Tiene una latencia muy baja, ideal para aplicaciones donde la velocidad es más importante que la verificación de errores.
+
+- **Desventajas**:
+  
+  - Puede propagar tramas dañadas porque no verifica el CRC.
+  
+  - No soporta análisis de QoS avanzado.
+
+
+
+#### Switching por método de corte
+
+En este tipo de conmutación, el switch no espera a recibir toda la trama. Apenas llegan los primeros bytes, lee la dirección MAC de destino (que está en los primeros 6 bytes de la trama) y con eso ya sabe a qué puerto enviarla.
+
+**Variantes del Cut-Through Switching**
+
+1. **Fast-Forward Switching**
+- Es la versión más rápida.
+
+- El switch empieza a reenviar la trama inmediatamente después de leer la dirección MAC de destino.
+
+- **Latencia**: Se mide desde que entra el primer bit hasta que sale el primer bit.
+
+- **Problema**: Como no espera ni verifica nada, puede reenviar tramas con errores.
+
+- **Quién corrige**: Si llegan dañadas, la NIC (tarjeta de red) del receptor las detecta y descarta.
+2. **Fragment-Free Switching**
+- Es un punto medio entre store-and-forward (seguro, pero más lento) y fast-forward (rápido, pero menos seguro).
+
+- El switch espera a recibir los primeros 64 bytes de la trama antes de reenviarla.
+
+- ¿Por qué 64 bytes? Porque la mayoría de errores y colisiones ocurren en ese tramo inicial.
+
+- Esto significa que se gana algo de seguridad contra errores, pero la latencia sigue siendo baja comparada con store-and-forward.
+
+**Comportamiento adaptable de algunos switches**
+
+Algunos switches modernos pueden trabajar en modo cut-through mientras no haya demasiados errores.
+
+- Si detectan que las tramas defectuosas superan un umbral de errores definido por el administrador, automáticamente cambian a store-and-forward** (para descartar errores).
+
+- Si el índice de errores baja, vuelven al cut-through para mejorar la velocidad.
+
+
+
+#### Almacenamiento en búfer de memoria en los switches
+
+Cuando un switch recibe una trama pero no puede enviarla de inmediato (porque el puerto de salida está ocupado o hay congestión), utiliza almacenamiento en búfer (buffering) para guardarla temporalmente.
+
+Existen dos métodos principales:
+
+1. **Memoria basada en puerto**
+   
+   - Cada puerto tiene su propia cola de memoria.
+   
+   - Una trama se guarda en esa cola hasta que pueda salir.
+   
+   - Problema: Si un puerto está ocupado, todas las tramas de su cola se retrasan, aunque otras estén listas para enviarse.
+
+2. **Memoria compartida**
+   
+   - Todas las tramas se guardan en un único búfer común.
+   
+   - La memoria se asigna de forma dinámica según el puerto que la necesite.
+   
+   - Ventaja: Mejor aprovechamiento de memoria, menos tramas descartadas y permite manejar conmutación asimétrica (puertos de distinta velocidad, ej. servidor en 10 Gbps y PCs en 1 Gbps).
+
+**Cuadro comparativo**
+
+| Método                       | Características principales                                                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Memoria basada en puerto** | Cada puerto tiene su propia cola. Si un puerto está ocupado, todas sus tramas se retrasan.                                      |
+| **Memoria compartida**       | Un búfer común para todos los puertos, asignación dinámica. Menos pérdidas de tramas y mejor con puertos de distinta velocidad. |
+
+
+
+#### Configuración de dúplex y velocidad
+
+Cada puerto de un switch puede configurarse en dos aspectos importantes:
+
+1. **Ancho de banda (velocidad):** Determina la rapidez de transmisión (10 Mbps, 100 Mbps, 1 Gbps, 10 Gbps, etc.).
+
+2. **Modo dúplex:** Define cómo se envían y reciben los datos.
+
+**Tipos de dúplex en Ethernet**
+
+1. **Dúplex completo (Full-duplex):**
+   
+   - Los dos dispositivos pueden enviar y recibir al mismo tiempo.
+   
+   - No hay colisiones, ya que la comunicación es simultánea.
+   
+   - Es el modo más eficiente.
+
+2. **Semidúplex (Half-duplex):**
+   
+   - Solo un dispositivo puede transmitir a la vez.
+   
+   - Si ambos intentan enviar al mismo tiempo, se produce una colisión.
+   
+   - Era común en redes antiguas con hubs, pero hoy casi no se usa.
+
+**Autonegociación**
+
+- Es una función de la mayoría de switches modernos y tarjetas de red (NICs).
+
+- Permite que dos dispositivos **acuerden** automáticamente:
+  
+  - La velocidad más alta que ambos soporten.
+  
+  - El modo dúplex (siempre se elige dúplex completo si es posible).
+
+- Evita errores de configuración manual.
+
+<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-30-06-18-06-image.png" title="" alt="" data-align="center">
+
+La mayoría de switches Cisco y NIC Ethernet usan negociación automática de velocidad y dúplex por defecto. En Gigabit Ethernet, el funcionamiento siempre es en dúplex completo. Un problema común en redes de 10/100 Mbps es la falta de coincidencia de dúplex, que ocurre cuando un extremo trabaja en medio dúplex y el otro en dúplex completo, lo que genera fallas de rendimiento.
+
+<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-30-06-18-41-image.png" title="" alt="" data-align="center">
+
+
+
+#### Auto-MDIX (MDIX automático)
+
+- **Antes de Auto-MDIX**
+  
+  - Para conectar dispositivos de red, se debía elegir el cable correcto:
+    
+    - **Cable directo** → se usaba entre dispositivos diferentes (ej: switch ↔ host, switch ↔ router).
+    
+    - **Cable cruzado** → se usaba entrebdispositivos similares (ej: switch ↔ switch, router ↔ host).
+  
+  - Si se usaba el cable incorrecto, la conexión no funcionaba.
+
+- **Con Auto-MDIX**
+  
+  - Es una función que permite que el puerto del switch detecte automáticamente si debe cruzar o no las señales.
+  
+  - Gracias a esto, ya no importa si conectas un cable directo o cruzado, el switch ajusta la configuración de la interfaz de manera automática.
+  
+  - Está habilitada por defecto en los switches Cisco con IOS 12.2 (18) SE o superior.
+
+- **Recomendación práctica**
+  
+  - Aunque la mayoría de switches modernos ya traen Auto-MDIX activado, existe la posibilidad de que esté deshabilitado en algunos equipos o versiones.
+  
+  - Por eso, la buena práctica es usar siempre el tipo de cable correcto y no depender de Auto-MDIX.
+  
+  - Si se necesita, Auto-MDIX puede habilitarse manualmente con el comando:
+    
+    `Switch(config-if)# mdix auto`
