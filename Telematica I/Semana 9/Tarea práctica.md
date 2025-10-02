@@ -13,5 +13,3 @@
 - [ ] Hacer prueba de conectividad de una LAN a la otra para analizar la tabla MAC
 
 - [ ] ¿Que pasa cuando hace pruebas de conectividad entre LAN's en la tabla MAC?
-
-

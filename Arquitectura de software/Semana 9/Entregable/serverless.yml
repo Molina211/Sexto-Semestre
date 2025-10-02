@@ -1,7 +1,7 @@
 
 # "service" is the name of this project. This will also be added to your AWS resource names.
-org: luis-org
-app: serverless-framework-es
+org: jsmolina
+app: arquitectura
 
 service: test
 
@@ -14,5 +14,5 @@ functions:
     handler: handler.hello
     events:
       - httpApi:
-          path: /
+          path: /hello
           method: get

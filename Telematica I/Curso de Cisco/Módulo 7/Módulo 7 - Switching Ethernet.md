@@ -162,7 +162,7 @@ En Data tambien viene la información de pisos superiores, no solo los datos.
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-24-47-image.png" title="" alt="" data-align="center">
 
-| **Campo**                                   | **Descripción resumida y explicada**                                                                                                                                |
+| **Campo**                                   | **Descripción**                                                                                                                                                     |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Preámbulo y Delimitador de inicio (8 B)** | Sirve para sincronizar la comunicación entre emisor y receptor. Indica el inicio de la trama.                                                                       |
 | **Dirección MAC de destino (6 B)**          | Identifica el dispositivo receptor. Puede ser unicast (uno), multicast (grupo) o broadcast (todos).                                                                 |
@@ -513,8 +513,6 @@ Los switches Cisco utilizan dos métodos de reenvío de tramas: store-and-forwar
   
   - No soporta análisis de QoS avanzado.
 
-
-
 #### Switching por método de corte
 
 En este tipo de conmutación, el switch no espera a recibir toda la trama. Apenas llegan los primeros bytes, lee la dirección MAC de destino (que está en los primeros 6 bytes de la trama) y con eso ya sabe a qué puerto enviarla.
@@ -548,8 +546,6 @@ Algunos switches modernos pueden trabajar en modo cut-through mientras no haya d
 
 - Si el índice de errores baja, vuelven al cut-through para mejorar la velocidad.
 
-
-
 #### Almacenamiento en búfer de memoria en los switches
 
 Cuando un switch recibe una trama pero no puede enviarla de inmediato (porque el puerto de salida está ocupado o hay congestión), utiliza almacenamiento en búfer (buffering) para guardarla temporalmente.
@@ -578,8 +574,6 @@ Existen dos métodos principales:
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | **Memoria basada en puerto** | Cada puerto tiene su propia cola. Si un puerto está ocupado, todas sus tramas se retrasan.                                      |
 | **Memoria compartida**       | Un búfer común para todos los puertos, asignación dinámica. Menos pérdidas de tramas y mejor con puertos de distinta velocidad. |
-
-
 
 #### Configuración de dúplex y velocidad
 
@@ -624,8 +618,6 @@ Cada puerto de un switch puede configurarse en dos aspectos importantes:
 La mayoría de switches Cisco y NIC Ethernet usan negociación automática de velocidad y dúplex por defecto. En Gigabit Ethernet, el funcionamiento siempre es en dúplex completo. Un problema común en redes de 10/100 Mbps es la falta de coincidencia de dúplex, que ocurre cuando un extremo trabaja en medio dúplex y el otro en dúplex completo, lo que genera fallas de rendimiento.
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-30-06-18-41-image.png" title="" alt="" data-align="center">
-
-
 
 #### Auto-MDIX (MDIX automático)
 

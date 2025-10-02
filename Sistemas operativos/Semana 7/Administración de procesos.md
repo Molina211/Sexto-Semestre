@@ -28,7 +28,7 @@ Un proceso es un programa en ejecución que incluye el código, datos, recursos 
 
 - **Tiempo real**: Procesos que deben responder en un tiempo estricto (ej. control de robots, aviones).
 
-## Estados de procesos
+### Estados de procesos
 
 - **Ejecución**: El proceso está corriendo en la CPU.
 
@@ -40,7 +40,7 @@ Un proceso es un programa en ejecución que incluye el código, datos, recursos 
 
 - **Suspendido**: El proceso está detenido temporalmente, puede reanudarse más tarde.
 
-**Bloque de control de procesos (PCB – Process Control Block)**
+### Bloque de control de procesos (PCB – Process Control Block)
 
 Es una estructura en memoria que almacena toda la información necesaria para gestionar un proceso. Incluye:
 
@@ -54,11 +54,27 @@ Es una estructura en memoria que almacena toda la información necesaria para ge
 
 - **Proceso procesando por prioridad**: Nivel de importancia que determina el orden de ejecución frente a otros procesos.
 
+| **Contenido del PCB**             | **Descripción**                                                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Información de identificación** | ID del proceso, ID del proceso padre (si aplica) e información del usuario.                                         |
+| **Estado del procesador**         | Valores del procesador al inicio del proceso o cuando es interrumpido.                                              |
+| **Control del proceso**           | Estado y planificación, memoria asignada, recursos usados, punteros de colas/anillos y comunicación entre procesos. |
+
 ---
 
-**Planificación de procesos**
+### Planificación de procesos
 
-Es la forma en que el sistema operativo organiza la ejecución de los procesos.
+La planificación es el mecanismo mediante el cual el sistema operativo decide qué proceso ejecutar, cuánto tiempo y cuándo asignarle recursos. Es fundamental para el buen funcionamiento del S.O., pues busca:
+
+- Reparto equitativo y uso eficiente del procesador.
+
+- Reducir tiempos de respuesta y de espera.
+
+- Aumentar la cantidad de trabajos ejecutados por unidad de tiempo.
+
+La selección se realiza mediante algoritmos de planificación, que definen las políticas para pasar procesos de listo a ejecución. Esta tarea la realiza el planificador, que gestiona los procesos listos en diferentes niveles de planificación.
+
+El sistema operativo organiza la ejecución de los procesos.
 
 - **A largo plazo**: Decide qué procesos entran al sistema (control de admisión de trabajos).
 
@@ -68,7 +84,7 @@ Es la forma en que el sistema operativo organiza la ejecución de los procesos.
 
 ---
 
-**Algoritmos de planificación**
+### Algoritmos de planificación
 
 Métodos que determinan el orden de ejecución de los procesos en la CPU.
 
@@ -86,23 +102,102 @@ Métodos que determinan el orden de ejecución de los procesos en la CPU.
 
 - **Prioridades**: Los procesos con mayor prioridad se ejecutan antes que los de menor prioridad.
 
-**Señales, excepciones y temporizadores**
+| **Algoritmo**                    | **Descripción**                                                                                                                                                          |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Round-robin o cíclica**        | Reparte equitativamente el tiempo del procesador (sistemas de tiempo compartido). Los procesos se ejecutan en orden circular hasta que terminan su rodaja o se bloquean. |
+| **FIFO**                         | Los procesos se ejecutan en el orden en que llegaron (primero en entrar, primero en salir).                                                                              |
+| **Prioridades**                  | Se ejecuta primero el proceso con mayor prioridad. Puede ocurrir inanición si procesos de baja prioridad nunca se ejecutan. Se soluciona con envejecimiento.             |
+| **Primero el trabajo más corto** | Se ejecuta el proceso con menor tiempo de ejecución conocido. Puede haber inanición.                                                                                     |
+| **Aleatorio o lotería**          | Se elige al azar el proceso a ejecutar (usando números aleatorios).                                                                                                      |
+| **Tiempo real**                  | Procesos que deben ejecutarse en un instante específico o repetitivamente en intervalos fijos.                                                                           |
 
-- **Señales**: Mecanismos de comunicación entre procesos y el sistema (ej. terminar un proceso con `kill`).
+---
 
-- **Excepciones**: Eventos inesperados que interrumpen la ejecución (ej. división por cero).
+### Señales, excepciones y temporizadores
 
-- **Temporizadores**: Relojes del sistema que permiten medir tiempo o limitar cuánto puede usar la CPU un proceso.
+**Señales y Excepciones en SO**
+
+- Los sistemas operativos notifican eventos a los procesos mediante:
+  
+  - **Señales** → usadas en sistemas POSIX.
+  
+  - **Excepciones** → usadas en Windows NT.
+
+- Ambos mecanismos cumplen la misma función frente a un proceso.
+
+- Los procesos también pueden recibir notificaciones programadas mediante temporizadores.
+
+**Señales**
+
+- Son interrupciones a un proceso, generadas por el SO u otro proceso.
+
+- Tipos:
+  
+  1. Excepciones de hardware.
+  
+  2. Comunicación.
+  
+  3. Entrada/Salida asíncrona.
+  
+  4. Activadas por otro proceso.
+
+- **Efectos sobre el proceso:**
+  
+  1. Se detiene en la instrucción actual.
+  
+  2. Ejecuta una rutina de tratamiento (parte del mismo proceso).
+  
+  3. Retoma la ejecución donde fue interrumpido.
+
+**Restricciones**
+
+- Un proceso puede enviar señales a otros solo si pertenecen al mismo usuario.
+
+- El superusuario puede enviar señales a procesos de cualquier usuario.
 
 ---
 
 **Procesos ligeros o hilos**
 
-- También llamados threads.
+Los hilos (threads) son flujos de ejecución dentro de un mismo proceso. El primero es el hilo principal, asociado a la función `main()` en C++.
 
-- Son “subprocesos” dentro de un mismo proceso, que comparten recursos pero pueden ejecutarse en paralelo.
+**Qué comparten los hilos de un proceso**:
 
-- Permiten mayor eficiencia en tareas concurrentes.
+- Espacio de memoria
+
+- Variables globales
+
+- Archivos abiertos
+
+- Procesos hijos
+
+- Temporizadores
+
+- Señales, semáforos y contabilidad
+
+**Qué no comparten (propio de cada hilo)**:
+
+- Contador de programa
+
+- Pila
+
+- Registros
+
+- Estado del hilo
+
+**Ventajas del uso de hilos**:
+
+- Separación y organización de tareas.
+
+- Modularidad en trabajos complejos.
+
+- Mayor velocidad al aprovechar tiempos de espera.
+
+- Uso más eficiente del procesador.
+
+- Permite funciones adicionales, como revisión ortográfica en segundo plano en Word.
+
+- 
 
 ---
 
@@ -121,7 +216,3 @@ Métodos que determinan el orden de ejecución de los procesos en la CPU.
   - **Temporizadores**
   
   - **Archivos y directorios**
-
-
-
-

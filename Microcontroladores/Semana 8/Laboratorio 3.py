@@ -1,10 +1,33 @@
 from machine import Pin, ADC, Timer
+import time
 
-# Configuración ADC para LM35 en GPIO34
-adc = ADC(Pin(3))
-adc.atten(ADC.ATTN_11DB)   # Rango 0-3.3V
-adc.width(ADC.WIDTH_12BIT) # Resolución de 12 bits (0-4095)
+adc = ADC(Pin(4)) 
+adc.atten(ADC.ATTN_11DB)   
+adc.width(ADC.WIDTH_12BIT)  
 
-# LED en GPIO2
-led = Pin(18, Pin.OUT)
-led.value(1)
+VREF = 3.3 
+data = [] 
+
+def muestreo(timer):
+    global data
+    raw = adc.read()
+    data.append(raw)
+    if len(data) > 50:
+        data.pop(0)
+
+t = Timer(0)
+t.init(period=100, mode=Timer.PERIODIC, callback=muestreo)
+
+try:
+    while True:
+        time.sleep(2)
+        if data:
+            minimo = min(data)
+            maximo = max(data)
+            promedio = sum(data) / len(data)
+            print("Mín:", minimo,
+                  "Máx:", maximo,
+                  "Promedio:", round(promedio, 2))
+except KeyboardInterrupt:
+    t.deinit()
+    print("Detenido por el usuario")
