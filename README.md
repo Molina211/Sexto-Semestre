@@ -4,14 +4,14 @@ Este repositorio está diseñado para organizar y centralizar los recursos, proy
 
 ## 📂 Contenido del repositorio
 
-- **Análisis financiero**: conceptos y herramientas para la gestión financiera, evaluación de proyectos y toma de decisiones económicas en entornos empresariales y tecnológicos.
+- **Análisis financiero**: Conceptos y herramientas para la gestión financiera, evaluación de proyectos y toma de decisiones económicas en entornos empresariales y tecnológicos.
 
-- **Arquitectura de software**: fundamentos, estilos arquitectónicos, patrones de diseño y buenas prácticas para la construcción de sistemas robustos y escalables.
+- **Arquitectura de software**: Fundamentos, estilos arquitectónicos, patrones de diseño y buenas prácticas para la construcción de sistemas robustos y escalables.
 
-- **Metodología de investigación**: enfoques, métodos y técnicas de investigación científica aplicados a proyectos académicos y profesionales.
+- **Metodología de investigación**: Enfoques, métodos y técnicas de investigación científica aplicados a proyectos académicos y profesionales.
 
-- **Microcontroladores**: programación, diseño de circuitos y aplicaciones prácticas con dispositivos embebidos orientados a la automatización y el control.
+- **Microcontroladores**: Programación, diseño de circuitos y aplicaciones prácticas con dispositivos embebidos orientados a la automatización y el control.
 
-- **Sistemas operativos**: estudio de la administración de recursos, procesos, memoria y sistemas de archivos en distintos entornos operativos.
+- **Sistemas operativos**: Estudio de la administración de recursos, procesos, memoria y sistemas de archivos en distintos entornos operativos.
 
-- **Telemática I**: fundamentos de redes de comunicación, protocolos y servicios que permiten la interconexión de sistemas informáticos.
+- **Telemática I**: Fundamentos de redes de comunicación, protocolos y servicios que permiten la interconexión de sistemas informáticos.
