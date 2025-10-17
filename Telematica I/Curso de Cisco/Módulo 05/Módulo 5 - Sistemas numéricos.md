@@ -59,8 +59,6 @@ Las viñetas siguientes describen cada fila de la tabla.
 
 #### Convertir binario a decimal
 
-###### ChatGPT dijo:
-
 Para convertir una dirección IPv4 en binario a su equivalente decimal punteado:
 
 1. Se divide la dirección en 4 octetos de 8 bits.

@@ -587,7 +587,7 @@ A diferencia de las direcciones lógicas de Capa 3 (IP), que indican la ubicaci�
 
 **1. Host a Router**
 
-- El host de origen* quiere enviar un paquete IP a un servidor.
+- El host de origen quiere enviar un paquete IP a un servidor.
 
 - Ese paquete IP es de Capa 3, contiene la dirección IP de origen y destino.
 

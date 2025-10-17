@@ -126,8 +126,6 @@ Se refiere a cómo físicamente se representan los 0 y 1 en el medio de transmis
 
 Es la forma física real que toma la señal (voltajes, luz, ondas) para transportar la información digital.
 
-
-
 ### Ancho de banda
 
 El ancho de banda es la capacidad de un medio para transportar datos en un tiempo determinado, expresado en kbps, Mbps o Gbps. No se refiere a la velocidad de los bits (que viajan a la velocidad de la electricidad), sino a la cantidad de bits transmitidos por segundo. Su valor práctico depende de las propiedades del medio físico, la tecnología de señalización y detección, así como de limitaciones físicas y tecnológicas.
@@ -163,8 +161,6 @@ Para reducir las interferencias en el **cableado de cobre**, se aplican distinta
 - **Blindaje metálico y conexión a tierra:** Protege contra la **EMI** y la **RFI** al bloquear señales externas que puedan distorsionar la transmisión.
 
 - **Trenzado de pares de hilos:** Cancela el **crosstalk** al compensar los campos eléctricos y magnéticos entre hilos adyacentes.
-
-
 
 ### Tipos de cableado de cobre
 
@@ -287,11 +283,9 @@ Los **cables UTP** pueden armarse con diferentes convenciones de conexión en el
 
 La fibra óptica, aunque más costosa que el cobre, permite transmitir datos a grandes distancias con mayor ancho de banda, mínima atenuación y sin interferencias. Está compuesta por hilos de vidrio que transportan impulsos de luz, funcionando como un tubo reflectante que garantiza una transmisión eficiente y confiable.
 
-
-
 ### Tipos de fibra óptica
 
-Existen**dos tipos principales de medios de fibra óptica:
+Existen dos tipos principales de medios de fibra óptica:
 
 1. **Fibra multimodo (MMF)**
    
@@ -393,8 +387,6 @@ Sin embargo, presentan algunas limitaciones importantes:
 
 Por estas razones, aunque el WiFi gana popularidad, los cables de cobre y fibra óptica siguen siendo los más usados en la infraestructura de red (routers, switches, etc.) por su mayor estabilidad y capacidad.
 
-
-
 ### Tipos de medios inalámbricos
 
 Los estándares inalámbricos regulan cómo se transmiten y reciben los datos a través del aire, abarcando aspectos de la capa física (codificación de señales, frecuencias, potencia, antenas) y de la capa de enlace de datos (cómo los dispositivos acceden y comparten el medio).
@@ -412,8 +404,6 @@ Los estándares inalámbricos regulan cómo se transmiten y reciben los datos a 
 
 - **Zigbee (IEEE 802.15.4):** 
   Diseñado para bajo consumo de energía, baja velocidad de datos y corto alcance. Se usa en IoT e industria (sensores, interruptores, dispositivos médicos).
-
-
 
 ### LAN inalámbrica
 
