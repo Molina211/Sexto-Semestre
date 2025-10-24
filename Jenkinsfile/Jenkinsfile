@@ -35,40 +35,131 @@ pipeline {
         stage('Notificar por correo') {
             steps {
                 script {
-                    // 🚀 Detectar si viene de GitHub (push) o del cron
+                    // Detecta origen del trigger
                     def triggeredBy = currentBuild.getBuildCauses().collect { it.shortDescription }.join(', ')
                     def esPush = triggeredBy.contains("SCMTrigger") || triggeredBy.contains("GitHub")
 
                     def fecha = new Date().format("yyyy-MM-dd HH:mm:ss")
                     def estado = currentBuild.currentResult
-                    def colorEstado = estado == 'SUCCESS' ? '#4CAF50' : '#E74C3C'
+                    def colorEstado = estado == 'SUCCESS' ? '#27ae60' : '#e74c3c'
+                    def bgGradiente = estado == 'SUCCESS' ? 'linear-gradient(135deg, #c8e6c9, #81c784)' : 'linear-gradient(135deg, #f8d7da, #e57373)'
 
                     def asunto, mensaje
 
                     if (esPush) {
                         asunto = "🚀 Actualización detectada - ${env.JOB_NAME}"
                         mensaje = """
-                            <html><body>
-                            <h2 style="color:#2980b9;">🚀 Nueva actualización detectada</h2>
-                            <p><b>Fecha:</b> ${fecha}</p>
-                            <p><b>Repositorio:</b> ${env.GIT_URL}</p>
-                            <p><b>Estado:</b> <span style="color:${colorEstado}; font-weight:bold;">${estado}</span></p>
-                            <p>Cambios recientes fueron detectados y respaldados automáticamente.</p>
-                            <hr><p style="font-size:12px;">Notificación automática de Jenkins</p>
-                            </body></html>
+                        <html>
+                        <head>
+                            <style>
+                                body {
+                                    font-family: 'Segoe UI', Arial, sans-serif;
+                                    background: ${bgGradiente};
+                                    margin: 0;
+                                    padding: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                                .card {
+                                    background: white;
+                                    border-radius: 16px;
+                                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                                    padding: 24px;
+                                    margin: 30px;
+                                    max-width: 600px;
+                                    width: 90%;
+                                }
+                                h2 {
+                                    color: #2c3e50;
+                                    border-bottom: 2px solid #3498db;
+                                    padding-bottom: 8px;
+                                }
+                                .info {
+                                    margin: 10px 0;
+                                    line-height: 1.5;
+                                    font-size: 15px;
+                                }
+                                .estado {
+                                    color: ${colorEstado};
+                                    font-weight: bold;
+                                }
+                                .footer {
+                                    font-size: 12px;
+                                    color: #7f8c8d;
+                                    text-align: center;
+                                    margin-top: 20px;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="card">
+                                <h2>🚀 Nueva actualización detectada</h2>
+                                <p class="info"><b>Fecha:</b> ${fecha}</p>
+                                <p class="info"><b>Repositorio:</b> ${env.GIT_URL}</p>
+                                <p class="info"><b>Estado:</b> <span class="estado">${estado}</span></p>
+                                <p class="info">Cambios recientes fueron detectados y respaldados automáticamente.</p>
+                                <div class="footer">🔔 Notificación automática de Jenkins</div>
+                            </div>
+                        </body>
+                        </html>
                         """
                     } else {
-                        asunto = "📚 Informe diario - ${env.JOB_NAME}"
+                        asunto = "📘 Informe diario - ${env.JOB_NAME}"
                         mensaje = """
-                            <html><body>
-                            <h2 style="color:#34495e;">📘 Informe diario de apuntes</h2>
-                            <p><b>Fecha:</b> ${fecha}</p>
-                            <p><b>Tarea:</b> ${env.JOB_NAME}</p>
-                            <p><b>Repositorio:</b> ${env.GIT_URL}</p>
-                            <p><b>Duración:</b> ${currentBuild.durationString}</p>
-                            <p style="color:${colorEstado};"><b>Estado:</b> ${estado}</p>
-                            <hr><p style="font-size:12px;">Informe automático programado de Jenkins</p>
-                            </body></html>
+                        <html>
+                        <head>
+                            <style>
+                                body {
+                                    font-family: 'Segoe UI', Arial, sans-serif;
+                                    background: linear-gradient(135deg, #dbeafe, #93c5fd);
+                                    margin: 0;
+                                    padding: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                                .card {
+                                    background: white;
+                                    border-radius: 16px;
+                                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                                    padding: 24px;
+                                    margin: 30px;
+                                    max-width: 600px;
+                                    width: 90%;
+                                }
+                                h2 {
+                                    color: #1d4ed8;
+                                    border-bottom: 2px solid #60a5fa;
+                                    padding-bottom: 8px;
+                                }
+                                .info {
+                                    margin: 10px 0;
+                                    line-height: 1.5;
+                                    font-size: 15px;
+                                }
+                                .estado {
+                                    color: ${colorEstado};
+                                    font-weight: bold;
+                                }
+                                .footer {
+                                    font-size: 12px;
+                                    color: #64748b;
+                                    text-align: center;
+                                    margin-top: 20px;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="card">
+                                <h2>📘 Informe diario de apuntes</h2>
+                                <p class="info"><b>Fecha:</b> ${fecha}</p>
+                                <p class="info"><b>Tarea:</b> ${env.JOB_NAME}</p>
+                                <p class="info"><b>Repositorio:</b> ${env.GIT_URL}</p>
+                                <p class="info"><b>Duración:</b> ${currentBuild.durationString}</p>
+                                <p class="info"><b>Estado:</b> <span class="estado">${estado}</span></p>
+                                <div class="footer">🕒 Informe automático programado por Jenkins</div>
+                            </div>
+                        </body>
+                        </html>
                         """
                     }
 
