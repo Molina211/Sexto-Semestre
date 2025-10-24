@@ -1,0 +1,99 @@
+stage('Notificar por correo') {
+    steps {
+        emailext (
+            subject: "📚 Resumen diario - ${env.JOB_NAME} (${currentBuild.currentResult})",
+            body: """
+                <html>
+                <head>
+                    <style>
+                        body {
+                            font-family: 'Inter', 'Segoe UI', sans-serif;
+                            background-color: #f7f9fb;
+                            color: #2c3e50;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .card {
+                            max-width: 650px;
+                            background: #ffffff;
+                            border-radius: 16px;
+                            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+                            margin: 40px auto;
+                            padding: 30px;
+                            border-top: 5px solid ${currentBuild.currentResult == 'SUCCESS' ? '#4CAF50' : '#E74C3C'};
+                        }
+                        h2 {
+                            color: #34495e;
+                            font-size: 24px;
+                            text-align: center;
+                            margin-bottom: 10px;
+                        }
+                        .status {
+                            display: inline-block;
+                            background: ${currentBuild.currentResult == 'SUCCESS' ? '#4CAF50' : '#E74C3C'};
+                            color: white;
+                            padding: 6px 12px;
+                            border-radius: 20px;
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                        .info {
+                            background: #f4f6f8;
+                            border-radius: 10px;
+                            padding: 15px;
+                            margin: 15px 0;
+                            font-size: 15px;
+                        }
+                        .info p {
+                            margin: 6px 0;
+                        }
+                        .highlight {
+                            font-weight: 600;
+                            color: #2c3e50;
+                        }
+                        .footer {
+                            text-align: center;
+                            margin-top: 25px;
+                            font-size: 13px;
+                            color: #7f8c8d;
+                            border-top: 1px solid #ecf0f1;
+                            padding-top: 10px;
+                        }
+                        .emoji {
+                            font-size: 22px;
+                            margin-right: 5px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="card">
+                        <h2>📘 Informe diario de apuntes</h2>
+                        <p style="text-align:center;">
+                            <span class="status">${currentBuild.currentResult}</span>
+                        </p>
+                        
+                        <div class="info">
+                            <p><span class="emoji">🗓️</span><span class="highlight">Fecha:</span> ${new Date().format("yyyy-MM-dd HH:mm:ss")}</p>
+                            <p><span class="emoji">🧠</span><span class="highlight">Tarea:</span> ${env.JOB_NAME}</p>
+                            <p><span class="emoji">💾</span><span class="highlight">Repositorio:</span> ${env.GIT_URL ?: 'No especificado'}</p>
+                            <p><span class="emoji">⏱️</span><span class="highlight">Duración:</span> ${currentBuild.durationString}</p>
+                        </div>
+
+                        <p style="text-align:center; font-size:15px;">
+                            Todos los apuntes han sido actualizados y respaldados correctamente.  
+                            Jenkins seguirá monitoreando cambios automáticamente. 🔄
+                        </p>
+
+                        <div class="footer">
+                            Notificación automática enviada por <b>Jenkins</b> 📬<br>
+                            Mantén tus apuntes sincronizados y seguros ☁️
+                        </div>
+                    </div>
+                </body>
+                </html>
+            """,
+            mimeType: 'text/html',
+            to: 'jhonmolina21109@gmail.com'
+        )
+    }
+}
