@@ -1,8 +1,12 @@
 pipeline {
     agent any
 
-    stages {
+    // 🔁 Ejecutar automáticamente todos los días a las 7:00 AM
+    triggers {
+        cron('H 10 * * *')
+    }
 
+    stages {
         stage('Clonar repositorio') {
             steps {
                 echo '📦 Clonando el repositorio de apuntes...'
@@ -14,7 +18,6 @@ pipeline {
             steps {
                 script {
                     echo '🗂️ Haciendo copia de seguridad de los apuntes...'
-                    // Crear carpeta de backup con marca de tiempo
                     def date = sh(script: "date +%Y-%m-%d_%H-%M-%S", returnStdout: true).trim()
                     def backupDir = "/var/jenkins_home/backups_apuntes/${date}"
                     sh """
