@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    // 🔁 Ejecutar automáticamente todos los días a las 7:00 AM
+    // 🔁 Ejecutar automáticamente todos los días a las 10:00 AM
     triggers {
         cron('H 10 * * *')
     }
@@ -31,104 +31,85 @@ pipeline {
         }
 
         stage('Notificar por correo') {
-    steps {
-        emailext (
-            subject: "📚 Informe diario - ${env.JOB_NAME} (${currentBuild.currentResult})",
-            body: """
-                <html>
-                <head>
-                    <style>
-                        body {
-                            font-family: 'Inter', 'Segoe UI', sans-serif;
-                            background-color: #f7f9fb;
-                            color: #2c3e50;
-                            margin: 0;
-                            padding: 0;
-                        }
-                        .card {
-                            max-width: 650px;
-                            background: #ffffff;
-                            border-radius: 16px;
-                            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-                            margin: 40px auto;
-                            padding: 30px;
-                            border-top: 5px solid ${currentBuild.currentResult == 'SUCCESS' ? '#4CAF50' : '#E74C3C'};
-                        }
-                        h2 {
-                            color: #34495e;
-                            font-size: 24px;
-                            text-align: center;
-                            margin-bottom: 10px;
-                        }
-                        .status {
-                            display: inline-block;
-                            background: ${currentBuild.currentResult == 'SUCCESS' ? '#4CAF50' : '#E74C3C'};
-                            color: white;
-                            padding: 6px 12px;
-                            border-radius: 20px;
-                            font-weight: 600;
-                            font-size: 14px;
-                        }
-                        .info {
-                            background: #f4f6f8;
-                            border-radius: 10px;
-                            padding: 15px;
-                            margin: 15px 0;
-                            font-size: 15px;
-                        }
-                        .info p {
-                            margin: 6px 0;
-                        }
-                        .highlight {
-                            font-weight: 600;
-                            color: #2c3e50;
-                        }
-                        .footer {
-                            text-align: center;
-                            margin-top: 25px;
-                            font-size: 13px;
-                            color: #7f8c8d;
-                            border-top: 1px solid #ecf0f1;
-                            padding-top: 10px;
-                        }
-                        .emoji {
-                            font-size: 22px;
-                            margin-right: 5px;
-                        }
-                    </style>
-                </head>
-                <body>
-                    <div class="card">
-                        <h2>📘 Informe diario de apuntes</h2>
-                        <p style="text-align:center;">
-                            <span class="status">${currentBuild.currentResult}</span>
-                        </p>
-                        
-                        <div class="info">
-                            <p><span class="emoji">🗓️</span><span class="highlight">Fecha:</span> ${new Date().format("yyyy-MM-dd HH:mm:ss")}</p>
-                            <p><span class="emoji">🧠</span><span class="highlight">Tarea:</span> ${env.JOB_NAME}</p>
-                            <p><span class="emoji">💾</span><span class="highlight">Repositorio:</span> ${env.GIT_URL ?: 'No especificado'}</p>
-                            <p><span class="emoji">⏱️</span><span class="highlight">Duración:</span> ${currentBuild.durationString}</p>
-                        </div>
+            steps {
+                script {
+                    // 🔍 Detectar si fue un push o ejecución programada
+                    def causas = currentBuild.rawBuild.getCauses()
+                    def esPush = causas.any { c -> c.toString().contains("SCMTrigger") || c.toString().contains("GitHub") }
 
-                        <p style="text-align:center; font-size:15px;">
-                            Todos los apuntes han sido actualizados y respaldados correctamente.  
-                            Jenkins seguirá monitoreando cambios automáticamente. 🔄
-                        </p>
+                    // 💌 Variables comunes
+                    def fecha = new Date().format("yyyy-MM-dd HH:mm:ss")
+                    def estado = currentBuild.currentResult
+                    def colorEstado = estado == 'SUCCESS' ? '#4CAF50' : '#E74C3C'
 
-                        <div class="footer">
-                            Notificación automática enviada por <b>Jenkins</b> 📬<br>
-                            Mantén tus apuntes sincronizados y seguros ☁️
-                        </div>
-                    </div>
-                </body>
-                </html>
-            """,
-            mimeType: 'text/html',
-            to: 'jhonmolina21109@gmail.com'
-        )
-    }
-}
+                    // 💬 Diseños diferentes según el tipo de trigger
+                    def asunto = esPush ? "🚀 Actualización detectada - ${env.JOB_NAME}" : "📚 Informe diario - ${env.JOB_NAME}"
+                    def mensaje = esPush ? """
+                        <html>
+                        <head>
+                            <style>
+                                body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #2c3e50; }
+                                .card { background: #fff; border-radius: 16px; padding: 30px; margin: 30px auto; max-width: 600px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); border-top: 5px solid #3498db; }
+                                h2 { text-align: center; color: #2980b9; }
+                                .info { background: #f4f6f8; border-radius: 10px; padding: 15px; margin-top: 15px; }
+                                .footer { text-align: center; font-size: 13px; color: #7f8c8d; margin-top: 20px; border-top: 1px solid #ecf0f1; padding-top: 10px; }
+                                .emoji { font-size: 22px; margin-right: 5px; }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="card">
+                                <h2>🚀 Nueva actualización de apuntes detectada</h2>
+                                <div class="info">
+                                    <p><span class="emoji">🧠</span><b>Tarea:</b> ${env.JOB_NAME}</p>
+                                    <p><span class="emoji">📅</span><b>Fecha:</b> ${fecha}</p>
+                                    <p><span class="emoji">💾</span><b>Repositorio:</b> ${env.GIT_URL}</p>
+                                    <p><span class="emoji">🧩</span><b>Estado:</b> <span style="color:${colorEstado}; font-weight:bold;">${estado}</span></p>
+                                </div>
+                                <p style="text-align:center; margin-top:15px;">Cambios nuevos fueron detectados y respaldados automáticamente.</p>
+                                <div class="footer">Notificación automática por Jenkins 🧠</div>
+                            </div>
+                        </body>
+                        </html>
+                    """ : """
+                        <html>
+                        <head>
+                            <style>
+                                body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #2c3e50; }
+                                .card { background: #fff; border-radius: 16px; padding: 30px; margin: 30px auto; max-width: 650px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); border-top: 5px solid ${colorEstado}; }
+                                h2 { text-align: center; color: #34495e; }
+                                .status { display: inline-block; background: ${colorEstado}; color: white; padding: 6px 12px; border-radius: 20px; font-weight: 600; }
+                                .info { background: #f4f6f8; border-radius: 10px; padding: 15px; margin: 15px 0; }
+                                .footer { text-align: center; margin-top: 25px; font-size: 13px; color: #7f8c8d; border-top: 1px solid #ecf0f1; padding-top: 10px; }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="card">
+                                <h2>📘 Informe diario de apuntes</h2>
+                                <p style="text-align:center;">
+                                    <span class="status">${estado}</span>
+                                </p>
+                                <div class="info">
+                                    <p><b>🗓️ Fecha:</b> ${fecha}</p>
+                                    <p><b>🧠 Tarea:</b> ${env.JOB_NAME}</p>
+                                    <p><b>💾 Repositorio:</b> ${env.GIT_URL ?: 'No especificado'}</p>
+                                    <p><b>⏱️ Duración:</b> ${currentBuild.durationString}</p>
+                                </div>
+                                <p style="text-align:center;">Todos los apuntes fueron actualizados y respaldados correctamente. 🔄</p>
+                                <div class="footer">📬 Jenkins - Informe diario automático</div>
+                            </div>
+                        </body>
+                        </html>
+                    """
 
+                    // 📩 Enviar el correo
+                    emailext(
+                        subject: asunto,
+                        body: mensaje,
+                        mimeType: 'text/html',
+                        to: 'jhonmolina21109@gmail.com'
+                    )
+                }
+            }
+        }
     }
 }
