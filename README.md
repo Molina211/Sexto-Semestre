@@ -14,4 +14,4 @@ Este repositorio está diseñado para organizar y centralizar los recursos, proy
 
 - **Sistemas operativos**: Estudio de la administración de recursos, procesos, memoria y sistemas de archivos en distintos entornos operativos.
 
-- **Telemática I**: Fundamentos de redes de comunicación, protocolos y servicios que permiten la interconexión de sistemas informáticos.
+- **Telemática I**: Fundamentos de redes de comunicación, protocolos y servicios que permiten la interconexión de sistemas informáticos. 
