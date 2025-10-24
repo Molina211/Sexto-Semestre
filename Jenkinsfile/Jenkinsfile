@@ -35,7 +35,6 @@ pipeline {
         stage('Notificar por correo') {
             steps {
                 script {
-                    // Detecta origen del trigger
                     def triggeredBy = currentBuild.getBuildCauses().collect { it.shortDescription }.join(', ')
                     def esPush = triggeredBy.contains("SCMTrigger") || triggeredBy.contains("GitHub")
 
@@ -53,21 +52,26 @@ pipeline {
                         <head>
                             <style>
                                 body {
-                                    font-family: 'Segoe UI', Arial, sans-serif;
-                                    background: ${bgGradiente};
                                     margin: 0;
                                     padding: 0;
-                                    display: flex;
-                                    justify-content: center;
+                                    background: ${bgGradiente};
+                                    font-family: 'Segoe UI', Arial, sans-serif;
+                                    -webkit-font-smoothing: antialiased;
+                                    width: 100%;
+                                }
+                                .wrapper {
+                                    width: 100%;
+                                    text-align: center;
                                 }
                                 .card {
-                                    background: white;
+                                    background: #ffffff;
                                     border-radius: 16px;
                                     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
                                     padding: 24px;
-                                    margin: 30px;
                                     max-width: 600px;
-                                    width: 90%;
+                                    margin: 40px auto;
+                                    text-align: left;
+                                    display: inline-block;
                                 }
                                 h2 {
                                     color: #2c3e50;
@@ -89,16 +93,25 @@ pipeline {
                                     text-align: center;
                                     margin-top: 20px;
                                 }
+                                @media only screen and (max-width: 600px) {
+                                    .card {
+                                        width: 90% !important;
+                                        padding: 18px !important;
+                                        margin: 20px auto !important;
+                                    }
+                                }
                             </style>
                         </head>
                         <body>
-                            <div class="card">
-                                <h2>🚀 Nueva actualización detectada</h2>
-                                <p class="info"><b>Fecha:</b> ${fecha}</p>
-                                <p class="info"><b>Repositorio:</b> ${env.GIT_URL}</p>
-                                <p class="info"><b>Estado:</b> <span class="estado">${estado}</span></p>
-                                <p class="info">Cambios recientes fueron detectados y respaldados automáticamente.</p>
-                                <div class="footer">🔔 Notificación automática de Jenkins</div>
+                            <div class="wrapper">
+                                <div class="card">
+                                    <h2>🚀 Nueva actualización detectada</h2>
+                                    <p class="info"><b>Fecha:</b> ${fecha}</p>
+                                    <p class="info"><b>Repositorio:</b> ${env.GIT_URL}</p>
+                                    <p class="info"><b>Estado:</b> <span class="estado">${estado}</span></p>
+                                    <p class="info">Cambios recientes fueron detectados y respaldados automáticamente.</p>
+                                    <div class="footer">🔔 Notificación automática de Jenkins</div>
+                                </div>
                             </div>
                         </body>
                         </html>
@@ -110,21 +123,26 @@ pipeline {
                         <head>
                             <style>
                                 body {
-                                    font-family: 'Segoe UI', Arial, sans-serif;
-                                    background: linear-gradient(135deg, #dbeafe, #93c5fd);
                                     margin: 0;
                                     padding: 0;
-                                    display: flex;
-                                    justify-content: center;
+                                    background: linear-gradient(135deg, #dbeafe, #93c5fd);
+                                    font-family: 'Segoe UI', Arial, sans-serif;
+                                    -webkit-font-smoothing: antialiased;
+                                    width: 100%;
+                                }
+                                .wrapper {
+                                    width: 100%;
+                                    text-align: center;
                                 }
                                 .card {
-                                    background: white;
+                                    background: #ffffff;
                                     border-radius: 16px;
                                     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
                                     padding: 24px;
-                                    margin: 30px;
                                     max-width: 600px;
-                                    width: 90%;
+                                    margin: 40px auto;
+                                    text-align: left;
+                                    display: inline-block;
                                 }
                                 h2 {
                                     color: #1d4ed8;
@@ -146,17 +164,26 @@ pipeline {
                                     text-align: center;
                                     margin-top: 20px;
                                 }
+                                @media only screen and (max-width: 600px) {
+                                    .card {
+                                        width: 90% !important;
+                                        padding: 18px !important;
+                                        margin: 20px auto !important;
+                                    }
+                                }
                             </style>
                         </head>
                         <body>
-                            <div class="card">
-                                <h2>📘 Informe diario de apuntes</h2>
-                                <p class="info"><b>Fecha:</b> ${fecha}</p>
-                                <p class="info"><b>Tarea:</b> ${env.JOB_NAME}</p>
-                                <p class="info"><b>Repositorio:</b> ${env.GIT_URL}</p>
-                                <p class="info"><b>Duración:</b> ${currentBuild.durationString}</p>
-                                <p class="info"><b>Estado:</b> <span class="estado">${estado}</span></p>
-                                <div class="footer">🕒 Informe automático programado por Jenkins</div>
+                            <div class="wrapper">
+                                <div class="card">
+                                    <h2>📘 Informe diario de apuntes</h2>
+                                    <p class="info"><b>Fecha:</b> ${fecha}</p>
+                                    <p class="info"><b>Tarea:</b> ${env.JOB_NAME}</p>
+                                    <p class="info"><b>Repositorio:</b> ${env.GIT_URL}</p>
+                                    <p class="info"><b>Duración:</b> ${currentBuild.durationString}</p>
+                                    <p class="info"><b>Estado:</b> <span class="estado">${estado}</span></p>
+                                    <div class="footer">🕒 Informe automático programado por Jenkins</div>
+                                </div>
                             </div>
                         </body>
                         </html>
