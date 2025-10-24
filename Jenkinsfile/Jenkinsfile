@@ -1,23 +1,25 @@
 pipeline {
     agent any
 
-    // 🔁 Ejecutar automáticamente todos los días a las 10:00 AM
     triggers {
         cron('H 10 * * *')
+    }
+
+    environment {
+        GIT_URL = 'https://github.com/Molina211/Sexto-Semestre.git'
     }
 
     stages {
         stage('Clonar repositorio') {
             steps {
-                echo '📦 Clonando el repositorio de apuntes...'
-                git branch: 'main', url: 'https://github.com/Molina211/Sexto-Semestre.git'
+                echo '📦 Clonando el repositorio...'
+                git branch: 'main', url: env.GIT_URL
             }
         }
 
         stage('Backup de apuntes') {
             steps {
                 script {
-                    echo '🗂️ Haciendo copia de seguridad de los apuntes...'
                     def date = sh(script: "date +%Y-%m-%d_%H-%M-%S", returnStdout: true).trim()
                     def backupDir = "/var/jenkins_home/backups_apuntes/${date}"
                     sh """
@@ -33,75 +35,43 @@ pipeline {
         stage('Notificar por correo') {
             steps {
                 script {
-                    // 🔍 Detectar si fue un push o ejecución programada
-                    def causas = currentBuild.rawBuild.getCauses()
-                    def esPush = causas.any { c -> c.toString().contains("SCMTrigger") || c.toString().contains("GitHub") }
+                    // 🚀 Detectar si viene de GitHub (push) o del cron
+                    def triggeredBy = currentBuild.getBuildCauses().collect { it.shortDescription }.join(', ')
+                    def esPush = triggeredBy.contains("SCMTrigger") || triggeredBy.contains("GitHub")
 
-                    // 💌 Variables comunes
                     def fecha = new Date().format("yyyy-MM-dd HH:mm:ss")
                     def estado = currentBuild.currentResult
                     def colorEstado = estado == 'SUCCESS' ? '#4CAF50' : '#E74C3C'
 
-                    // 💬 Diseños diferentes según el tipo de trigger
-                    def asunto = esPush ? "🚀 Actualización detectada - ${env.JOB_NAME}" : "📚 Informe diario - ${env.JOB_NAME}"
-                    def mensaje = esPush ? """
-                        <html>
-                        <head>
-                            <style>
-                                body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #2c3e50; }
-                                .card { background: #fff; border-radius: 16px; padding: 30px; margin: 30px auto; max-width: 600px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); border-top: 5px solid #3498db; }
-                                h2 { text-align: center; color: #2980b9; }
-                                .info { background: #f4f6f8; border-radius: 10px; padding: 15px; margin-top: 15px; }
-                                .footer { text-align: center; font-size: 13px; color: #7f8c8d; margin-top: 20px; border-top: 1px solid #ecf0f1; padding-top: 10px; }
-                                .emoji { font-size: 22px; margin-right: 5px; }
-                            </style>
-                        </head>
-                        <body>
-                            <div class="card">
-                                <h2>🚀 Nueva actualización de apuntes detectada</h2>
-                                <div class="info">
-                                    <p><span class="emoji">🧠</span><b>Tarea:</b> ${env.JOB_NAME}</p>
-                                    <p><span class="emoji">📅</span><b>Fecha:</b> ${fecha}</p>
-                                    <p><span class="emoji">💾</span><b>Repositorio:</b> ${env.GIT_URL}</p>
-                                    <p><span class="emoji">🧩</span><b>Estado:</b> <span style="color:${colorEstado}; font-weight:bold;">${estado}</span></p>
-                                </div>
-                                <p style="text-align:center; margin-top:15px;">Cambios nuevos fueron detectados y respaldados automáticamente.</p>
-                                <div class="footer">Notificación automática por Jenkins 🧠</div>
-                            </div>
-                        </body>
-                        </html>
-                    """ : """
-                        <html>
-                        <head>
-                            <style>
-                                body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #2c3e50; }
-                                .card { background: #fff; border-radius: 16px; padding: 30px; margin: 30px auto; max-width: 650px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); border-top: 5px solid ${colorEstado}; }
-                                h2 { text-align: center; color: #34495e; }
-                                .status { display: inline-block; background: ${colorEstado}; color: white; padding: 6px 12px; border-radius: 20px; font-weight: 600; }
-                                .info { background: #f4f6f8; border-radius: 10px; padding: 15px; margin: 15px 0; }
-                                .footer { text-align: center; margin-top: 25px; font-size: 13px; color: #7f8c8d; border-top: 1px solid #ecf0f1; padding-top: 10px; }
-                            </style>
-                        </head>
-                        <body>
-                            <div class="card">
-                                <h2>📘 Informe diario de apuntes</h2>
-                                <p style="text-align:center;">
-                                    <span class="status">${estado}</span>
-                                </p>
-                                <div class="info">
-                                    <p><b>🗓️ Fecha:</b> ${fecha}</p>
-                                    <p><b>🧠 Tarea:</b> ${env.JOB_NAME}</p>
-                                    <p><b>💾 Repositorio:</b> ${env.GIT_URL ?: 'No especificado'}</p>
-                                    <p><b>⏱️ Duración:</b> ${currentBuild.durationString}</p>
-                                </div>
-                                <p style="text-align:center;">Todos los apuntes fueron actualizados y respaldados correctamente. 🔄</p>
-                                <div class="footer">📬 Jenkins - Informe diario automático</div>
-                            </div>
-                        </body>
-                        </html>
-                    """
+                    def asunto, mensaje
 
-                    // 📩 Enviar el correo
+                    if (esPush) {
+                        asunto = "🚀 Actualización detectada - ${env.JOB_NAME}"
+                        mensaje = """
+                            <html><body>
+                            <h2 style="color:#2980b9;">🚀 Nueva actualización detectada</h2>
+                            <p><b>Fecha:</b> ${fecha}</p>
+                            <p><b>Repositorio:</b> ${env.GIT_URL}</p>
+                            <p><b>Estado:</b> <span style="color:${colorEstado}; font-weight:bold;">${estado}</span></p>
+                            <p>Cambios recientes fueron detectados y respaldados automáticamente.</p>
+                            <hr><p style="font-size:12px;">Notificación automática de Jenkins</p>
+                            </body></html>
+                        """
+                    } else {
+                        asunto = "📚 Informe diario - ${env.JOB_NAME}"
+                        mensaje = """
+                            <html><body>
+                            <h2 style="color:#34495e;">📘 Informe diario de apuntes</h2>
+                            <p><b>Fecha:</b> ${fecha}</p>
+                            <p><b>Tarea:</b> ${env.JOB_NAME}</p>
+                            <p><b>Repositorio:</b> ${env.GIT_URL}</p>
+                            <p><b>Duración:</b> ${currentBuild.durationString}</p>
+                            <p style="color:${colorEstado};"><b>Estado:</b> ${estado}</p>
+                            <hr><p style="font-size:12px;">Informe automático programado de Jenkins</p>
+                            </body></html>
+                        """
+                    }
+
                     emailext(
                         subject: asunto,
                         body: mensaje,
