@@ -1,7 +1,39 @@
-stage('Notificar por correo') {
+pipeline {
+    agent any
+
+    // 🔁 Ejecutar automáticamente todos los días a las 7:00 AM
+    triggers {
+        cron('H 10 * * *')
+    }
+
+    stages {
+        stage('Clonar repositorio') {
+            steps {
+                echo '📦 Clonando el repositorio de apuntes...'
+                git branch: 'main', url: 'https://github.com/Molina211/Sexto-Semestre.git'
+            }
+        }
+
+        stage('Backup de apuntes') {
+            steps {
+                script {
+                    echo '🗂️ Haciendo copia de seguridad de los apuntes...'
+                    def date = sh(script: "date +%Y-%m-%d_%H-%M-%S", returnStdout: true).trim()
+                    def backupDir = "/var/jenkins_home/backups_apuntes/${date}"
+                    sh """
+                        mkdir -p ${backupDir}
+                        cp -r * ${backupDir}/
+                        echo '✅ Backup completado en ${backupDir}' > backup_log.txt
+                    """
+                    echo "✅ Backup completado en: ${backupDir}"
+                }
+            }
+        }
+
+        stage('Notificar por correo') {
     steps {
         emailext (
-            subject: "📚 Resumen diario - ${env.JOB_NAME} (${currentBuild.currentResult})",
+            subject: "📚 Informe diario - ${env.JOB_NAME} (${currentBuild.currentResult})",
             body: """
                 <html>
                 <head>
@@ -95,5 +127,8 @@ stage('Notificar por correo') {
             mimeType: 'text/html',
             to: 'jhonmolina21109@gmail.com'
         )
+    }
+}
+
     }
 }
