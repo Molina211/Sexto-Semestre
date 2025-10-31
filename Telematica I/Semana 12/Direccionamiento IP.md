@@ -18,8 +18,6 @@ Se divide en 5 clases:
 
 Estructura de la IPv4 **x.x.x.x** dada con un numero maximo de 4 millones de direcciones y un valor maximo de 255 valores.
 
-
-
 ### Asiganción del direccionamiento
 
 - Dirección: 180.100.10.0
@@ -41,11 +39,9 @@ Máscaras posibles fuera del octeto:
 
 - Máscara: 255.255.255.192
 
-- Prefijo: 80.100.10.3/26 = 26 unos
+- Prefijo: 180.100.10.3/26 = 26 unos
 
 La máscara son bloques de 1 y bloques de 0 según la longitud del prefijo.
-
-
 
 ### Funcionamiento
 
@@ -76,15 +72,13 @@ La porción de red se le llama los numero de 180 hasta el 10, donde se parte con
 
 Los bloques de Ceros de la porción de Host indica la cantidad de dispositivos que se pueden conectar a esa red. La formula es 2<sup>n</sup> - 2 ----- 2<sup>8</sup> - 2 = 254 (Explicar a GPT)
 
-**Profijo:** Es la parte del direccionamiento del bloque que no ccambia ni varía. La misma porción de red es el prefijo. (Explicar a GPT)
+**Prefijo:** Es la parte del direccionamiento del bloque que no ccambia ni varía. La misma porción de red es el prefijo. (Explicar a GPT)
 
 **Primera IP valida:** Es aquella que tiene puros ceros menos el ultimo es 1.
 
 **Ultima IP valida:** Es aquella que tiene puros unos menos el ultimo que es 0.
 
 **Dirección broadcast:** Es aquella que tiene putos unos.
-
-
 
 ### EJERCICIO
 
@@ -98,5 +92,3 @@ Los bloques de Ceros de la porción de Host indica la cantidad de dispositivos q
 | 180.100.10.1/20           | 1<sup>ra</sup> IP valida | 11001000 | 11000100 | 10100000 | 00000001 | 1                    |
 | 180.100.10.254/20         | Ultima IP valida         | 11001000 | 11000100 | 10100000 | 11111110 | 4094                 |
 | 180.100.10.255/20         | Dirección Broadcast      | 11001000 | 11000100 | 10100000 | 11111111 | 4095                 |
-
-
