@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "3279bad10ce5c32b",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f047868264343f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "10156b6bb47a7a18",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9212a9beff0afa44",
+    "type": "split",
+    "children": [
+      {
+        "id": "0ff53120d8362e43",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea9cf50950bb1bae",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "8941ea5321b080cd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "16c38bbbc442734c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 278.5
+  },
+  "right": {
+    "id": "fabeb3a315e2a995",
+    "type": "split",
+    "children": [
+      {
+        "id": "babe4cb249e36057",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eba75690e4cbb9d1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Análisis financiero/Semana 02/Análisis financiero.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Análisis financiero"
+            }
+          },
+          {
+            "id": "297ce335781e0329",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Análisis financiero/Semana 02/Análisis financiero.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Análisis financiero"
+            }
+          },
+          {
+            "id": "a93cb9170861b191",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "b1a5f0ba554d7e19",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 284.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": true,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": true,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": true,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
+    }
+  },
+  "active": "10156b6bb47a7a18",
+  "lastOpenFiles": [
+    "Arquitectura de software/Semana 14/Laboratorio aws/Implementación de Jenkins + Git en AWS.pdf",
+    "Arquitectura de software/Semana 14/Laboratorio aws/Laboratorio - Jenkins - Post-Build y Archivar Artefactos.pdf",
+    "Arquitectura de software/Semana 14/Laboratorio aws/mso4FF0.tmp",
+    "Arquitectura de software/Semana 14/Laboratorio aws/~WRL2147.tmp",
+    "Arquitectura de software/Semana 14/Laboratorio aws/~WRD2119.tmp",
+    "Arquitectura de software/Semana 14/Laboratorio aws/jenkins.ppk",
+    "Arquitectura de software/Semana 14/Laboratorio aws/~$boratorio - Jenkins - Post-Build y Archivar Artefactos.docx",
+    "Telematica I/Semana 14/Distribución.md",
+    "Telematica I/Semana 12/ABP Telematica I G2.pdf",
+    "Arquitectura de software/Semana 14/Laboratorio aws/Laboratorio - Jenkins - Post-Build y Archivar Artefactos.docx",
+    "Arquitectura de software/Semana 14/Laboratorio - Jenkins - Post-Build y Archivar Artefactos.docx",
+    "Arquitectura de software/Semana 14/Laboratorio - Jenkins - Post-Build y Archivar Artefactos/Laboratorio - Jenkins - Post-Build y Archivar Artefactos.docx",
+    "Arquitectura de software/Semana 14/Laboratorio aws/jenkins-webhook-main/README.md",
+    "Telematica I/Curso de Cisco/Módulo 11/Módulo 11 - Asignación de direcciones IPv4.md",
+    "Metodología de investigación/Semana 14/Marco Teórico.md",
+    "Metodología de investigación/Semana 13/Presentación del marco teorico y su variantes.md",
+    "Telematica I/Curso de Cisco/Módulo 08/Módulo 8 - Capa de red.md",
+    "Telematica I/Semana 07/Apoyo para el Módulo 5 (IPv4 y IPv6).md",
+    "Análisis financiero/Semana 12/Estado de resultados.md",
+    "Análisis financiero/Semana 14/Estado de flujo de efectivo.md",
+    "Análisis financiero/Semana 14/Generalidades y conceptos, costos y gastos.md",
+    "Telematica I/Curso de Cisco/Módulo 06/Módulo 6 - Capa de enlace de datos.md",
+    "Telematica I/Curso de Cisco/Módulo 10/Módulo 10 - Configuración básica de un router.md",
+    "Telematica I/Curso de Cisco/Módulo 07/Módulo 7 - Switching Ethernet.md",
+    "Telematica I/Semana 08/Módulo 6 - Capa de enlace de datos.md",
+    "Telematica I/Curso de Cisco/Módulo 04/Módulo 4  - Capa física.md",
+    "Telematica I/Semana 06/Módulo 4  - Capa física.md",
+    "Telematica I/Curso de Cisco/Módulo 14/Módulo 14 - Capa de transporte.md",
+    "Telematica I/Semana 12/Direccionamiento IP.md",
+    "Telematica I/Curso de Cisco/Módulo 15/Módulo 15 - Capa de aplicación.md",
+    "Telematica I/Semana 02/Módulo 1 - Las redes en la actualidad.md",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104111306.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104111143.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104110735.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104110731.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104105435.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104105131.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104104556.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104104122.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104103438.png",
+    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104103352.png",
+    "Telematica I/Curso de Cisco/Módulo 12/Módulo 12 - Asignación de direcciones IPv6.md",
+    "Telematica I/Curso de Cisco/Módulo 03/Módulo 3 - Protocolos y modelos.md",
+    "Telematica I/Curso de Cisco/Módulo 02/Modulo 2 - Configuración básica de switches y terminales.md",
+    "Telematica I/Semana 03/Modulo 2 - Configuración básica de switches y terminales.md",
+    "Excalidraw/Drawing 2025-11-02 23.43.02.excalidraw.md",
+    "Sin título.canvas"
+  ]
+}

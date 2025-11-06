@@ -381,7 +381,7 @@ Aunque los nodos puedan estar conectados a través de varios dispositivos físic
 
 **LAN multiacceso modernas**
 
-- En las LAN actuale, los dispositivos finales (PC, impresoras, routers) generalmente se conectan mediante topologías estrella o estrella extendida.
+- En las LAN actuales, los dispositivos finales (PC, impresoras, routers) generalmente se conectan mediante topologías estrella o estrella extendida.
   
   - **Estrella:** Todos los dispositivos se conectan a un dispositivo central, normalmente un switch Ethernet.
   

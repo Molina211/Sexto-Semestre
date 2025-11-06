@@ -24,7 +24,7 @@ Básicamente consiste en examinar números y ratios para responder preguntas com
 
 ---
 
-## Aspector básicos de las finanzas
+## Aspectos básicos de las finanzas
 
 #### 1. Rentabilidad
 

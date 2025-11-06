@@ -331,7 +331,9 @@ Nota: Si se quiere eliminar el nombra para volver al predeterminado usa:
     Para protergerlas, usa el comando:
     
     ```
-    Oficina1# configure terminalOficina1(config)# service password-encryptionOficina1(config)#
+    Oficina1# configure terminal
+Oficina1(config)# service password-encryption
+Oficina1(config)#
     ```
     
     Este comando aplica un cifrado básico a todas las contraseñas que estaban sin encriptar, las cuales son de los archivos de configuración, **no** las protege mientras viajan por la red. Su principal función es ocultar contraseñas a simple vista y evitar que usuarios no autorizados las lean.
@@ -341,7 +343,8 @@ Nota: Si se quiere eliminar el nombra para volver al predeterminado usa:
     **Ejemplo de lo que se veria**
     
     ```
-    Oficina1(config)# endOficina1# show running-config
+    Oficina1(config)# end
+Oficina1# show running-config
     !
     (Output omitted)
     !

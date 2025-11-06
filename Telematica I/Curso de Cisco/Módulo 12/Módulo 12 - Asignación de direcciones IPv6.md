@@ -34,8 +34,6 @@ IPv4 tiene un límite de ~4.300 millones de direcciones, y aunque las direccione
 
 Además, el crecimiento del **Internet de las cosas (IoT)**, con dispositivos como autos, electrodomésticos y equipos biomédicos conectados, hace que el espacio limitado de IPv4 sea insuficiente. Por estas razones, la transición a IPv6 es necesaria para soportar la expansión de Internet y nuevas tecnologías.
 
-
-
 #### Coexistencia de IPv6 e IPv6
 
 No hay una fecha límite para la adopción de IPv6; IPv4 e IPv6 coexistirán durante varios años. El IETF desarrolló protocolos y herramientas para facilitar la migración, y las técnicas de transición se pueden clasificar en tres categorías principales:
@@ -85,8 +83,6 @@ Este formato muestra la dirección completa sin abreviaciones, pero no es el mé
 `0000 : 0000 : 0000 : 0000 : 0000 : 0000 : 0000: 0001` 
 `0000 : 0000 : 0000 : 0000 : 0000 : 0000 : 0000: 0000`
 
-
-
 #### Regla 1 - Omitir los ceros iniciales
 
 La primera regla de abreviación de direcciones IPv6 permite omitir los ceros iniciales en cada hexteto.
@@ -121,8 +117,6 @@ Solo se pueden eliminar los ceros al inicio del hexteto, no los ceros finales, y
 | **Sin ceros iniciales** | 0:0:0:0:0:0:0:1                         |
 | **Recomendado**         | 0000:0000:0000:0000:0000:0000:0000:0000 |
 | **Sin ceros iniciales** | 0:0:0:0:0:0:0:0                         |
-
-
 
 #### Regla 2 - Dos puntos dobles
 
@@ -171,11 +165,9 @@ Existen tres tipos principales de direcciones IPv6:
 
 2. **Multidifusión:** Permite enviar un solo paquete a varios destinos simultáneamente.
 
-3. **Difusión por proximidad:** Asigna una dirección a varios dispositivos, pero el paquete se envía solo al más cercano con esa dirección.
+3. **Difusión por proximidad(Anycast):** Asigna una dirección a varios dispositivos, pero el paquete se envía solo al más cercano con esa dirección.
 
 A diferencia de IPv4, IPv6 no usa direcciones de difusión, aunque la multidifusión de todos los nodos cumple una función similar.
-
-
 
 #### Longitud de prefijo IPv6
 
@@ -195,7 +187,7 @@ Se recomienda encarecidamente utilizar un ID de interfaz de 64 bits para la mayo
 
 #### Tipos de direcciones de unidifusion IPv6
 
-Las direcciones IPv6 de unidifusión identifican de forma **única una interfaz** en un dispositivo habilitado para IPv6. 
+Las direcciones IPv6 de unidifusión identifican de forma única una interfaz en un dispositivo habilitado para IPv6. 
 Los paquetes enviados a una dirección de unidifusión son recibidos solo por esa interfaz específica. 
 Al igual que en IPv4, las direcciones de origen deben ser de unidifusión, mientras que las de destino pueden ser unidifusión o multidifusión. 
 Existen varios tipos de direcciones de unidifusión IPv6, según su alcance y propósito.
@@ -220,8 +212,6 @@ Los dispositivos IPv6 suelen tener dos direcciones de unidifusión:
    
    - No es enrutable fuera del enlace; los routers no reenvían paquetes con direcciones link-local.
 
-
-
 #### Una nota sobre la dirección local única
 
 Las direcciones locales únicas (ULA), del rango fc00::/7 a fdff::/7, se usan para redes internas y no son enrutable globalmente.
@@ -233,8 +223,6 @@ Las direcciones locales únicas (ULA), del rango fc00::/7 a fdff::/7, se usan pa
 - No se traducen ni enrutan hacia Internet.
 
 Aunque algunas redes usan direcciones privadas (como las de RFC 1918) para ocultarse del exterior, esto no sustituye las medidas de seguridad adecuadas recomendadas por el IETF.
-
-
 
 #### IPv6 GUA
 
@@ -263,8 +251,6 @@ GUA tiene 3 partes:
 - ID de subred
 
 - ID de interfaz
-
-
 
 #### Estructura IPv6 GUA
 
@@ -295,7 +281,7 @@ Es la parte de la dirección que separa la red global de la interfaz.
 
 **Ejemplo:**
 
-- Si una empresa recibe un prefijo /32 y usa subredes **/64**, 
+- Si una empresa recibe un prefijo /32 y usa subredes /64, 
   → tiene 32 bits para ID de subred, 
   → lo que equivale a 4.300 millones de subredes, 
   → cada una con 18 quintillones de direcciones disponibles. 
@@ -310,7 +296,7 @@ Equivale a la parte de host en IPv4, pero en IPv6 se llama ID de interfaz, porqu
 
 - Esto permite que los dispositivos con SLAAC (Stateless Address Autoconfiguration) creen automáticamente su propia dirección.
 
-- Cada subred /64 puede tener hasta 18 quintillones de dispositivos**.
+- Cada subred /64 puede tener hasta 18 quintillones de dispositivos.
 
 **Importante:**
 
@@ -318,11 +304,9 @@ Equivale a la parte de host en IPv4, pero en IPv6 se llama ID de interfaz, porqu
 
 - La dirección todo-0 se reserva para la difusión por proximidad subred-router, por lo que solo debe asignarse a routers.
 
-
-
 #### IPv6 LLA
 
-Las direcciones locales de enlace (LLA) permiten la comunicación solo dentro de la misma red local o subred.  
+Las direcciones locales de enlace (LLA) permiten la comunicación solo dentro de la misma red local o subred. 
 No pueden usarse para enviar paquetes más allá de ese enlace, es decir, no son enrutable fuera de la red local.
 
 **Características principales:**
@@ -360,7 +344,7 @@ Un PC y una impresora en la misma red pueden comunicarse directamente usando sus
 
 2. **Dinámica:** Generada automáticamente por el dispositivo:
    
-   - Puede usar un ID de interfaz aleatorio o
+   - Puede usar un ID de interfaz aleatorio
    
    - El método EUI-64, que combina la dirección MAC del dispositivo con bits adicionales para formar el identificador.
 
@@ -408,8 +392,6 @@ Cada una recibe una dirección IPv6 GUA con su correspondiente longitud de prefi
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-30-16-03-55-image.png" title="" alt="" data-align="center">
 
-
-
 #### Configuración de GUA estática en un host de Windows
 
 Configurar una dirección IPv6 manualmente en un host es similar a hacerlo con IPv4. 
@@ -421,15 +403,13 @@ También puede usarse la dirección local de enlace (LLA) del router como puerta
 Al igual que en IPv4, configurar direcciones IPv6 estáticas en cada cliente no es práctico en redes grandes. 
 Por eso, se usa la asignación dinámica de direcciones IPv6, que permite que los dispositivos obtengan su dirección automáticamente sin intervención manual.
 
-Existen dos métodos principales*:
+Existen dos métodos principales:
 
 1. **SLAAC (Stateless Address Autoconfiguration)** → el dispositivo genera su propia dirección IPv6 usando la información que recibe del router, sin depender de un servidor DHCP.
 
 2. **DHCPv6 con información de estado** → el servidor DHCPv6 asigna direcciones IPv6 y puede llevar un registro (estado) de qué dirección tiene cada dispositivo.
 
 *Nota: En ambos casos, el LLA (Link-Local Address) del router se configura automáticamente como la puerta de enlace predeterminada, facilitando la comunicación dentro de la red.*
-
-
 
 #### Configuración estática de una dirección de unidifusión local de enlace
 
@@ -491,8 +471,6 @@ Existen tres métodos principales para que los dispositivos obtengan su configur
 
 El router IPv6 guía a los hosts sobre cómo autoconfigurarse, ya sea completamente por sí mismos (SLAAC), con ayuda parcial de DHCPv6, o totalmente a través de un servidor DHCPv6.
 
-
-
 #### Método 1 - SLAAC
 
 **SLAAC (Stateless Address Autoconfiguration)** es un método que permite a un dispositivo generar su propia dirección IPv6 global unicast (GUA) sin depender de un servidor DHCPv6.
@@ -520,8 +498,6 @@ Cada host se autoconfigura usando los datos recibidos en el mensaje RA.
 1. *El enrutador envia un mensaje RA con el prefijo para el enlace local.*
 2. *La PC usa SLAAC para obtener un prefijo del mensaje RA y crea su propia ID de interfaz.*
 
-
-
 #### Método 2 - SLAAC y DHCPv6 sin estado
 
 El enrutador puede configurarse para que los dispositivos obtengan su configuración IPv6 combinando SLAAC y DHCPv6 sin estado.
@@ -541,8 +517,6 @@ SLAAC configura la dirección IPv6, el router actúa como puerta de enlace, y el
    prefijo y puerta de enlace predeterminada. Pero tendrá que obtener información DNS de un servidor DHCPv6»*.
 3. *El PC envia un mensaje de solicitud DHCPv6 a todos los servidores DHCPv6. «Utilicé SLAAC para crear mi dirección IPv6 y obtener mi dirección de puerta de
    enlace predeterminada, pero necesito otra información de un servidor DHCPv6 sin estado.* 
-
-
 
 #### Método 3 - DHCPv6 con estado
 
@@ -568,8 +542,6 @@ Un servidor DHCPv6 con estado asigna direcciones IPv6 a los dispositivos y manti
 
 La dirección de puerta de enlace predeterminada no la entrega el servidor DHCPv6 (ni con ni sin estado); solo se obtiene automáticamente a través del mensaje RA (Router Advertisement) del enrutador.
 
-
-
 #### Proceso EUI-64 versus generado aleatorio
 
 Cuando el mensaje RA usa SLAAC o SLAAC con DHCPv6 sin estado, el cliente genera su propia ID de interfaz, ya que elprefijo se obtiene del mensaje RA, pero la segunda parte (ID de interfaz) debe crearla el dispositivo. 
@@ -579,8 +551,6 @@ Esta ID puede generarse mediante el método EUI-64 o con un número aleatorio de
 
 1. *El enrutador envia un mensaje RA.*
 2. *El PC utiliza el prefijo del mensaje RA y utiliza EUI-64 o un número aleatorio de 64 bits para generar un ID de interfaz.*
-
-
 
 #### Proceso EUI-64
 
@@ -630,8 +600,6 @@ Por eso, al crear una dirección EUI-64, se invierte este bit para mostrar que l
 El comando ipconfig puede mostrar una dirección IPv6 global (GUA) generada dinámicamente mediante SLAAC y el proceso EUI-64, que inserta **“fffe”** en medio de la ID de la interfaz, derivándola de la dirección MAC. 
 Este método facilita rastrear una dirección IPv6 hasta un dispositivo físico, lo que plantea problemas de privacidad. Por ello, se pueden usar IDs de interfaz aleatorias para evitar el rastreo.
 
-
-
 #### ID de interfaz generadas aleatoriamente
 
 Según el sistema operativo, un dispositivo puede generar su ID de interfaz de forma aleatoria o mediante EUI-64. 
@@ -652,8 +620,6 @@ Es fundamental verificar la configuración IPv6 para asegurarse de que las direc
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-31-10-14-28-image.png" title="" alt="" data-align="center">
 
-
-
 #### LLA dinámicos en Windows
 
 Los sistemas operativos, como Windows, suelen usar el mismo método de generación de direcciones (por ejemplo, EUI-64 o un número aleatorio) tanto para crear una GUA mediante SLAAC como para asignar una LLA de forma dinámica.
@@ -666,15 +632,11 @@ Los sistemas operativos, como Windows, suelen usar el mismo método de generaci�
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-31-10-16-27-image.png" title="" alt="" data-align="center">
 
-
-
 #### LLA dinámicos en enrutadores Cisco
 
 Los routers Cisco generan automáticamente una LLA IPv6 al asignar una GUA a una interfaz, usando el método EUI-64 para crear la ID de interfaz. En interfaces seriales, usan la MAC de una interfaz Ethernet. Aunque estas LLAs son únicas en su enlace, su longitud las hace difíciles de identificar, por lo que es común configurarlas manualmente para facilitar su reconocimiento.
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-31-11-56-02-image.png" title="" alt="" data-align="center">
-
-
 
 #### Verifique la configuración de la dirección IPv6
 
@@ -724,8 +686,6 @@ Existen dos tipos principales:
 
 2. **Multidifusión de nodo solicitado** → utilizadas por los dispositivos para la resolución de direcciones y detección de vecinos.
 
-
-
 #### Direcciones de multidifusión IPv6 bien conocidas
 
 Las direcciones de multidifusión IPv6 conocidas son direcciones reservadas para grupos específicos de dispositivos que comparten un protocolo o servicio común, como DHCPv6.
@@ -739,8 +699,6 @@ Dos de las más comunes son:
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-31-13-16-28-image.png" title="" alt="" data-align="center">
 
 *Los dispositivos con IPv6 habilitado envían mensajes ICMPv6 RS (Router Solicitation) a la dirección de multidifusión de todos los enrutadores (`ff02::2`) para pedir información de configuración. En respuesta, el router IPv6 envía un mensaje RA (Router Advertisement) que proporciona los datos necesarios para que el dispositivo configure su dirección IPv6.*
-
-
 
 #### Direcciones IPv6 de multidifusión de nodo solicitado
 
@@ -770,8 +728,6 @@ Con un prefijo global /48, se obtienen:
 No es necesario convertir a binario: para crear nuevas subredes, basta con sumar valores en hexadecimal. 
 Además, la conservación de direcciones no es un problema gracias al amplio espacio de 128 bits.
 
-
-
 #### Ejemplo de subred IPv6
 
 Cuando a una organización se le asigna el prefijo 2001:db8:acad::/48, los primeros 48 bits identifican el prefijo de enrutamiento global, común para todas sus subredes.
@@ -781,8 +737,6 @@ Para generar cada nueva subred, simplemente se incrementa el valor hexadecimal d
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-31-13-45-29-image.png" title="" alt="" data-align="center">
 
-
-
 #### Asignación de subredes IPv6
 
 Con IPv6, el administrador debe diseñar un esquema lógico de direccionamiento entre más de 65.536 subredes posibles. En el ejemplo, se requieren cinco subredes: una para cada LAN y una para el enlace serie entre R1 y R2. A diferencia de IPv4, todas las subredes, incluso la del enlace serie, usan la misma longitud de prefijo, lo que simplifica la administración, ya que en IPv6 no es necesario preocuparse por conservar direcciones.
@@ -790,8 +744,6 @@ Con IPv6, el administrador debe diseñar un esquema lógico de direccionamiento 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-31-13-54-58-image.png" title="" alt="" data-align="center">
 
 Se asignaron cinco subredes IPv6 con los ID de subred del 0001 al 0005. Cada subred tiene un prefijo /64, lo que ofrece una cantidad de direcciones muy superior a las que se podrían necesitar.
-
-
 
 #### Enrutador configurado con subredes IPv6
 

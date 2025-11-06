@@ -4,7 +4,7 @@
 
 - **Plugins:** Jira , Azure , Miro (Tablero de agilidad o gestion de producto)
 
-- **Plugins:** Repositorio de codigo
+- **Plugins:** Repositorio de código
 
 - **Plugins:** Notificacion (Correo, slack, discord)
 

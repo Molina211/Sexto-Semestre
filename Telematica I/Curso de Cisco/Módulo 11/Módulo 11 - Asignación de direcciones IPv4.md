@@ -4,14 +4,14 @@
 
 ## Contenido
 
-- **Estructura de la direccion IPv4:** Describe la estructura de una dirección IPv4, incluidas la porción de red y de host, y la
+- **Estructura de la dirección IPv4:** Describe la estructura de una dirección IPv4, incluidas la porción de red y de host, y la
   máscara de subred.
 
 - **IPv4 Unicast, Broadcast, y Multicast:** Compare las características y los usos de las direcciones IPv4 unicast, broadcast y multicast.
 
 - **Tipos de direcciones IPv4:** Explica las direcciones IPv4 públicas, privadas y reservadas.
 
-- **Segmentacion de la red:** Explica la forma en que la division en subredes segmenta una red para permitir una mejor comunicación.
+- **Segmentación de la red:** Explica la forma en que la division en subredes segmenta una red para permitir una mejor comunicación.
 
 - **Division de subredes de una red IPv4:** Calcula las subredes IPv4 para un prefijo /24.
 
@@ -120,7 +120,7 @@ Ejemplo: 192.168.10.0/24.
 
 | Descripción                                  | Porción de red (Decimal / Binario)                                                                                                       | Porción de host (Decimal / Binario)                                                                                                      | Bits de host        |
 |:-------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| **Máscara de subred 255.255.255.0 /24**      | <img title="" src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-49-46-image.png" alt="" data-align="inline"> | <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-52-44-image.png" title="" alt="" data-align="center"> |                     |
+| **Máscara de subred 255.255.255.0 /24**      | <img title="" src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-49-46-image.png" alt="" data-align="inline"> | <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-52-44-image.png" title="" alt="" data-align="center"> | Todos los 0         |
 | **Dirección de red 192.168.10.0 /24**        | <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-50-51-image.png" title="" alt="" data-align="inline"> | <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-52-57-image.png" title="" alt="" data-align="center"> | Todos los 0         |
 | **Primera dirección 192.168.10.1 /24**       | <img title="" src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-50-32-image.png" alt="" data-align="inline"> | <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-53-07-image.png" title="" alt="" data-align="center"> | Todos los 0s y un 1 |
 | **Última dirección 192.168.10.254 /24**      | <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-51-05-image.png" title="" alt="" data-align="inline"> | <img title="" src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-27-15-53-16-image.png" alt="" data-align="center"> | Todos los 1s y un 0 |
