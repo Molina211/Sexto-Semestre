@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2f047868264343f8",
+        "id": "859268267073dd2e",
         "type": "tabs",
         "children": [
           {
-            "id": "10156b6bb47a7a18",
+            "id": "85cc158a9758ca54",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Telematica I/Curso de Cisco/Módulo 15/Módulo 15 - Capa de aplicación.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "Módulo 15 - Capa de aplicación"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 224.5
   },
   "right": {
     "id": "fabeb3a315e2a995",
@@ -138,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Telematica I/Semana 14/Distribución.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de Distribución"
             }
           }
         ],
@@ -151,7 +156,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 284.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,54 +170,54 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "10156b6bb47a7a18",
+  "active": "85cc158a9758ca54",
   "lastOpenFiles": [
-    "Arquitectura de software/Semana 14/Laboratorio aws/Implementación de Jenkins + Git en AWS.pdf",
-    "Arquitectura de software/Semana 14/Laboratorio aws/Laboratorio - Jenkins - Post-Build y Archivar Artefactos.pdf",
-    "Arquitectura de software/Semana 14/Laboratorio aws/mso4FF0.tmp",
-    "Arquitectura de software/Semana 14/Laboratorio aws/~WRL2147.tmp",
-    "Arquitectura de software/Semana 14/Laboratorio aws/~WRD2119.tmp",
-    "Arquitectura de software/Semana 14/Laboratorio aws/jenkins.ppk",
-    "Arquitectura de software/Semana 14/Laboratorio aws/~$boratorio - Jenkins - Post-Build y Archivar Artefactos.docx",
+    "Telematica I/Semana 10/Interconexión de Redes LAN - IPv4.pdf",
+    "Telematica I/Semana 14/~WRL2780.tmp",
+    "Telematica I/Semana 14/~WRD2698.tmp",
+    "Telematica I/Semana 14/~WRD2253.tmp",
+    "Telematica I/Curso de Cisco/Módulo 15/Módulo 15 - Capa de aplicación.md",
+    "Telematica I/Semana 14/Proyecto Telematica Final.pkt~",
+    "Telematica I/Semana 14/~WRL2891.tmp",
+    "Telematica I/Semana 14/~WRD2871.tmp",
+    "Telematica I/Semana 14/~WRL3032.tmp",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 5.32.29 PM.jpeg",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.53.29 PM.jpeg",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.53.41 PM.jpeg",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.54.33 PM.jpeg",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.55.05 PM.jpeg",
+    "Telematica I/Semana 14/Exposición - Guion.md",
     "Telematica I/Semana 14/Distribución.md",
     "Telematica I/Semana 12/ABP Telematica I G2.pdf",
-    "Arquitectura de software/Semana 14/Laboratorio aws/Laboratorio - Jenkins - Post-Build y Archivar Artefactos.docx",
-    "Arquitectura de software/Semana 14/Laboratorio - Jenkins - Post-Build y Archivar Artefactos.docx",
-    "Arquitectura de software/Semana 14/Laboratorio - Jenkins - Post-Build y Archivar Artefactos/Laboratorio - Jenkins - Post-Build y Archivar Artefactos.docx",
-    "Arquitectura de software/Semana 14/Laboratorio aws/jenkins-webhook-main/README.md",
+    "Telematica I/Semana 10/Guia de Práctica 2. Interconexión de Redes  LAN - IPv4.pdf",
+    "Telematica I/Semana 14/pptC99B.tmp",
+    "Telematica I/Curso de Cisco/Módulo 12/Módulo 12 - Asignación de direcciones IPv6.md",
+    "Telematica I/Curso de Cisco/Módulo 14/Módulo 14 - Capa de transporte.md",
+    "Telematica I/Curso de Cisco/Módulo 13/Módulo 13 - ICMP.md",
+    "Telematica I/Curso de Cisco/Módulo 10/Módulo 10 - Configuración básica de un router.md",
     "Telematica I/Curso de Cisco/Módulo 11/Módulo 11 - Asignación de direcciones IPv4.md",
+    "Telematica I/Curso de Cisco/Módulo 08/Módulo 8 - Capa de red.md",
+    "Telematica I/Curso de Cisco/Módulo 09/Módulo 9 - Resolución de dirección.md",
+    "Arquitectura de software/Semana 03/Elaboración de grupos de trabajo.md",
+    "Análisis financiero/Semana 09/El mundo de las instituciones financieras.md",
+    "Análisis financiero/Semana 02/Análisis financiero.md",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 5.33.41 PM.jpeg",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 5.33.13 PM.jpeg",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 5.32.46 PM.jpeg",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 5.32.30 PM.jpeg",
+    "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 5.32.27 PM.jpeg",
+    "Telematica I/Semana 12/Direccionamiento IP.md",
+    "Telematica I/Curso de Cisco/Módulo 06/Módulo 6 - Capa de enlace de datos.md",
+    "Telematica I/Curso de Cisco/Módulo 04/Módulo 4  - Capa física.md",
+    "Telematica I/Curso de Cisco/Módulo 07/Módulo 7 - Switching Ethernet.md",
+    "Arquitectura de software/Semana 14/Laboratorio aws/jenkins-webhook-main/README.md",
     "Metodología de investigación/Semana 14/Marco Teórico.md",
     "Metodología de investigación/Semana 13/Presentación del marco teorico y su variantes.md",
-    "Telematica I/Curso de Cisco/Módulo 08/Módulo 8 - Capa de red.md",
     "Telematica I/Semana 07/Apoyo para el Módulo 5 (IPv4 y IPv6).md",
     "Análisis financiero/Semana 12/Estado de resultados.md",
     "Análisis financiero/Semana 14/Estado de flujo de efectivo.md",
     "Análisis financiero/Semana 14/Generalidades y conceptos, costos y gastos.md",
-    "Telematica I/Curso de Cisco/Módulo 06/Módulo 6 - Capa de enlace de datos.md",
-    "Telematica I/Curso de Cisco/Módulo 10/Módulo 10 - Configuración básica de un router.md",
-    "Telematica I/Curso de Cisco/Módulo 07/Módulo 7 - Switching Ethernet.md",
     "Telematica I/Semana 08/Módulo 6 - Capa de enlace de datos.md",
-    "Telematica I/Curso de Cisco/Módulo 04/Módulo 4  - Capa física.md",
-    "Telematica I/Semana 06/Módulo 4  - Capa física.md",
-    "Telematica I/Curso de Cisco/Módulo 14/Módulo 14 - Capa de transporte.md",
-    "Telematica I/Semana 12/Direccionamiento IP.md",
-    "Telematica I/Curso de Cisco/Módulo 15/Módulo 15 - Capa de aplicación.md",
-    "Telematica I/Semana 02/Módulo 1 - Las redes en la actualidad.md",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104111306.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104111143.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104110735.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104110731.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104105435.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104105131.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104104556.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104104122.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104103438.png",
-    "Telematica I/Curso de Cisco/Módulo 15/ANEXOS/Pasted image 20251104103352.png",
-    "Telematica I/Curso de Cisco/Módulo 12/Módulo 12 - Asignación de direcciones IPv6.md",
-    "Telematica I/Curso de Cisco/Módulo 03/Módulo 3 - Protocolos y modelos.md",
-    "Telematica I/Curso de Cisco/Módulo 02/Modulo 2 - Configuración básica de switches y terminales.md",
-    "Telematica I/Semana 03/Modulo 2 - Configuración básica de switches y terminales.md",
-    "Excalidraw/Drawing 2025-11-02 23.43.02.excalidraw.md",
     "Sin título.canvas"
   ]
 }

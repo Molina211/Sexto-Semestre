@@ -1,0 +1,10 @@
+{
+  "latex-math:eval-latex-expression": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "\\"
+    }
+  ]
+}

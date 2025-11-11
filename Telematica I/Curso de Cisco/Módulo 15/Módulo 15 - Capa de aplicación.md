@@ -64,7 +64,7 @@ Estos protocolos son usados por los dispositivos de origen y destino durante una
 
    *BOOTP - Protocolo de arranque*
    
-   Cliente* UDP 68, servidor 67
+   Cliente UDP 68, servidor 67
    
    - Permite que una estación de trabajo sin disco obtenga su propia dirección IP, la dirección IP de un servidor BOOTP en la red y un archivo que se debe cargar en la memoria para arrancar la maquina.
    - El protocolo DHCP reemplaza al protocolo BOOTP.
@@ -104,7 +104,7 @@ Estos protocolos son usados por los dispositivos de origen y destino durante una
 
    *TFTP - Trivial File Transfer Protocol*
    
-   Cliente* UDP 69
+   Cliente UDP 69
    
    - Un protocolo de transferencia de archivos simple y sin conexión con entrega de archivos sin reconocimiento y sin el máximo esfuerzo
    - Utiliza menos sobrecarga que FTP.

@@ -102,7 +102,7 @@ También incluye un mensaje de redirección, equivalente al de ICMPv4, para opti
    El dispositivo envía un mensaje de Solicitud de Vecino (NS) usando su propia dirección como objetivo. 
    Si otro dispositivo tiene esa dirección, responde con un mensaje de Anuncio de Vecino (NA) indicando que está en uso. 
    Si no hay respuesta, la dirección se considera única y válida. 
-   Aunque no es obligatoria, laRFC 4861 recomienda realizar DAD** para las direcciones unicast.
+   Aunque no es obligatoria, laRFC 4861 recomienda realizar DAD para las direcciones unicast.
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-11-01-02-07-39-image.png" title="" alt="" data-align="center">
 
