@@ -163,13 +163,14 @@
       "daily-notes:Abrir la nota de hoy": true,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": true,
-      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
+      "github-sync:Sync with Remote": false
     }
   },
-  "active": "ea9cf50950bb1bae",
+  "active": "2433780155217b46",
   "lastOpenFiles": [
-    "Sin título 1.canvas",
     "Sin título.canvas",
+    "Sin título 1.canvas",
     "Sistemas operativos/Semana 15/Parcial de tercer corte.md",
     "Microcontroladores/Semana 14/Avances del proyecto en clase.md",
     "Sistemas operativos/Semana 15",
