@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "859268267073dd2e",
+        "id": "67dbfafcb18c30c2",
         "type": "tabs",
         "children": [
           {
-            "id": "85cc158a9758ca54",
+            "id": "2433780155217b46",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Telematica I/Curso de Cisco/Módulo 15/Módulo 15 - Capa de aplicación.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Módulo 15 - Capa de aplicación"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -170,17 +166,31 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "85cc158a9758ca54",
+  "active": "ea9cf50950bb1bae",
   "lastOpenFiles": [
+    "Sin título 1.canvas",
+    "Sin título.canvas",
+    "Sistemas operativos/Semana 15/Parcial de tercer corte.md",
+    "Microcontroladores/Semana 14/Avances del proyecto en clase.md",
+    "Sistemas operativos/Semana 15",
+    "Microcontroladores/Semana 15",
+    "Metodología de investigación/Semana 15.md",
+    "Metodología de investigación/Semana 15",
+    "Arquitectura de software/Semana 15/Parcial del tercer corte.md",
+    "Telematica I/Curso de Cisco/Módulo 14/Módulo 14 - Capa de transporte.md",
+    "Telematica I/Curso de Cisco/Módulo 15/Módulo 15 - Capa de aplicación.md",
+    "Telematica I/Curso de Cisco/Módulo 12/Módulo 12 - Asignación de direcciones IPv6.md",
+    "Telematica I/Semana 14/Proyecto Telematica Final.pkt~",
+    "Telematica I/Curso de Cisco/Módulo 11/Módulo 11 - Asignación de direcciones IPv4.md",
+    "Telematica I/Curso de Cisco/Módulo 10/Módulo 10 - Configuración básica de un router.md",
+    "Telematica I/Curso de Cisco/Módulo 09/Módulo 9 - Resolución de dirección.md",
+    "Telematica I/Curso de Cisco/Módulo 08/Módulo 8 - Capa de red.md",
     "Telematica I/Semana 10/Interconexión de Redes LAN - IPv4.pdf",
     "Telematica I/Semana 14/~WRL2780.tmp",
     "Telematica I/Semana 14/~WRD2698.tmp",
     "Telematica I/Semana 14/~WRD2253.tmp",
-    "Telematica I/Curso de Cisco/Módulo 15/Módulo 15 - Capa de aplicación.md",
-    "Telematica I/Semana 14/Proyecto Telematica Final.pkt~",
     "Telematica I/Semana 14/~WRL2891.tmp",
     "Telematica I/Semana 14/~WRD2871.tmp",
-    "Telematica I/Semana 14/~WRL3032.tmp",
     "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 5.32.29 PM.jpeg",
     "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.53.29 PM.jpeg",
     "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.53.41 PM.jpeg",
@@ -188,16 +198,7 @@
     "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.55.05 PM.jpeg",
     "Telematica I/Semana 14/Exposición - Guion.md",
     "Telematica I/Semana 14/Distribución.md",
-    "Telematica I/Semana 12/ABP Telematica I G2.pdf",
-    "Telematica I/Semana 10/Guia de Práctica 2. Interconexión de Redes  LAN - IPv4.pdf",
-    "Telematica I/Semana 14/pptC99B.tmp",
-    "Telematica I/Curso de Cisco/Módulo 12/Módulo 12 - Asignación de direcciones IPv6.md",
-    "Telematica I/Curso de Cisco/Módulo 14/Módulo 14 - Capa de transporte.md",
     "Telematica I/Curso de Cisco/Módulo 13/Módulo 13 - ICMP.md",
-    "Telematica I/Curso de Cisco/Módulo 10/Módulo 10 - Configuración básica de un router.md",
-    "Telematica I/Curso de Cisco/Módulo 11/Módulo 11 - Asignación de direcciones IPv4.md",
-    "Telematica I/Curso de Cisco/Módulo 08/Módulo 8 - Capa de red.md",
-    "Telematica I/Curso de Cisco/Módulo 09/Módulo 9 - Resolución de dirección.md",
     "Arquitectura de software/Semana 03/Elaboración de grupos de trabajo.md",
     "Análisis financiero/Semana 09/El mundo de las instituciones financieras.md",
     "Análisis financiero/Semana 02/Análisis financiero.md",
@@ -213,11 +214,6 @@
     "Arquitectura de software/Semana 14/Laboratorio aws/jenkins-webhook-main/README.md",
     "Metodología de investigación/Semana 14/Marco Teórico.md",
     "Metodología de investigación/Semana 13/Presentación del marco teorico y su variantes.md",
-    "Telematica I/Semana 07/Apoyo para el Módulo 5 (IPv4 y IPv6).md",
-    "Análisis financiero/Semana 12/Estado de resultados.md",
-    "Análisis financiero/Semana 14/Estado de flujo de efectivo.md",
-    "Análisis financiero/Semana 14/Generalidades y conceptos, costos y gastos.md",
-    "Telematica I/Semana 08/Módulo 6 - Capa de enlace de datos.md",
-    "Sin título.canvas"
+    "Telematica I/Semana 07/Apoyo para el Módulo 5 (IPv4 y IPv6).md"
   ]
 }

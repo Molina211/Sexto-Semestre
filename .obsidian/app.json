@@ -3,5 +3,6 @@
   "alwaysUpdateLinks": true,
   "newLinkFormat": "absolute",
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "./ANEXOS"
+  "attachmentFolderPath": "./ANEXOS",
+  "promptDelete": false
 }

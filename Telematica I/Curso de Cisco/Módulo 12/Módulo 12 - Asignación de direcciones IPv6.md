@@ -34,7 +34,7 @@ IPv4 tiene un límite de ~4.300 millones de direcciones, y aunque las direccione
 
 Además, el crecimiento del **Internet de las cosas (IoT)**, con dispositivos como autos, electrodomésticos y equipos biomédicos conectados, hace que el espacio limitado de IPv4 sea insuficiente. Por estas razones, la transición a IPv6 es necesaria para soportar la expansión de Internet y nuevas tecnologías.
 
-#### Coexistencia de IPv6 e IPv6
+#### Coexistencia de IPv4 e IPv6
 
 No hay una fecha límite para la adopción de IPv6; IPv4 e IPv6 coexistirán durante varios años. El IETF desarrolló protocolos y herramientas para facilitar la migración, y las técnicas de transición se pueden clasificar en tres categorías principales:
 
@@ -165,7 +165,7 @@ Existen tres tipos principales de direcciones IPv6:
 
 2. **Multidifusión:** Permite enviar un solo paquete a varios destinos simultáneamente.
 
-3. **Difusión por proximidad(Anycast):** Asigna una dirección a varios dispositivos, pero el paquete se envía solo al más cercano con esa dirección.
+3. **Difusión por proximidad (Anycast):** Asigna una dirección a varios dispositivos, pero el paquete se envía solo al más cercano con esa dirección.
 
 A diferencia de IPv4, IPv6 no usa direcciones de difusión, aunque la multidifusión de todos los nodos cumple una función similar.
 
@@ -513,10 +513,8 @@ SLAAC configura la dirección IPv6, el router actúa como puerta de enlace, y el
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-30-17-56-28-image.png" title="" alt="" data-align="center">
 
 1. *El PC envia un RS a todos los enrutadores IPv6, «Necesito información de direccionamiento».*
-2. *El enrutador envia un mensaje RA a todos los nodos IPv6 con el Método 2 (SLAAC y DHCPv6) especificado. "Aqui esta la información de su prefijo, longitud de
-   prefijo y puerta de enlace predeterminada. Pero tendrá que obtener información DNS de un servidor DHCPv6»*.
-3. *El PC envia un mensaje de solicitud DHCPv6 a todos los servidores DHCPv6. «Utilicé SLAAC para crear mi dirección IPv6 y obtener mi dirección de puerta de
-   enlace predeterminada, pero necesito otra información de un servidor DHCPv6 sin estado.* 
+2. *El enrutador envia un mensaje RA a todos los nodos IPv6 con el Método 2 (SLAAC y DHCPv6) especificado. "Aqui esta la información de su prefijo, longitud de prefijo y puerta de enlace predeterminada. Pero tendrá que obtener información DNS de un servidor DHCPv6»*.
+3. *El PC envia un mensaje de solicitud DHCPv6 a todos los servidores DHCPv6. «Utilicé SLAAC para crear mi dirección IPv6 y obtener mi dirección de puerta de enlace predeterminada, pero necesito otra información de un servidor DHCPv6 sin estado.* 
 
 #### Método 3 - DHCPv6 con estado
 
@@ -544,7 +542,7 @@ La dirección de puerta de enlace predeterminada no la entrega el servidor DHCPv
 
 #### Proceso EUI-64 versus generado aleatorio
 
-Cuando el mensaje RA usa SLAAC o SLAAC con DHCPv6 sin estado, el cliente genera su propia ID de interfaz, ya que elprefijo se obtiene del mensaje RA, pero la segunda parte (ID de interfaz) debe crearla el dispositivo. 
+Cuando el mensaje RA usa SLAAC o SLAAC con DHCPv6 sin estado, el cliente genera su propia ID de interfaz, ya que el prefijo se obtiene del mensaje RA, pero la segunda parte (ID de interfaz) debe crearla el dispositivo. 
 Esta ID puede generarse mediante el método EUI-64 o con un número aleatorio de 64 bits.
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-30-18-07-21-image.png" title="" alt="" data-align="center">
@@ -603,7 +601,7 @@ Este método facilita rastrear una dirección IPv6 hasta un dispositivo físico,
 #### ID de interfaz generadas aleatoriamente
 
 Según el sistema operativo, un dispositivo puede generar su ID de interfaz de forma aleatoria o mediante EUI-64. 
-Desde Windows Vista, se usa una ID aleatoria, mientras que Windows X** y versiones anteriores empleaban EUI-64. 
+Desde Windows Vista, se usa una ID aleatoria, mientras que Windows X y versiones anteriores empleaban EUI-64. 
 Una vez creada la ID (por cualquiera de los métodos), se combina con el prefijo IPv6 recibido en el mensaje RA para formar una dirección GUA.
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-30-18-41-27-image.png" title="" alt="" data-align="center">

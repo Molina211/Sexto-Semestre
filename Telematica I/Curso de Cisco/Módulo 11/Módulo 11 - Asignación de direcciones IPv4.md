@@ -456,7 +456,7 @@ Se muestra las subredes resultantes de tomar prestados 10 bits, creando subredes
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-29-09-54-36-image.png" title="" alt="" data-align="center">
 
-Al prestar 10 bits para crear subredes en la red 10.0.0.0/8, quedan 14 bits para los hosts, lo que da 16 384 direcciones por subred. 
+Al prestar 10 bits para crear subredes en la red 10.0.0.0/8, quedan 14 bits para los hosts, lo que da 16 384 direcciones por subred.
 Al restar las direcciones reservadas (red y difusión), quedan 16 382 hosts utilizables por subred. 
 Así, cada una de las 1000 subredes puede soportar hasta 16 382 dispositivos.
 

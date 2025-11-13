@@ -1,0 +1,3 @@
+# Parcial del tercer corte
+
+---

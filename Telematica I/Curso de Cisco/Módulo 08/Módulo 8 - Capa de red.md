@@ -246,10 +246,10 @@ El comando **`netstat -r`** (o **`route print`**) muestra tres secciones princip
 
 ### Introducción al enrutamiento
 
-Cuando un paquete llega al router, este analiza su dirección IP de destino y consulta su tabla de enrutamiento para decidir a dónde enviarlo. La tabla contiene todas las redes conocidas y sus rutas, y el router reenvía el paquete por la mejor coincidencia disponible (la ruta más larga o específica).
+Cuando un paquete llega al router, este analiza su dirección IP de destino y consulta su tabla de enrutamiento para decidir a dónde enviarlo. La tabla contiene todas las redes conocidas y sus rutas, y ia disel router reenvía el paquete por la mejor coincidencponible (la ruta más larga o específica).
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-33-33-image.png" title="" alt="" data-align="center">
-
+ 
 *R1 Routing Table*
 
 <img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-34-51-image.png" title="" alt="" data-align="center">
