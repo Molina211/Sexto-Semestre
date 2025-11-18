@@ -1,34 +1,34 @@
 from machine import Pin, PWM
 from time import sleep
 
-# === CONFIGURACIÓN DEL SERVO ===
-servo_pin = 5  # Cambia este número según dónde conectaste el servo
-servo = PWM(Pin(servo_pin), freq=50)  # Frecuencia estándar para servos (50 Hz)
+servo = PWM(Pin(4), freq=50)
 
-# === FUNCIONES DE CONTROL ===
+# LÍMITES REALES DE TU SERVO
+DUTY_MIN = 40     # posición 0°
+DUTY_MAX = 130    # posición 180°
 
 def mover_servo(grados):
-    """
-    Mueve el servo a un ángulo dado (0° a 180°)
-    """
-    # Convierte grados a ciclo de trabajo (duty)
-    # Rango típico: 0.5ms (0°) a 2.5ms (180°)
-    duty = int((grados / 180) * 100 + 25)
-    servo.duty(duty)
+    # Convierte grados (0–180) al rango de duty que tu servo acepta
+    duty = DUTY_MIN + (grados / 180) * (DUTY_MAX - DUTY_MIN)
+    servo.duty(int(duty))
 
-# === PROGRAMA PRINCIPAL ===
-print("\nIniciando control del servomotor...")
+print("→ Moviendo a posición inicial (0°)...")
+mover_servo(0)
 sleep(1)
 
-while True:
-    print("🔒 Cerradura cerrada (0°)")
-    mover_servo(0)
-    sleep(2)
+print("→ Iniciando recorrido grande...")
 
-    print("🔓 Abriendo cerradura (90°)...")
-    mover_servo(90)
-    sleep(3)
+# Recorrido desde 0° hasta 180°
+for angulo in range(110, -1, -5):
+    mover_servo(angulo)
+    print("Ángulo:", angulo)
+    sleep(0.05)
 
-    print("🔄 Regresando a posición inicial (0°)...")
-    mover_servo(0)
-    sleep(3)
+# Regreso desde 180° a 0°
+print("→ Volviendo a 0°...")
+for angulo in range(-1, 111, 5):
+    mover_servo(angulo)
+    print("Ángulo:", angulo)
+    sleep(0.05)
+
+print("✔ Recorrido completo")

@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "67dbfafcb18c30c2",
+        "id": "a42d8b2f51cd5df1",
         "type": "tabs",
         "children": [
           {
-            "id": "2433780155217b46",
+            "id": "24e77e54beb602bc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas operativos/Semana 16/Narrativa de exposición de algoritmos.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "Narrativa de exposición de algoritmos"
             }
           }
         ]
@@ -163,12 +167,14 @@
       "daily-notes:Abrir la nota de hoy": true,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": true,
-      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "github-sync:Sync with Remote": false
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "2433780155217b46",
+  "active": "24e77e54beb602bc",
   "lastOpenFiles": [
+    "Sistemas operativos/Semana 16/Narrativa de exposición de algoritmos.md",
+    "Excalidraw/Drawing 2025-11-13 02.31.59.excalidraw.md",
+    "Excalidraw",
     "Sin título.canvas",
     "Sin título 1.canvas",
     "Sistemas operativos/Semana 15/Parcial de tercer corte.md",
@@ -191,7 +197,6 @@
     "Telematica I/Semana 14/~WRD2698.tmp",
     "Telematica I/Semana 14/~WRD2253.tmp",
     "Telematica I/Semana 14/~WRL2891.tmp",
-    "Telematica I/Semana 14/~WRD2871.tmp",
     "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 5.32.29 PM.jpeg",
     "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.53.29 PM.jpeg",
     "Telematica I/Semana 14/Fotos/WhatsApp Image 2025-11-08 at 4.53.41 PM.jpeg",
@@ -214,7 +219,6 @@
     "Telematica I/Curso de Cisco/Módulo 07/Módulo 7 - Switching Ethernet.md",
     "Arquitectura de software/Semana 14/Laboratorio aws/jenkins-webhook-main/README.md",
     "Metodología de investigación/Semana 14/Marco Teórico.md",
-    "Metodología de investigación/Semana 13/Presentación del marco teorico y su variantes.md",
-    "Telematica I/Semana 07/Apoyo para el Módulo 5 (IPv4 y IPv6).md"
+    "Metodología de investigación/Semana 13/Presentación del marco teorico y su variantes.md"
   ]
 }
