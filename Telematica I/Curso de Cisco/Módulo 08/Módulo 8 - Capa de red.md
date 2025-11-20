@@ -16,7 +16,7 @@
 
 La capa de red (Capa 3 del modelo OSI) permite el intercambio de datos entre dispositivos en distintas redes. Sus principales protocolos son **IPv4** e **IPv6**, y también incluye protocolos de enrutamiento como **OSPF** y de mensajería como **ICMP**.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-21-19-07-32-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-21-19-07-32-image.png]]
 
 La capa de red (Capa 3 del modelo OSI) se encarga de mover los datos de un dispositivo a otro a través de diferentes redes. Para hacerlo, realiza cuatro funciones principales:
 
@@ -26,7 +26,7 @@ La capa de red (Capa 3 del modelo OSI) se encarga de mover los datos de un dispo
 
 3. **Enrutamiento:** Los routers deciden la mejor ruta para que los paquetes lleguen a su destino, incluso si deben pasar por varios routers (llamados saltos).
 
-4. **Desencapsulación:** Al llegar al destino, el dispositivo revisa la dirección IP, quita el encabezado y envía los datos a la capa de transporte para su uso final.
+4. **Des encapsulación:** Al llegar al destino, el dispositivo revisa la dirección IP, quita el encabezado y envía los datos a la capa de transporte para su uso final.
 
 La capa de red se encarga de llevar los paquetes desde un host de origen hasta uno de destino, sin importar el tipo de datos que transporten.
 
@@ -38,7 +38,7 @@ Los routers y switches de capa 3 leen este encabezado para decidir la mejor ruta
 
 Gracias a este proceso, cada capa funciona de forma independiente, lo que permite que IPv4, IPv6 u otros protocolos nuevos operen sin afectar las demás capas.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-21-19-14-07-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-21-19-14-07-image.png]]
 
 El **NAT (Network Address Translation)** es una función que cambia las direcciones IP dentro de los paquetes, permitiendo que varios dispositivos de una red local compartan una sola IP pública al conectarse a Internet.
 
@@ -58,25 +58,25 @@ Decir que IP es un protocolo sin conexión significa que no establece una comuni
 
 *Sin conexión - Analogía*
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-21-19-28-50-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-21-19-28-50-image.png]]
 
 No hay intercambio inicial de control ni mantenimiento de una sesión durante la transmisión; IP simplemente envía los paquetes hacia su destino según la información del encabezado.
 
 *Sin conexión: red*
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-21-19-29-35-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-21-19-29-35-image.png]]
 
 #### Mejor esfuerzo
 
 IP no mantiene conexiones ni usa campos extra en su encabezado, lo que reduce su sobrecarga. Sin embargo, al no establecer una conexión previa, el emisor no puede saber si el destino está disponible ni si los paquetes llegan correctamente. Por ello, IP ofrece una entrega de mejor esfuerzo, sin garantía de recepción ni fiabilidad.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-21-19-31-50-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-21-19-31-50-image.png]]
 
 #### Independiente de los medios
 
 IP es poco confiable porque no puede detectar, corregir ni retransmitir paquetes perdidos, dañados o fuera de orden. Solo se encarga de dirigir los datos, sin confirmar su entrega. La confiabilidad es tarea de protocolos de capas superiores, como **TCP**. Además, IP es independiente del medio, por lo que puede transmitir datos sobre cobre, fibra óptica o redes inalámbricas.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-21-19-44-08-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-21-19-44-08-image.png]]
 
 La capa de enlace de datos prepara los paquetes IP para su transmisión por el medio físico, por lo que IP puede funcionar sobre cualquier tipo de red.
 
@@ -96,7 +96,7 @@ Este encabezado contiene campos con información binaria que permiten a los disp
 Los valores binarios de cada campo del encabezado IPv4 indican los parámetros del paquete. 
 Los diagramas del encabezado, leídos de izquierda a derecha y de arriba abajo, muestran visualmente la estructura y función de cada campo del protocolo IP.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-21-19-50-57-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-21-19-50-57-image.png]]
 
 | **Campo**                                      | **Tamaño (bits)** | **Descripción**                                                                                   |
 | ---------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------- |
@@ -145,18 +145,18 @@ Las principales mejoras son:
 
 #### Comparación del espacio de direcciones de IPv4 e IPv6
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-06-55-29-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-06-55-29-image.png]]
 
 Una mejora clave de IPv6 frente a IPv4 es su encabezado simplificado. 
 Mientras IPv4 tiene un encabezado variable de hasta 60 bytes con 12 campos, IPv6 reduce y reorganiza los campos, eliminando los innecesarios para lograr un procesamiento más eficiente.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-06-57-35-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-06-57-35-image.png]]
 
 El encabezado de IPv6 tiene una longitud fija de 40 octetos, principalmente por sus direcciones más largas, lo que permite un procesamiento más rápido y eficiente que en IPv4.
 
 #### Encabezado de paquetes IPv6
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-06-58-50-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-06-58-50-image.png]]
 
 Los campos del encabezado IPv6 son los elementos que permiten identificar, dirigir y gestionar los paquetes de datos en una red basada en esta versión del protocolo IP. En comparación con IPv4, IPv6 simplifica su estructura para mejorar la velocidad de procesamiento y la eficiencia del enrutamiento.
 
@@ -195,7 +195,7 @@ Un host puede enviar un paquete a:
 
 - **Host remoto:** Cuando el destino está en otra red, por lo que el paquete se envía mediante un router.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-07-12-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-07-12-image.png]]
 
 El dispositivo de origen decide si un paquete va a un **host local o remoto**:
 
@@ -218,7 +218,7 @@ Si no existe o está desactivada, los paquetes no pueden salir de la red local.
 La tabla de enrutamiento de un host incluye una puerta de enlace predeterminada, que permite enviar tráfico fuera de la red local. 
 En IPv4, se obtiene por DHCP o configuración manual, y en IPv6, el router la anuncia o también puede configurarse manualmente.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-21-08-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-21-08-image.png]]
 
 Configurar un gateway predeterminado crea una ruta predeterminada en la tabla de enrutamiento del host, usada para enviar tráfico a redes remotas. 
 Así, PC1 y PC2 envían todo el tráfico externo al router R1.
@@ -228,11 +228,11 @@ Así, PC1 y PC2 envían todo el tráfico externo al router R1.
 En Windows, los comandos **`route print`** o **`netstat -r`** muestran la tabla de enrutamiento del host, ofreciendo la misma información. 
 Aunque parezca compleja al inicio, su interpretación es sencilla y muestra cómo el host dirige el tráfico en la red.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-24-03-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-24-03-image.png]]
 
 *Ejemplo de tabla de enrutamiento en PC1 con IPv4*
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-24-52-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-24-52-image.png]]
 
 El comando **`netstat -r`** (o **`route print`**) muestra tres secciones principales:
 
@@ -246,13 +246,13 @@ El comando **`netstat -r`** (o **`route print`**) muestra tres secciones princip
 
 ### Introducción al enrutamiento
 
-Cuando un paquete llega al router, este analiza su dirección IP de destino y consulta su tabla de enrutamiento para decidir a dónde enviarlo. La tabla contiene todas las redes conocidas y sus rutas, y ia disel router reenvía el paquete por la mejor coincidencponible (la ruta más larga o específica).
+Cuando un paquete llega al router, este analiza su dirección IP de destino y consulta su tabla de enrutamiento para decidir a dónde enviarlo. La tabla contiene todas las redes conocidas y sus rutas, y ia disel router reenvía el paquete por la mejor coinciden ponible (la ruta más larga o específica).
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-33-33-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-33-33-image.png]]
  
 *R1 Routing Table*
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-34-51-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-34-30-image.png]]
 
 #### Tabla de enrutamiento IP del router
 
@@ -264,7 +264,7 @@ La tabla de enrutamiento de un router guarda tres tipos de rutas:
 
 - **Ruta predeterminada:** Usada como última opción cuando no existe una coincidencia específica en la tabla.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-37-20-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-37-20-image.png]]
 
 Un router puede descubrir redes remotas de dos maneras:
 
@@ -275,11 +275,11 @@ Un router puede descubrir redes remotas de dos maneras:
 
 Las rutas estáticas se configuran manualmente e indican la red remota y la dirección IP del siguiente salto por donde debe enviarse el paquete.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-38-53-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-38-52-image 1.png]]
 
 Las rutas estáticas no se actualizan automáticamente ante cambios en la red; deben modificarse manualmente. Si una ruta deja de estar disponible, el administrador debe reconfigurar el router para establecer una nueva ruta válida hacia el destino.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-39-35-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-39-35-image.png]]
 
 El enrutamiento estático se configura manualmente y requiere ajustes si cambia la topología. Es ideal para redes pequeñas o con pocos enlaces redundantes, y suele combinarse con enrutamiento dinámico para definir la ruta predeterminada.
 
@@ -291,13 +291,13 @@ Los protocolos de enrutamiento dinámico como **OSPF** y **EIGRP** permiten que 
 
 - **EIGRP (Enhanced Interior Gateway Routing Protocol):** Usa el algoritmo DUAL para lograr una convergencia rápida y eficiente, optimizando el uso del ancho de banda.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-56-27-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-56-26-image.png]]
 
 Los routers R1 y R2 usan el protocolo **OSPF** para intercambiar información sobre sus redes conectadas directamente (192.168.10.0/24 y 10.1.1.0/24). 
 El protocolo de enrutamiento dinámico detecta redes remotas, mantiene actualizadas las tablas de enrutamiento, selecciona la mejor ruta hacia cada destino y recalcula automáticamente nuevas rutas si ocurre un cambio en la topología de red. 
 Así, los routers pueden adaptarse sin intervención manual.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-09-58-06-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-58-06-image.png]]
 
 Es común que algunos routers usen una combinación de rutas estáticas y un protocolo de enrutamiento dinámico.
 
@@ -305,9 +305,9 @@ Es común que algunos routers usen una combinación de rutas estáticas y un pro
 
 R2 está conectado a Internet, por lo que R1 tiene una ruta estática predeterminada que envía los paquetes a R2 cuando no existe una ruta específica. Además, ambos routers usan **OSPF** para anunciar sus redes conectadas directamente.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-10-01-52-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-10-01-52-image 1.png]]
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-10-22-10-02-05-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-10-02-05-image.png]]
 
 El comando **`show ip route`** permite visualizar la tabla de enrutamiento IPv4 en un router Cisco, mostrando todas las rutas conocidas y cómo se aprendieron. 
 Cada entrada incluye un código identificador que indica el tipo de ruta:
