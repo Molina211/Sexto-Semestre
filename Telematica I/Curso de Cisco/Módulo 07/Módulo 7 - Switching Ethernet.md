@@ -38,7 +38,7 @@ Sus estándares son IEEE 802.2 y 802.3.
 
 - 100 Gbps
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-15-46-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-15-46-image.png]]
 
 Capa de enlace de datos (IEEE 802) se divide en dos subcapas:
 
@@ -60,7 +60,7 @@ Capa de enlace de datos (IEEE 802) se divide en dos subcapas:
 
 El LLC conecta software y protocolos de red con el hardware, mientras que MAC gestiona el acceso al medio y la entrega física de las tramas.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-17-15-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-17-15-image.png]]
 
 #### Subcapa MAC
 
@@ -82,7 +82,7 @@ La subcapa MAC (IEEE 802.3) cumple dos funciones principales:
 
 La subcapa MAC organiza los datos en tramas y controla cómo se accede al medio de transmisión.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-19-39-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-19-39-image.png]]
 
 **Ethernet heredado (antiguo)**
 
@@ -154,13 +154,13 @@ El rango válido de una trama Ethernet es 64–1518 bytes; fuera de ese rango se
 
 - Menos de 64 bytes → se considera trama corta o fragmento de colisión y se descarta.
 
-- Más de 1518 bytes → se considera trama jumbo; muchos switches y NIC modernos la soportan.
+- Más de 1518 bytes → se considera trama jumbo; muchos switch's y NIC modernos la soportan.
 
 - Tramas fuera de este rango se descartan por ser inválidas (colisiones o ruido).
 
 En Data tambien viene la información de pisos superiores, no solo los datos.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-24-47-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-24-47-image.png]]
 
 | **Campo**                                   | **Descripción**                                                                                                                                                     |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -183,11 +183,11 @@ Direcciones posibles: 2^48 ≈ 281 billones.
 
 También existe una variante de **64 bits (8 bytes)** llamada **EUI-64**, pero no es la que se usa normalmente en Ethernet/Wi-Fi.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-29-29-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-29-29-image.png]]
 
 Un byte puede representarse como dos dígitos hexadecimales.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-30-16-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-30-16-image.png]]
 
 En hexadecimal se muestran los ceros iniciales para completar el byte (ej: `00001010` → `0A`). Sus formas  más comunes de escribir hex son:
 
@@ -207,11 +207,11 @@ Una dirección MAC = 48 bits = 6 bytes = 12 dígitos hexadecimales.
 
 Esta dirección sirve para identificar origen y destino en la capa de enlace de datos (OSI). Siendo el “número de identidad” físico de cada tarjeta de red en una LAN.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-33-18-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-33-18-image.png]]
 
 Cada MAC debe ser única, con el IEEE se da a cada fabricante un código de 24 bits (3 bytes) llamado OUI. El fabricante usa ese OUI como los primeros 6 dígitos hex de la MAC, con esto, los últimos 6 dígitos los asigna el fabricante para identificar cada dispositivo, o sea, la MAC se compone de OUI (fabricante) + número único del dispositivo.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-25-08-35-26-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-35-26-image.png]]
 
 Cada fabricante (ej. **Cisco**) recibe un OUI del IEEE.
 
@@ -308,7 +308,7 @@ Una dirección MAC de unicast es la dirección única que se utiliza cuando se e
   - En **IPv4** → usa ARP (Address Resolution Protocol).
   
   - En **IPv6** → usa ND (Neighbor Discovery).
-3. **Regla importante**
+2. **Regla importante**
 - La MAC de origen siempre es unicast, porque identifica de manera única al dispositivo que envía la trama.
 
 #### Dirección MAC broadcast
@@ -343,7 +343,7 @@ Una trama multicast la reciben solo los dispositivos miembros de un grupo, no to
 
 También hay direcciones multicast reservadas para otros protocolos (ej. **STP**, **LLDP**).
 
-Switches: Por defecto la envían a todos los puertos (excepto el de origen), a menos que estén configurados con snooping de multicast.
+Switch's: Por defecto la envían a todos los puertos (excepto el de origen), a menos que estén configurados con snooping de multicast.
 
 Routers: No reenvían multicast, salvo que tengan activado el enrutamiento de multicast.
 
@@ -369,7 +369,7 @@ Al recibir una trama:
 
 Esto lo diferencia de un hub, que simplemente copia y reenvía todos los bits a todos los puertos sin filtrar, causando congestión.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-26-16-35-41-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-35-41-image.png]]
 
 #### Switch, Aprendiendo y Reenviando
 
@@ -409,7 +409,7 @@ El switch aprende dinámicamente las direcciones MAC observando la MAC de origen
 
 - Así, el switch ya sabe en qué puerto está PC-A para futuras comunicaciones.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-26-16-40-59-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-40-59-image.png]]
 
 **Buscar dirección MAC de destino**
 
@@ -451,7 +451,7 @@ Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto c
 
 - Agrega la entrada: `MAC PC-D → Puerto 4`
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-09-26-16-48-24-image.png)
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-48-24-image.png]]
 
 **Switch reenvía hacia PC-A**
 
@@ -459,7 +459,7 @@ Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto c
 
 - Como ya la tiene registrada en la tabla (MAC PC-A → Puerto 1), la envía solo por el puerto 1, evitando mandar la trama a todos los puertos.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-26-16-47-56-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-47-56-image.png]]
 
 **PC-A envía otra trama a PC-D**
 
@@ -471,13 +471,13 @@ Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto c
 
 - Como ya sabe que PC-D está en el puerto 4, envía la trama directamente por ese puerto.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-09-26-16-47-42-image.png)
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-47-42-image 1.png]]
 
 ---
 
 ### Velocidades y métodos de reenvío del Switch
 
-Los switches Cisco utilizan dos métodos de reenvío de tramas: store-and-forward y cut-through.
+Los switch's Cisco utilizan dos métodos de reenvío de tramas: store-and-forward y cut-through.
 
 **Store-and-Forward (almacenamiento y envío)**
 
@@ -529,6 +529,7 @@ En este tipo de conmutación, el switch no espera a recibir toda la trama. Apena
 - **Problema**: Como no espera ni verifica nada, puede reenviar tramas con errores.
 
 - **Quién corrige**: Si llegan dañadas, la NIC (tarjeta de red) del receptor las detecta y descarta.
+
 2. **Fragment-Free Switching**
 - Es un punto medio entre store-and-forward (seguro, pero más lento) y fast-forward (rápido, pero menos seguro).
 
@@ -538,15 +539,15 @@ En este tipo de conmutación, el switch no espera a recibir toda la trama. Apena
 
 - Esto significa que se gana algo de seguridad contra errores, pero la latencia sigue siendo baja comparada con store-and-forward.
 
-**Comportamiento adaptable de algunos switches**
+**Comportamiento adaptable de algunos switch's**
 
-Algunos switches modernos pueden trabajar en modo cut-through mientras no haya demasiados errores.
+Algunos switch's modernos pueden trabajar en modo cut-through mientras no haya demasiados errores.
 
 - Si detectan que las tramas defectuosas superan un umbral de errores definido por el administrador, automáticamente cambian a store-and-forward** (para descartar errores).
 
 - Si el índice de errores baja, vuelven al cut-through para mejorar la velocidad.
 
-#### Almacenamiento en búfer de memoria en los switches
+#### Almacenamiento en búfer de memoria en los switch's
 
 Cuando un switch recibe una trama pero no puede enviarla de inmediato (porque el puerto de salida está ocupado o hay congestión), utiliza almacenamiento en búfer (buffering) para guardarla temporalmente.
 
@@ -613,11 +614,11 @@ Cada puerto de un switch puede configurarse en dos aspectos importantes:
 
 - Evita errores de configuración manual.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-30-06-18-06-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-30-06-18-06-image.png]]
 
 La mayoría de switches Cisco y NIC Ethernet usan negociación automática de velocidad y dúplex por defecto. En Gigabit Ethernet, el funcionamiento siempre es en dúplex completo. Un problema común en redes de 10/100 Mbps es la falta de coincidencia de dúplex, que ocurre cuando un extremo trabaja en medio dúplex y el otro en dúplex completo, lo que genera fallas de rendimiento.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-30-06-18-41-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-30-06-18-41-image.png]]
 
 #### Auto-MDIX (MDIX automático)
 
