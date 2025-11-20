@@ -34,11 +34,11 @@ En un PC, la **GUI** permite usar el mouse, escribir texto y ver resultados en p
 
 Los dispositivos Cisco ejecutan versiones específicas de Cisco IOS (como IOS XE, IOS XR y NX-OS), según el tipo de equipo y las funciones requeridas. Cada dispositivo trae un IOS básico, pero se puede actualizar para obtener más capacidades.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-20-30-03-image.png)
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/2025-08-24-20-30-03-image.png]]
 
 - **Método de acceso**
   
-  Un switch nuevo puede reenviar tráfico y permitir comunicación entre hosts sin necesidad de configuración previa. Sin embargo, todos los switches deben configurarse y protegerse adecuadamente. Para ello, se utilizan distintos métodos:
+  Un Switch nuevo puede reenviar tráfico y permitir comunicación entre hosts sin necesidad de configuración previa. Sin embargo, todos los switches deben configurarse y protegerse adecuadamente. Para ello, se utilizan distintos métodos:
   
   - **Consola:** Acceso físico directo mediante un puerto especial. Permite configurar el dispositivo incluso sin servicios de red activos (ideal para la configuración inicial). Requiere cable de consola y software de emulación de terminal.
   
@@ -130,7 +130,7 @@ Tambien, existen demas atajos dentro de los modos de configuración que mencione
 
 En Cisco IOS, cada comando tiene un formato específico y debe ejecutarse en el modo correcto. La estructura básica es:
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-22-38-46-image.png)
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/2025-08-24-22-38-46-image.png]]
 
 - **Palabra clave (keyword):** parámetro predefinido del sistema, como `ip protocols`.
 
@@ -225,7 +225,7 @@ Reglas para el nombre de host en IOS:
 
 Cada organización debe definir una convención de nombres (ejemplo: incluir ubicación y función del dispositivo) y documentarla para mantener consistencia en toda la red.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-23-29-29-image.png)
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/2025-08-24-23-29-29-image.png]]
 
 Para aplicar la convención de nombres en un dispositivo Cisco IOS:
 
@@ -387,11 +387,11 @@ Para que los dispositivos finales puedan comunicarse entre sí dentro de una red
 
 Las direcciones IPv4 se escriben en notación decimal punteada, compuesta por cuatro números que van de 0 a 255. Junto con la dirección IP también se requiere una máscara de subred, la cual tiene 32 bits y cumple la función de diferenciar la parte de la dirección que corresponde a la red y la que corresponde al host. Además, los dispositivos utilizan una dirección de gateway predeterminado, que normalmente es la dirección IP del router encargado de permitir la conexión hacia redes externas, incluyendo Internet.
 
-<img src="https://www.netacad.com/content/itn/1.0/courses/content/m2/es-XL/assets/2.6.1-image-1.jpg" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/Pasted image 20251120130456.png]]
 
 Las direcciones IPv6 tienen 128 bits y se representan con 32 dígitos hexadecimales agrupados de cuatro en cuatro, separados por dos puntos. No hacen distinción entre mayúsculas y minúsculas.
 
-<img title="" src="https://www.netacad.com/content/itn/1.0/courses/content/m2/es-XL/assets/2.6.1-image-3.png" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/Pasted image 20251120130510.png]]
 
 Las redes funcionan gracias a las interfaces de los dispositivos y a los medios que los conectan, cada medio tiene ventajas y desventajas las cuales, generalmente, son: 
 
@@ -403,7 +403,7 @@ Las redes funcionan gracias a las interfaces de los dispositivos y a los medios 
 
 - El costo de los medios y de la instalación.
 
-En la mayoría de las redes locales se usa Ethernet, que conecta computadoras, switches y otros equipos mediante cables. Los switches de capa 2 no trabajan directamente con direcciones IP, ya que solo se encargan de conectar dispositivos dentro de la misma red. Sin embargo, para poder administrarlos de forma remota se les asigna una interfaz virtual llamada SVI (por defecto es la VLAN1). Esa dirección IP no es para que el switch funcione como tal, sino únicamente para poder configurarlo a distancia.
+En la mayoría de las redes locales se usa Ethernet, que conecta computadoras, switch's y otros equipos mediante cables. Los switch's de capa 2 no trabajan directamente con direcciones IP, ya que solo se encargan de conectar dispositivos dentro de la misma red. Sin embargo, para poder administrarlos de forma remota se les asigna una interfaz virtual llamada SVI (por defecto es la VLAN1). Esa dirección IP no es para que el Switch funcione como tal, sino únicamente para poder configurarlo a distancia.
 
 ---
 
@@ -419,13 +419,13 @@ En Windows, la configuración manual se realiza desde:
 
 `Panel de control > Centro de redes > Cambiar configuración del adaptador > Propiedades del adaptador > Propiedades de Conexión de área local`.
 
-<img src="https://www.netacad.com/content/itn/1.0/courses/content/m2/es-XL/assets/2.7.1-image-1.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/Pasted image 20251120130548.png]]
 
 Para configurar una dirección manual en Windows, se debe seleccionar Protocolo de Internet versión 4 (TCP/IPv4) en las propiedades del adaptador y abrir sus propiedades. Allí se ingresan la dirección IPv4, la máscara de subred y el gateway predeterminado.
 
 La configuración de IPv6 es similar al procedimiento de IPv4.
 
-<img src="https://www.netacad.com/content/itn/1.0/courses/content/m2/es-XL/assets/2.7.1-image-3.jpg" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/Pasted image 20251120130559.png]]
 
 La dirección del servidor DNS es la dirección IPv4 del servidor del sistema de nombres de dominio (DNS), que se utiliza para traducir direcciones IP a direcciones web.
 
@@ -441,7 +441,7 @@ Así, la PC obtiene los parámetros de un servidor DHCP.
 
 En IPv6 se emplean DHCPv6 y SLAAC para la configuración automática de direcciones.
 
-<img src="https://www.netacad.com/content/itn/1.0/courses/content/m2/es-XL/assets/2.7.2-image-1.jpg" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/Pasted image 20251120130618.png]]
 
 En Windows se puede verificar la configuración IP usando el comando: `ipconfig`
 
@@ -567,7 +567,7 @@ Finalmente se hace la prueba de conectividad diriguiendo a el **Command Prompt**
 
 El mensaje que deberia aparecer seria este:
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-25-02-49-30-image.png)
+![[Telematica I/Curso de Cisco/Módulo 02/ANEXOS/2025-08-25-02-49-30-image.png]]
 
 El porcentaje que esta en Lost = 1 (75% loss), indica el porcentaje de fallo que tiene la conectividad, lo cual se arregla con cada ping que se haga.
 

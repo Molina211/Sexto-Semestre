@@ -8,7 +8,7 @@
 
 - **Componentes de la red:** Explique la forma en que se utilizan los dispositivos host y de red.
 
-- **Topología y representaciones de red:** Explique las representaciones de la red y cómo se usan en la red. Topologias
+- **Topología y representaciones de red:** Explique las representaciones de la red y cómo se usan en la red. topologías
 
 - **Tipos comunes de redes:** Compare las características de los tipos comunes de redes.
 
@@ -34,9 +34,9 @@ La comunicación es casi tan vital como las necesidades básicas para la vida. G
 
 - **Servidor:** Los servidores son computadoras que, mediante software especializado, ofrecen información o servicios como correo electrónico o páginas web a otros dispositivos en la red. Cada servicio necesita un software de servidor específico (por ejemplo, un servidor web para ofrecer páginas web). Un mismo servidor puede atender a muchos clientes a la vez. 
 
-![](C:\Users\Molina211\OneDrive\Imágenes\Screenshots\Captura%20de%20pantalla%202025-08-22%20174822.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/Captura de pantalla 2025-08-22 174822.png]]
 
-Para poder ingresar a la petición especifica que necesita el cliente del servidor, el PC cuenta con diferentes tipos de softwares para el uso de cada una de las opciones que proporciona el mismo. Un PC puede ejecutar varios tipos de software de cliente, tales como el envío de un correo mientras se ve otra pagina web escuchando música, ahí se pueden puntuar 3 tipos de software, el de correo electronico, el de Web y el de Reproductor de música.
+Para poder ingresar a la petición especifica que necesita el cliente del servidor, el PC cuenta con diferentes tipos de softwares para el uso de cada una de las opciones que proporciona el mismo. Un PC puede ejecutar varios tipos de software de cliente, tales como el envío de un correo mientras se ve otra pagina web escuchando música, ahí se pueden puntuar 3 tipos de software, el de correo electrónico, el de Web y el de Reproductor de música.
 
 - **Entre pares**
   
@@ -48,11 +48,11 @@ Para poder ingresar a la petición especifica que necesita el cliente del servid
 
 - **Dispositivos finales**
   
-  Se denomina como **Dispositivo final** aquel sistema conectado a la red que posee una direccion (IP), siendo tambien los que las personas se han familiarizado más como Portátiles, Computadoras de mesa, Celulares, etc.
+  Se denomina como **Dispositivo final** aquel sistema conectado a la red que posee una dirección (IP), siendo tambien los que las personas se han familiarizado más como Portátiles, Computadoras de mesa, Celulares, etc.
 
 - **Dispositivos intermedios**
   
-  Los **Dispositivos Intermedios** son los encargados de controlar principalmente el flujo de datos en la red, capaces de estar conectados a multiples redes individuales para formar una red interna. Algunos de los dispositivos intermedios más comunes son:
+  Los **Dispositivos Intermedios** son los encargados de controlar principalmente el flujo de datos en la red, capaces de estar conectados a múltiples redes individuales para formar una red interna. Algunos de los dispositivos intermedios más comunes son:
   
   - *Router inalámbrico*
   
@@ -82,7 +82,7 @@ Para poder ingresar a la petición especifica que necesita el cliente del servid
 
 Se trata de la forma en la que muestra el como se ven los componentes que se conectaran a otros componentes, donde se ubicarán y como se conectarán. Aquí vemos lo que se llama **Topología**, que usa simbolos para la **representacion de red**.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-12-25-09-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-12-25-09-image.png]]
 
 Además de estas representaciones, se utiliza una terminología especializada para describir cómo cada uno de estos dispositivos y medios se conectan entre sí:
 
@@ -96,7 +96,7 @@ Se conoce como **Diagramas de topología** la forma de documentación en la que 
 
 La **física** representa la ubicación real de dispositivos y la instalación de los cables. Marcando las habitaciones de los grupos de dispositivos.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-12-35-23-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-12-35-23-image.png]]
 
 La **lógica** ilustran la conexión entre dispositivos, puertos y direcciones de red. Marcando los dispositivos intermediarios y qué medios se están utilizando.
 
@@ -141,11 +141,11 @@ Las redes se clasifican en 4 tipos:
     
     - Tienen enlaces más lentos que las LAN.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-14-06-27-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-14-06-27-image.png]]
 
 Tambien, esta el **Internet**, que es una colección global de redes interconectadas. Algunas LAN se conectan entre sí mediante una WAN, y estas WAN también pueden interconectarse usando cables de cobre, fibra óptica o transmisiones inalámbricas entre si mismas.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-14-18-15-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-14-18-15-image.png]]
 
 - **Intranets y Extranets**
   
@@ -175,7 +175,7 @@ Los usuarios domésticos y oficinas pequeñas acceden a Internet mediante un ISP
   
   La disponibilidad depende del lugar y del proveedor de Internet.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-16-03-41-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-16-03-37-image.png]]
 
 - **Conexiones a Internet empresariales**
   
@@ -201,21 +201,21 @@ La red pasó de manejar solo datos a conectar personas, dispositivos e informaci
 
 - **Tolerancia a fallas:** Una red tolerante a fallas limita el impacto de una avería y permite recuperarse rápidamente gracias a la **redundancia**, es decir, múltiples rutas entre origen y destino. Con la **conmutación de paquetes**, los mensajes se dividen en paquetes con su propia dirección, que pueden viajar por diferentes rutas según el estado de la red, garantizando que el usuario no note la falla ni el cambio de trayecto.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-17-08-53-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-17-08-53-image.png]]
 
 - **Escalabilidad:** Una red escalable puede crecer fácilmente para admitir más usuarios y aplicaciones sin afectar el rendimiento. Esto es posible gracias al uso de estándares y protocolos comunes, que permiten integrar nuevas redes y facilitan que los proveedores mejoren sus productos sin crear reglas nuevas.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-17-10-34-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-17-10-34-image.png]]
 
 - **Calidad de servicio:** Es clave en las redes modernas porque asegura que aplicaciones sensibles, como llamadas de voz o transmisiones de video en vivo, funcionen sin interrupciones. A medida que datos, voz y video comparten la misma red, QoS gestiona la congestión y garantiza que los contenidos lleguen de forma confiable a los usuarios.
   
   La **congestión** ocurre cuando la demanda de ancho de banda (la cantidad de datos que se pueden transmitir por segundo) supera la capacidad disponible de la red. En esos casos, los paquetes de datos deben esperar en cola hasta que haya recursos para enviarlos, lo que genera retrasos o cortes. Con QoS, la red puede priorizar ciertos tipos de tráfico (por ejemplo, llamadas de voz sobre descargas), reduciendo los efectos de la congestión.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-17-13-51-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-17-13-48-image.png]]
 
 - **Seguridad de la red:** La red y la información que circula en ella son activos muy valiosos, por lo que la seguridad es esencial. Existen dos aspectos principales:
   
-  - **Seguridad de la infraestructura:** Proteger físicamente los dispositivos de red (routers, switches, servidores) y evitar accesos no autorizados a su software de administración.
+  - **Seguridad de la infraestructura:** Proteger físicamente los dispositivos de red (routers, switch's, servidores) y evitar accesos no autorizados a su software de administración.
   
   - **Seguridad de la información:** Garantizar que los datos transmitidos y almacenados estén protegidos contra accesos indebidos o pérdidas.
   
@@ -227,7 +227,7 @@ La red pasó de manejar solo datos a conectar personas, dispositivos e informaci
   
   3. **Disponibilidad** - Permite a los usuarios autorizados acceder de manera confiable y oportuna a los servicios y datos necesarios.
 
-![](C:\Users\Molina211\AppData\Roaming\marktext\images\2025-08-24-17-20-45-image.png)
+![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/2025-08-24-17-20-41-image.png]]
 
 ---
 
