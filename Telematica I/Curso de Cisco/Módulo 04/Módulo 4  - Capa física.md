@@ -5,10 +5,15 @@
 ## Contenido
 
 - **Propósito de la capa física:** Describa el propósito y las funciones de la capa física en la red.
+
 - **Características de la capa física:** Describa las características de la capa física.
+
 - **Cableado de cobre:** Identifique las características básicas del cableado de cobre.
-- **Cableado UTP:** Explique cómo se utiliza el cable UTP en las redes Ethernet. (Este submodulo esta integrado en el de **Cableado de cobre**)
+
+- **Cableado UTP:** Explique cómo se utiliza el cable UTP en las redes Ethernet. (Este submódulo esta integrado en el de **Cableado de cobre**)
+
 - **Cableado de fibra óptica:** Describir el cableado de fibra óptica y sus ventajas principales sobre otros medios.
+
 - **Medios inalámbricos:** Conecte dispositivos utilizando medios conectados por cable e inalámbricos.
 
 ---
@@ -19,21 +24,21 @@
 
 Para que haya comunicación en red, primero se necesita conexión a una red local, ya sea por cable o de forma inalámbrica.
 
-- **Red cableada**: los dispositivos se conectan mediante cables a un switch, transmitiendo datos por el medio físico.
+- **Red cableada**: los dispositivos se conectan mediante cables a un Switch, transmitiendo datos por el medio físico.
 
-- **Red inalámbrica**: los dispositivos usan ondas de radio y se conectan a un punto de acceso o router.
+- **Red inalámbrica**: los dispositivos usan ondas de radio y se conectan a un punto de acceso o Router.
 
 Las empresas suelen usar ambas opciones según las necesidades y ventajas de cada una.
 
 Estos son los componentes de un punto de acceso:
 
-1. Las antenas inalámbricas (Estas están integradas dentro de la versión del router que se muestra en la figura anterior).
-2. Varios puertos de switch de Ethernet
+1. Las antenas inalámbricas (Estas están integradas dentro de la versión del Router que se muestra en la figura anterior).
+2. Varios puertos de Switch de Ethernet
 3. Un puerto de internet
 
-<img src="https://www.netacad.com/content/itn/1.0/courses/content/m4/es-XL/assets/4.1.1-image-1.jpg" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/Pasted image 20251120131652.png]]
 
-### Conexión por cable al router inalámbrico
+### Conexión por cable al Router inalámbrico
 
 Las **tarjetas de interfaz de red (NIC)** permiten que un dispositivo se conecte a la red:
 
@@ -75,7 +80,7 @@ Organizaciones destacadas:
 
 - **JSA/JIS**: Asociación de Normas Japonesas.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-08-10-21-51-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-08-10-21-51-image.png]]
 
 ### Componentes físicos
 
@@ -88,7 +93,7 @@ Incluyen:
 
 - Conectores (RJ-45, puertos ópticos, etc.)
 
-- Interfaces y puertos en dispositivos como routers o switches.
+- Interfaces y puertos en dispositivos como routers o switch's.
 
 Son las “partes tangibles” que permiten que los datos viajen de un dispositivo a otro.
 
@@ -130,7 +135,7 @@ Es la forma física real que toma la señal (voltajes, luz, ondas) para transpor
 
 El ancho de banda es la capacidad de un medio para transportar datos en un tiempo determinado, expresado en kbps, Mbps o Gbps. No se refiere a la velocidad de los bits (que viajan a la velocidad de la electricidad), sino a la cantidad de bits transmitidos por segundo. Su valor práctico depende de las propiedades del medio físico, la tecnología de señalización y detección, así como de limitaciones físicas y tecnológicas.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-00-35-55-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-00-35-55-image.png]]
 
 La **terminología del ancho de banda** se entiende a partir de tres conceptos clave:
 
@@ -154,7 +159,7 @@ Los datos viajan como impulsos eléctricos que sufren **atenuación** al recorre
 
 - **Crosstalk (diafonía):** Interferencia entre hilos adyacentes debido a campos eléctricos o magnéticos, provocando fugas de señales, como ocurre en llamadas telefónicas donde se escucha otra conversación.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-00-48-21-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-00-48-21-image.png]]
 
 Para reducir las interferencias en el **cableado de cobre**, se aplican distintas técnicas:
 
@@ -193,23 +198,23 @@ El **IEEE** establece sus características eléctricas y clasifica los cables po
 
 - **Cat. 8**: Hasta 40 Gbps.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-14-56-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-14-56-image.png]]
 
 ##### Conectores RJ-45 para UTP
 
-<img src="https://www.netacad.com/content/itn/1.0/_assets/media/2dd9fd50-1c25-11ea-a010-eb2108469056/2dd9fd55-1c25-11ea-81a0-ffc2c49b96bc.jpg" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/Pasted image 20251120131815.png]]
 
 ##### Socket RJ-45 para UTP
 
-<img src="https://www.netacad.com/content/itn/1.0/_assets/media/2dda2460-1c25-11ea-a010-eb2108469056/2dda2464-1c25-11ea-81a0-ffc2c49b96bc.jpg" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/Pasted image 20251120131826.png]]
 
 ##### Cable UTP mal terminado
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-17-00-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-16-32-image.png]]
 
 ##### Cable UTP correctamente terminado
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-17-23-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-17-23-image.png]]
 
 Los **cables UTP** pueden armarse con diferentes convenciones de conexión en el conector **RJ-45**:
 
@@ -221,9 +226,9 @@ Los **cables UTP** pueden armarse con diferentes convenciones de conexión en el
 
 **Auto-MDIX** permite que los equipos de red ajusten automáticamente la conexión, funcionando con cualquier cable Ethernet (directo o cruzado) sin importar el tipo.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-24-54-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-24-54-image.png]]
 
-<img title="" src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-25-08-image.png" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-25-08-image.png]]
 
 ---
 
@@ -351,23 +356,23 @@ Por último, los cables de conexión de fibra óptica interconectan dispositivos
 
 #### Cable de conexión multimodo SC-SC
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-44-38-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-44-38-image.png]]
 
 #### Cable de conexión monomodo LC-LC
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-45-15-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-45-15-image.png]]
 
 #### Cable de conexión multimodo ST-LC
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-45-48-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-45-47-image.png]]
 
 #### Cable de conexión monomodo SC-ST
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-46-26-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-46-26-image.png]]
 
 **Cuadro comparativo entre cobre y fibra**
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-15-01-47-40-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-47-40-image.png]]
 
 ---
 
@@ -385,7 +390,7 @@ Sin embargo, presentan algunas limitaciones importantes:
 
 - **Medio compartido:** En las WLAN solo un dispositivo transmite o recibe a la vez; si muchos se conectan, el ancho de banda disponible se reparte.
 
-Por estas razones, aunque el WiFi gana popularidad, los cables de cobre y fibra óptica siguen siendo los más usados en la infraestructura de red (routers, switches, etc.) por su mayor estabilidad y capacidad.
+Por estas razones, aunque el WiFi gana popularidad, los cables de cobre y fibra óptica siguen siendo los más usados en la infraestructura de red (routers, switch's, etc.) por su mayor estabilidad y capacidad.
 
 ### Tipos de medios inalámbricos
 

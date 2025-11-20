@@ -103,7 +103,7 @@ El tiempo es clave para que la comunicación funcione bien. Se divide en tres pa
    
    - Ejemplo: Si alguien habla demasiado rápido, el otro no entiende. En redes, los protocolos ajustan esa velocidad.
 
-2. **Tiempo de espera (Timeout)**
+1. **Tiempo de espera (Timeout)**
    
    - Es el **límite de espera por una respuesta**.
    
@@ -127,7 +127,7 @@ El tiempo es clave para que la comunicación funcione bien. Se divide en tres pa
 
 - **WLAN (Wireless Local Area Network):** Es una red de área local inalámbrica, es decir, una red Wi-Fi.
 
-- Ejemplo: tu router de casa que da internet sin cables a tu celular, portátil, etc.
+- Ejemplo: tu Router de casa que da internet sin cables a tu celular, portátil, etc.
 
 La NIC WLAN es la tarjeta de red inalámbrica de tu dispositivo que le permite conectarse a una Wi-Fi.
 
@@ -143,7 +143,7 @@ El mensaje va de un emisor a un grupo específico de receptores (no a todos).
 
 **Broadcast (Transmisión)** 
 El mensaje se envía a todos los dispositivos de la red, sin importar si lo necesitan o no. 
-**Ejemplo:** Cuando el router anuncia su señal Wi-Fi, todos los equipos cercanos pueden verla.
+**Ejemplo:** Cuando el Router anuncia su señal Wi-Fi, todos los equipos cercanos pueden verla.
 
 **Anycast** 
 El mensaje va a un grupo de receptores posibles, pero **solo uno de ellos lo recibe**, normalmente el más cercano o disponible. 
@@ -161,7 +161,7 @@ El mensaje va a un grupo de receptores posibles, pero **solo uno de ellos lo rec
 
 En los diagramas de red, los dispositivos se representan con un **icono de nodo** (generalmente un círculo). Estos nodos ayudan a mostrar cómo se entrega la información (unicast, multicast, broadcast, anycast) sin necesidad de dibujar computadores reales.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-03-13-56-57-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-13-56-57-image.png]]
 
 ---
 
@@ -233,7 +233,7 @@ Cuando un dispositivo envía una solicitud a un servidor web, se usan varios pro
 
 HTTP pide la página, TCP garantiza que llegue bien, IP la envía al destino correcto y Ethernet la mueve dentro de la red local.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-03-15-03-21-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-15-03-21-image.png]]
 
 ---
 
@@ -263,13 +263,13 @@ Ejemplo en redes:
 
 - **Capa de contenido:** La información que realmente se transmite, como un correo electrónico, una página web o un mensaje de WhatsApp.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-03-15-11-32-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-15-11-32-image.png]]
 
 Una suite de protocolos es como una pila organizada, donde las capas de abajo mueven los datos y las de arriba se encargan del mensaje y su significado.
 
 ## Evolución de los conjuntos de protocolos
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-03-15-21-44-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-15-21-44-image.png]]
 
 ### Internet Protocol Suite o TCP/IP
 
@@ -443,7 +443,7 @@ Las **organizaciones de estandarización** (sin fines de lucro y neutrales) crea
 
 ### Estándares de Internet
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-03-17-34-46-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-17-34-46-image.png]]
 
 Distintas organizaciones tienen diferentes responsabilidades para promover y elaborar estándares para el protocolo TCP/IP como:
 
@@ -452,7 +452,7 @@ Distintas organizaciones tienen diferentes responsabilidades para promover y ela
 - **Grupo de trabajo de ingeniería de Internet (IEFT)** - Crea y actualiza protocolos como TCP/IP (publica los RFC).
 - **Grupo de trabajo de investigación de Internet (IRTF)** - Investiga a largo plazo temas de Internet (seguridad, criptografía, P2P, etc.).
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-03-17-36-22-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-17-36-22-image.png]]
 
 - **ICANN:** Organización con sede en EE. UU. que gestiona la **asignación de direcciones IP** y la **administración de nombres de dominio** (ej. .com, .org, .net), además de otros identificadores usados en **TCP/IP**.
 
@@ -498,7 +498,7 @@ Los dos modelos más usados son:
 
 - **TCP/IP.**
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-03-17-50-35-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-17-50-35-image.png]]
 
 ### El modelo de referencia de OSI
 
@@ -619,7 +619,9 @@ El **modelo TCP/IP** (o modelo de Internet) se creó en los años 70 para descri
 | **2. Enlace de datos**   | **Acceso a la red**         | Define cómo se envían los datos en un enlace físico (Ethernet, Wi-Fi).                              |
 | **1. Física**            | **Acceso a la red**         | Se ocupa de la transmisión real por cables, señales o radio.                                        |
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-03-22-19-18-image.png" title="" alt="" data-align="center"> **Similitudes**
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-22-19-18-image.png]]
+
+**Similitudes**
 
 - En ambos modelos, la capa de red (OSI 3) coincide con la **capa de Internet (TCP/IP)** → se encarga de direcciones y enrutamiento.
 
@@ -698,7 +700,7 @@ Cuando los datos de una aplicación se envían por la red, pasan por varias capa
    
    - Cada nombre refleja el trabajo que hace esa capa: por ejemplo, un segmento TCP incluye control de flujo y confiabilidad, mientras que un paquete IP se encarga de direccionamiento y enrutamiento.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-00-35-35-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-00-35-35-image.png]]
 
 Resumen:
 
@@ -732,7 +734,7 @@ La capa de red se encarga del “viaje largo”: Llevar los datos al destino cor
 
 La capa de **enlace de datos** se encarga del “viaje corto”: Pasar los datos de un dispositivo al siguiente dentro de la misma red local.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-00-40-51-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-00-40-51-image.png]]
 
 ### Dirección lógica de capa 3
 
@@ -794,7 +796,7 @@ En pocas palabras:
 
 Si la porción de red de la dirección IP de origen y de destino es **igual**, significa que ambos dispositivos están en la misma red.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-01-06-26-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-06-26-image 1.png]]
 
 ### Función de las direcciones de la capa de enlace de datos (capa 2) - La misma red IP
 
@@ -814,7 +816,7 @@ Cuando el emisor y el receptor están en la misma red, la trama de enlace de dat
 
 - La **MAC** nos dice “cómo llegar físicamente a ese dispositivo dentro de la red local” (dirección física).
 
-- Cuando ambos dispositivos están en la misma red, no se necesita router; basta con que la NIC use la **MAC del receptor** para entregar la trama.
+- Cuando ambos dispositivos están en la misma red, no se necesita Router; basta con que la NIC use la **MAC del receptor** para entregar la trama.
 
 ---
 
@@ -824,9 +826,9 @@ Cuando el emisor y el receptor están en la misma red, la trama de enlace de dat
 
 - La combinación IP + MAC permite que los datos lleguen correctamente desde la red local hasta el dispositivo final, ya sea en la misma red o a través de varias redes.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-01-12-31-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-12-31-image.png]]
 
-Cuando un dispositivo se comunica con otro en una red remota, la dirección de la capa de red (IP) indica el destino final del paquete, mientras que la dirección de la capa de enlace de datos (MAC) se utiliza para enviar la trama al siguiente dispositivo en la ruta, normalmente un router, dentro de cada red por la que pasa el paquete.
+Cuando un dispositivo se comunica con otro en una red remota, la dirección de la capa de red (IP) indica el destino final del paquete, mientras que la dirección de la capa de enlace de datos (MAC) se utiliza para enviar la trama al siguiente dispositivo en la ruta, normalmente un Router, dentro de cada red por la que pasa el paquete.
 
 ### Función de las direcciones de la capa de red
 
@@ -838,23 +840,23 @@ Cuando el emisor y el receptor están en redes diferentes, las direcciones IP mu
 
 La **porción de red** de cada IP indica que el paquete debe atravesar más de una red para llegar al destino.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-01-41-56-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-41-56-image.png]]
 
 ### Rol de acceso a datos de las direcciones de capa de vínculo de datos - Diferentes redes IP
 
 Cuando el emisor y el receptor están en redes diferentes, la trama de Ethernet no puede enviarse directamente al destino.
 
-- La trama se envía al router o gateway predeterminado (ej. R1), que tiene una MAC en la misma red que el emisor.
+- La trama se envía al Router o gateway predeterminado (ej. R1), que tiene una MAC en la misma red que el emisor.
 
 - **MAC de origen:** del dispositivo emisor (PC1 → AA-AA-AA-AA-AA-AA).
 
-- **MAC de destino:** del router/gateway (R1 → 11-11-11-11-11-11).
+- **MAC de destino:** del Router/gateway (R1 → 11-11-11-11-11-11).
 
-El router recibe la trama, desempaqueta el paquete IP y lo reenvía hacia el destino, ya sea a otro router o directamente al servidor web si está en una red conectada.
+El Router recibe la trama, desempaqueta el paquete IP y lo reenvía hacia el destino, ya sea a otro Router o directamente al servidor web si está en una red conectada.
 
-Es fundamental que cada host tenga configurada la IP del gateway predeterminado, porque todos los paquetes a redes remotas se envían a ese gateway, usando la MAC del router para salir de la red local.
+Es fundamental que cada host tenga configurada la IP del gateway predeterminado, porque todos los paquetes a redes remotas se envían a ese gateway, usando la MAC del Router para salir de la red local.
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-01-47-17-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-47-17-image.png]]
 
 En resumen, la IP indica el destino final, la **MAC** y el **gateway** permiten que los datos salgan de tu red y lleguen correctamente al destino.
 
@@ -888,11 +890,11 @@ La MAC mueve la trama en cada salto local, mientras que la IP guía el paquete h
 
 **Flujo de datos**
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-01-50-19-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-50-19-image.png]]
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-01-50-34-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-50-34-image.png]]
 
-<img src="file:///C:/Users/Molina211/AppData/Roaming/marktext/images/2025-09-04-01-50-44-image.png" title="" alt="" data-align="center">
+![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-50-44-image.png]]
 
 ## RESUMEN
 
@@ -918,7 +920,7 @@ La MAC mueve la trama en cada salto local, mientras que la IP guía el paquete h
   
   - TCP/IP es la base de Internet, abierto y basado en estándares.
   
-  - Procesos como encapsulación/descapsulación permiten enviar y recibir información entre cliente y servidor.
+  - Procesos como encapsulación/desemcapsulación permiten enviar y recibir información entre cliente y servidor.
 
 - **Organizaciones de estandarización**
   
