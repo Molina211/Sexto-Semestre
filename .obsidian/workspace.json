@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Telematica I/Curso de Cisco/Módulo 08/Módulo 8 - Capa de red.md",
+                "file": "Telematica I/Curso de Cisco/Módulo 10/Módulo 10 - Configuración básica de un router.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Módulo 8 - Capa de red"
+              "title": "Módulo 10 - Configuración básica de un router"
             }
           }
         ]
@@ -171,17 +171,21 @@
   },
   "active": "4c6f3b6b53d6e451",
   "lastOpenFiles": [
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-10-02-05-image.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-10-01-52-image 1.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-58-06-image.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-56-26-image.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-39-35-image.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-38-52-image 1.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-38-52-image.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-37-20-image.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-10-01-52-image.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-34-30-image.png",
-    "Telematica I/Curso de Cisco/Módulo 08/ANEXOS/2025-10-22-09-33-33-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-23-46-image 1.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-23-46-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-21-59-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-21-13-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-17-38-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-17-02-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-15-19-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-14-47-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-14-09-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-13-49-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-13-04-image.png",
+    "Telematica I/Curso de Cisco/Módulo 10/ANEXOS",
+    "Telematica I/Curso de Cisco/Módulo 09/Módulo 9 - Resolución de dirección.md",
+    "Telematica I/Curso de Cisco/Módulo 09/ANEXOS",
+    "Telematica I/Curso de Cisco/Módulo 08/Módulo 8 - Capa de red.md",
     "Telematica I/Curso de Cisco/Módulo 08/ANEXOS",
     "Telematica I/Curso de Cisco/Módulo 07/Módulo 7 - Switching Ethernet.md",
     "Telematica I/Curso de Cisco/Módulo 07/ANEXOS",
@@ -203,8 +207,6 @@
     "Arquitectura de software/Semana 16/Entrega de Parcial y añadido de las credenciales.md",
     "Telematica I/Curso de Cisco/Módulo 16/Módulo 16 - Fundamentos de seguridad de red.md",
     "Telematica I/Curso de Cisco/Módulo 15/Módulo 15 - Capa de aplicación.md",
-    "Telematica I/Curso de Cisco/Módulo 16",
-    "Metodología de investigación/Semana 16/~WRL3247.tmp",
     "Análisis financiero/Semana 16/Entrega y socialización de notas - Corte 3.md",
     "Sistemas operativos/Semana 16/Narrativa de exposición de algoritmos.md",
     "Excalidraw/Drawing 2025-11-13 02.31.59.excalidraw.md",
@@ -216,8 +218,6 @@
     "Arquitectura de software/Semana 15/Parcial del tercer corte.md",
     "Telematica I/Curso de Cisco/Módulo 14/Módulo 14 - Capa de transporte.md",
     "Telematica I/Curso de Cisco/Módulo 12/Módulo 12 - Asignación de direcciones IPv6.md",
-    "Telematica I/Curso de Cisco/Módulo 11/Módulo 11 - Asignación de direcciones IPv4.md",
-    "Telematica I/Curso de Cisco/Módulo 10/Módulo 10 - Configuración básica de un router.md",
-    "Telematica I/Curso de Cisco/Módulo 09/Módulo 9 - Resolución de dirección.md"
+    "Telematica I/Curso de Cisco/Módulo 11/Módulo 11 - Asignación de direcciones IPv4.md"
   ]
 }
