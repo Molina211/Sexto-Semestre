@@ -34,7 +34,7 @@ La comunicación es casi tan vital como las necesidades básicas para la vida. G
 
 - **Servidor:** Los servidores son computadoras que, mediante software especializado, ofrecen información o servicios como correo electrónico o páginas web a otros dispositivos en la red. Cada servicio necesita un software de servidor específico (por ejemplo, un servidor web para ofrecer páginas web). Un mismo servidor puede atender a muchos clientes a la vez. 
 
-![[Telematica I/Curso de Cisco/Módulo 01/ANEXOS/Captura de pantalla 2025-08-22 174822.png]]
+![[Módulo 01/ANEXOS/Captura de pantalla 2025-08-22 174822.png]]
 
 Para poder ingresar a la petición especifica que necesita el cliente del servidor, el PC cuenta con diferentes tipos de softwares para el uso de cada una de las opciones que proporciona el mismo. Un PC puede ejecutar varios tipos de software de cliente, tales como el envío de un correo mientras se ve otra pagina web escuchando música, ahí se pueden puntuar 3 tipos de software, el de correo electrónico, el de Web y el de Reproductor de música.
 
