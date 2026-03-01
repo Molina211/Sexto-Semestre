@@ -13,11 +13,11 @@
 
 Las direcciones IPv4 se representan en **binario (1 y 0)**, pero como son difíciles de manejar, los administradores las convierten a **decimal (0–9)**. Comprender el sistema binario es fundamental porque los dispositivos de red (hosts, servidores y routers) usan direcciones IPv4 binarias para identificarse y comunicarse.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-17-10-36-46-image.png]]
+![](./ANEXOS/2025-09-17-10-36-46-image.png)
 
 Una dirección IPv4 tiene 32 bits divididos en 4 octetos de 8 bits separados por puntos. Aunque los dispositivos usan direcciones en binario, para los humanos se representan en notación decimal con puntos.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-17-10-38-03-image.png]]
+![](./ANEXOS/2025-09-17-10-38-03-image.png)
 
 #### Notación de posición binaria
 
@@ -33,11 +33,11 @@ Las viñetas siguientes describen cada fila de la tabla.
 
 - **Fila 4:** Representa unidades de miles, cientos, decenas y unos.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-17-11-11-18-image.png]]
+![](./ANEXOS/2025-09-17-11-11-18-image.png)
 
 **EJEMPLO:**
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-17-11-14-52-image.png]]
+![](./ANEXOS/2025-09-17-11-14-52-image.png)
 
 *Notación binaria base en 2*
 
@@ -51,11 +51,11 @@ Las viñetas siguientes describen cada fila de la tabla.
 
 - **Fila 4:** Representa unidades de uno, dos, cuatro, ocho, etc.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-17-11-18-27-image.png]]
+![](./ANEXOS/2025-09-17-11-18-27-image.png)
 
 **EJEMPLO:**
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-17-11-19-06-image.png]]
+![](./ANEXOS/2025-09-17-11-19-06-image.png)
 
 #### Convertir binario a decimal
 
@@ -71,19 +71,19 @@ Para convertir una dirección IPv4 en binario a su equivalente decimal punteado:
 
 Suponga que 11000000.10101000.00001011.00001010 es la dirección IPv4 binaria de un host. Para convertir la dirección binaria a decimal, comience con el primer octeto. Introduzca el número binario de 8 bits en el valor de posición de la fila 1 y, después, calcule para producir el número decimal 192. Este número entra en el primer octeto de la notación decimal punteada.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-10-54-24-image.png]]
+![](./ANEXOS/2025-09-18-10-54-24-image.png)
 
 A continuación, convertir el segundo octeto de 10101000. El valor decimal resultante es 168 y entra en el segundo octeto.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-10-54-52-image.png]]
+![](./ANEXOS/2025-09-18-10-54-52-image.png)
 
 Convertir el tercer octeto de 00001011 como se muestra en la tabla.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-10-55-07-image.png]]
+![](./ANEXOS/2025-09-18-10-55-07-image.png)
 
 Convertir el cuarto octeto de 00001010 como se muestra en la tabla. Esto completa la dirección IP y produce **192.168.11.10**.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-10-55-27-image 1.png]]
+![](<./ANEXOS/2025-09-18-10-55-27-image 1.png>)
 
 #### Conversión de sistema decimal a binario
 
@@ -131,15 +131,15 @@ Los routers y computadoras entienden binario**, mientras que los humanos usamos 
 
 - **Dirección en formato decimal punteado:** 192.168.10.10 es una dirección IP asignada a una computadora.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-11-26-31-image.png]]
+![](./ANEXOS/2025-09-18-11-26-31-image.png)
 
 - **Octetos:** La dirección se compone de cuatro octetos diferentes.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-11-27-50-image.png]]
+![](./ANEXOS/2025-09-18-11-27-50-image.png)
 
 - **Dirección de 32 bits:** La computadora almacena la dirección como el flujo de datos total de 32 bits.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-11-28-24-image.png]]
+![](./ANEXOS/2025-09-18-11-28-24-image.png)
 
 ---
 
@@ -147,7 +147,7 @@ Los routers y computadoras entienden binario**, mientras que los humanos usamos 
 
 El decimal es base 10 y el hexadecimal es base 16, usando los dígitos 0–9 y las letras A–F. Cada grupo binario de 4 bits (0000–1111) tiene un equivalente en decimal y en hexadecimal.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-12-06-02-image.png]]
+![](./ANEXOS/2025-09-18-12-06-02-image.png)
 
 El hexadecimal simplifica la representación del binario, ya que 4 bits = 1 dígito hexadecimal.
 
@@ -161,7 +161,7 @@ En IPv6, el formato es:
 `x:x:x:x:x:x:x:x` 
 Cada x = 1 hexteto = 16 bits = 4 dígitos hexadecimales.
 
-![[Telematica I/Curso de Cisco/Módulo 05/ANEXOS/2025-09-18-12-12-59-image.png]]
+![](./ANEXOS/2025-09-18-12-12-59-image.png)
 
 #### Conversiones decimales a hexadecimales
 

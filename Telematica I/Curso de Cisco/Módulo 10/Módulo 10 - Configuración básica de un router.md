@@ -20,31 +20,31 @@ Las siguientes tareas deben completarse al configurar la configuración inicial 
 
 1. Configure el nombre del dispositivo.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-40-41-image.png]]
+![](./ANEXOS/2025-10-27-09-40-41-image.png)
 
 2. Proteja el modo EXEC con privilegios.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-41-01-image.png]]
+![](./ANEXOS/2025-10-27-09-41-01-image.png)
 
 3. Proteger el modo EXEC de usuario
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-41-19-image.png]]
+![](./ANEXOS/2025-10-27-09-41-19-image.png)
 
 4. Proteger el acceso remoto por Telnet y SSH
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-41-41-image.png]]
+![](./ANEXOS/2025-10-27-09-41-41-image.png)
 
 5. Proteja todas las contraseñas del archivo de configuración
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-41-57-image.png]]
+![](./ANEXOS/2025-10-27-09-41-57-image.png)
 
 6. Proporcione una notificación legal.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-42-15-image.png]]
+![](./ANEXOS/2025-10-27-09-42-15-image.png)
 
 7. Guarde la configuración.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-42-32-image.png]]
+![](./ANEXOS/2025-10-27-09-42-32-image.png)
 
 
 
@@ -52,11 +52,11 @@ Las siguientes tareas deben completarse al configurar la configuración inicial 
 
 En este ejemplo, el router R1 del diagrama de topología se configurará con la configuración inicial.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-43-44-image.png]]
+![](./ANEXOS/2025-10-27-09-43-44-image.png)
 
 Para configurar el nombre del dispositivo para R1, utilice los siguientes comandos .
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-44-01-image.png]]
+![](./ANEXOS/2025-10-27-09-44-01-image.png)
 
 *Nota: Observe cómo el indicador del enrutador muestra ahora el nombre de host del enrutador.*
 
@@ -64,15 +64,15 @@ Todo el acceso al router debe estar asegurado. El modo EXEC privilegiado proporc
 
 Los siguientes comandos aseguran el modo EXEC privilegiado y el modo EXEC de usuario, habilitan el acceso remoto Telnet y SSH y cifran todas las contraseñas de texto sin formato (es decir, EXEC de usuario y línea VTY).
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-46-56-image.png]]
+![](./ANEXOS/2025-10-27-09-46-56-image.png)
 
 La notificación legal advierte a los usuarios que solo deben acceder al dispositivo los usuarios permitidos. La notificación legal se configura de la siguiente manera.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-47-37-image.png]]
+![](./ANEXOS/2025-10-27-09-47-37-image.png)
 
 Si se configuraron los comandos anteriores y el router perdió energía accidentalmente, se perderían todos los comandos configurados. Por esta razón, es importante guardar la configuración cuando se implementen los cambios. Los siguientes comandos guardan la configuración en ejecución en la NVRAM.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-48-08-image.png]]
+![](./ANEXOS/2025-10-27-09-48-08-image.png)
 
 ---
 
@@ -80,7 +80,7 @@ Si se configuraron los comandos anteriores y el router perdió energía accident
 
 Una vez completada la configuración básica, se deben configurar las interfaces del router, ya que sin ellas los dispositivos finales no pueden comunicarse con él. Los routers Cisco, como el ISR 4321, cuentan con interfaces GigabitEthernet (por ejemplo, G0/0/0 y G0/0/1). Su configuración es similar a la de un SVI en un switch, e implica usar comandos específicos para asignar direcciones IP y activar las interfaces.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-09-58-39-image.png]]
+![](./ANEXOS/2025-10-27-09-58-39-image.png)
 
 1. **Interface type-and-number**
 
@@ -129,11 +129,11 @@ Por defecto, muchas interfaces están apagadas, y este comando las activa para q
 
 En este ejemplo, se habilitarán las interfaces directamente conectadas de R1 en el diagrama de topología.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-06-36-image.png]]
+![](./ANEXOS/2025-10-27-10-06-36-image.png)
 
 Para configurar las interfaces en R1, utilice los siguientes comandos.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-07-03-image.png]]
+![](./ANEXOS/2025-10-27-10-07-03-image.png)
 
 *Nota: Observe los mensajes informativos que nos informan de que G0/0/0 y G0/0/1 están activados.*
 
@@ -143,7 +143,7 @@ Para configurar las interfaces en R1, utilice los siguientes comandos.
 
 Existen varios comandos que se pueden utilizar para verificar la configuración de interfaz. El más útil de estos es el comando `show ip interface brief` y `show ipv6 interface brief`, como se muestra en el ejemplo.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-08-12-image.png]]
+![](./ANEXOS/2025-10-27-10-08-12-image.png)
 
 #### Configuración comandos de Verificación
 
@@ -159,31 +159,31 @@ En la tabla se resumen los comandos `show` más populares utilizados para veri
 
 1. **Show ip interface brief**
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-13-04-image.png]]
+![](./ANEXOS/2025-10-27-10-13-04-image.png)
 
 2. **Show ipv6 interface brief**
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-13-49-image.png]]
+![](./ANEXOS/2025-10-27-10-13-49-image.png)
 
 3. **Show ip route**
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-14-09-image.png]]
+![](./ANEXOS/2025-10-27-10-14-09-image.png)
 
 4. **Show ipv6 route**
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-14-47-image.png]]
+![](./ANEXOS/2025-10-27-10-14-47-image.png)
 
 5. **Show interfaces**
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-15-19-image.png]]
+![](./ANEXOS/2025-10-27-10-15-19-image.png)
 
 6. **Show ip interface**
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-17-02-image.png]]
+![](./ANEXOS/2025-10-27-10-17-02-image.png)
 
 7. **Show ipv6 interface**
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-17-38-image.png]]
+![](./ANEXOS/2025-10-27-10-17-38-image.png)
 
 ---
 
@@ -194,11 +194,11 @@ Cada host debe configurarse con una dirección IP y la dirección del gateway co
 Si hay varios routers, se elige uno como puerta de enlace predeterminada. 
 El gateway solo se usa cuando el destino está fuera de la red local; si el destino está en la misma red (como entre dos PCs de una misma LAN), el tráfico se envía directamente sin pasar por el router.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-21-13-image.png]]
+![](./ANEXOS/2025-10-27-10-21-13-image.png)
 
 Si PC1 envía un paquete a PC3 (que está en otra red), el paquete se envía al gateway predeterminado (R1). El router revisa su tabla de enrutamiento para decidir por qué interfaz debe reenviar el paquete y lo envía hacia PC3 por la ruta adecuada.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-21-59-image.png]]
+![](./ANEXOS/2025-10-27-10-21-59-image.png)
 
 El mismo proceso ocurriría en una red IPv6, aunque esto no se muestra en la topología. Los dispositivos usarían la dirección IPv6 del enrutador local como puerta de enlace predeterminada.
 
@@ -211,7 +211,7 @@ Esto se logra mediante una interfaz virtual de switch (SVI) con dirección IPv4 
 Además, se debe configurar un gateway predeterminado (con el comando `ip default-gateway [dirección IP]`), que corresponde a la interfaz del router conectada al switch. 
 Así, el administrador puede acceder y gestionar el switch desde otra red.
 
-![[Telematica I/Curso de Cisco/Módulo 10/ANEXOS/2025-10-27-10-23-46-image 1.png]]
+![](<./ANEXOS/2025-10-27-10-23-46-image 1.png>)
 
 Cuando un host administrador accede a un switch remoto, el tráfico pasa por el router (R1), por lo que el switch S1 necesita una puerta de enlace predeterminada configurada para poder responder y establecer la conexión SSH. 
 Los servidores conectados al switch ya deben tener su gateway configurado en su sistema operativo. 

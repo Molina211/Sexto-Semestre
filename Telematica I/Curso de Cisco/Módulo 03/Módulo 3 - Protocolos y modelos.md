@@ -161,7 +161,7 @@ El mensaje va a un grupo de receptores posibles, pero **solo uno de ellos lo rec
 
 En los diagramas de red, los dispositivos se representan con un **icono de nodo** (generalmente un círculo). Estos nodos ayudan a mostrar cómo se entrega la información (unicast, multicast, broadcast, anycast) sin necesidad de dibujar computadores reales.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-13-56-57-image.png]]
+![](./ANEXOS/2025-09-03-13-56-57-image.png)
 
 ---
 
@@ -233,7 +233,7 @@ Cuando un dispositivo envía una solicitud a un servidor web, se usan varios pro
 
 HTTP pide la página, TCP garantiza que llegue bien, IP la envía al destino correcto y Ethernet la mueve dentro de la red local.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-15-03-21-image.png]]
+![](./ANEXOS/2025-09-03-15-03-21-image.png)
 
 ---
 
@@ -263,13 +263,13 @@ Ejemplo en redes:
 
 - **Capa de contenido:** La información que realmente se transmite, como un correo electrónico, una página web o un mensaje de WhatsApp.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-15-11-32-image.png]]
+![](./ANEXOS/2025-09-03-15-11-32-image.png)
 
 Una suite de protocolos es como una pila organizada, donde las capas de abajo mueven los datos y las de arriba se encargan del mensaje y su significado.
 
 ## Evolución de los conjuntos de protocolos
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-15-21-44-image.png]]
+![](./ANEXOS/2025-09-03-15-21-44-image.png)
 
 ### Internet Protocol Suite o TCP/IP
 
@@ -443,7 +443,7 @@ Las **organizaciones de estandarización** (sin fines de lucro y neutrales) crea
 
 ### Estándares de Internet
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-17-34-46-image.png]]
+![](./ANEXOS/2025-09-03-17-34-46-image.png)
 
 Distintas organizaciones tienen diferentes responsabilidades para promover y elaborar estándares para el protocolo TCP/IP como:
 
@@ -452,7 +452,7 @@ Distintas organizaciones tienen diferentes responsabilidades para promover y ela
 - **Grupo de trabajo de ingeniería de Internet (IEFT)** - Crea y actualiza protocolos como TCP/IP (publica los RFC).
 - **Grupo de trabajo de investigación de Internet (IRTF)** - Investiga a largo plazo temas de Internet (seguridad, criptografía, P2P, etc.).
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-17-36-22-image.png]]
+![](./ANEXOS/2025-09-03-17-36-22-image.png)
 
 - **ICANN:** Organización con sede en EE. UU. que gestiona la **asignación de direcciones IP** y la **administración de nombres de dominio** (ej. .com, .org, .net), además de otros identificadores usados en **TCP/IP**.
 
@@ -498,7 +498,7 @@ Los dos modelos más usados son:
 
 - **TCP/IP.**
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-17-50-35-image.png]]
+![](./ANEXOS/2025-09-03-17-50-35-image.png)
 
 ### El modelo de referencia de OSI
 
@@ -619,7 +619,7 @@ El **modelo TCP/IP** (o modelo de Internet) se creó en los años 70 para descri
 | **2. Enlace de datos**   | **Acceso a la red**         | Define cómo se envían los datos en un enlace físico (Ethernet, Wi-Fi).                              |
 | **1. Física**            | **Acceso a la red**         | Se ocupa de la transmisión real por cables, señales o radio.                                        |
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-03-22-19-18-image.png]]
+![](./ANEXOS/2025-09-03-22-19-18-image.png)
 
 **Similitudes**
 
@@ -700,7 +700,7 @@ Cuando los datos de una aplicación se envían por la red, pasan por varias capa
    
    - Cada nombre refleja el trabajo que hace esa capa: por ejemplo, un segmento TCP incluye control de flujo y confiabilidad, mientras que un paquete IP se encarga de direccionamiento y enrutamiento.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-00-35-35-image.png]]
+![](./ANEXOS/2025-09-04-00-35-35-image.png)
 
 Resumen:
 
@@ -734,7 +734,7 @@ La capa de red se encarga del “viaje largo”: Llevar los datos al destino cor
 
 La capa de **enlace de datos** se encarga del “viaje corto”: Pasar los datos de un dispositivo al siguiente dentro de la misma red local.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-00-40-51-image.png]]
+![](./ANEXOS/2025-09-04-00-40-51-image.png)
 
 ### Dirección lógica de capa 3
 
@@ -796,7 +796,7 @@ En pocas palabras:
 
 Si la porción de red de la dirección IP de origen y de destino es **igual**, significa que ambos dispositivos están en la misma red.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-06-26-image 1.png]]
+![](<./ANEXOS/2025-09-04-01-06-26-image 1.png>)
 
 ### Función de las direcciones de la capa de enlace de datos (capa 2) - La misma red IP
 
@@ -826,7 +826,7 @@ Cuando el emisor y el receptor están en la misma red, la trama de enlace de dat
 
 - La combinación IP + MAC permite que los datos lleguen correctamente desde la red local hasta el dispositivo final, ya sea en la misma red o a través de varias redes.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-12-31-image.png]]
+![](./ANEXOS/2025-09-04-01-12-31-image.png)
 
 Cuando un dispositivo se comunica con otro en una red remota, la dirección de la capa de red (IP) indica el destino final del paquete, mientras que la dirección de la capa de enlace de datos (MAC) se utiliza para enviar la trama al siguiente dispositivo en la ruta, normalmente un Router, dentro de cada red por la que pasa el paquete.
 
@@ -840,7 +840,7 @@ Cuando el emisor y el receptor están en redes diferentes, las direcciones IP mu
 
 La **porción de red** de cada IP indica que el paquete debe atravesar más de una red para llegar al destino.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-41-56-image.png]]
+![](./ANEXOS/2025-09-04-01-41-56-image.png)
 
 ### Rol de acceso a datos de las direcciones de capa de vínculo de datos - Diferentes redes IP
 
@@ -856,7 +856,7 @@ El Router recibe la trama, desempaqueta el paquete IP y lo reenvía hacia el des
 
 Es fundamental que cada host tenga configurada la IP del gateway predeterminado, porque todos los paquetes a redes remotas se envían a ese gateway, usando la MAC del Router para salir de la red local.
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-47-17-image.png]]
+![](./ANEXOS/2025-09-04-01-47-17-image.png)
 
 En resumen, la IP indica el destino final, la **MAC** y el **gateway** permiten que los datos salgan de tu red y lleguen correctamente al destino.
 
@@ -890,11 +890,11 @@ La MAC mueve la trama en cada salto local, mientras que la IP guía el paquete h
 
 **Flujo de datos**
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-50-19-image.png]]
+![](./ANEXOS/2025-09-04-01-50-19-image.png)
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-50-34-image.png]]
+![](./ANEXOS/2025-09-04-01-50-34-image.png)
 
-![[Telematica I/Curso de Cisco/Módulo 03/ANEXOS/2025-09-04-01-50-44-image.png]]
+![](./ANEXOS/2025-09-04-01-50-44-image.png)
 
 ## RESUMEN
 

@@ -84,13 +84,13 @@ También incluye un mensaje de redirección, equivalente al de ICMPv4, para opti
 1. **Mensaje RA:** Los mensajes de Anuncio de Router (RA) son enviados por los enrutadores IPv6 cada 200 segundos para informar a los hosts sobre parámetros de red, como el prefijo, longitud del prefijo, dirección DNS y nombre de dominio  
    Un host que usa SLAAC configura su puerta de enlace predeterminada con la dirección de enlace local del enrutador que envió el mensaje RA.
 
-![[Telematica I/Curso de Cisco/Módulo 13/ANEXOS/2025-11-01-01-59-02-image.png]]
+![](./ANEXOS/2025-11-01-01-59-02-image.png)
 
 *R1 envía un mensaje de RA, «Hola a todos los dispositivos habilitados para IPv6. Soy R1 y puedes usar SLAAC para crear una dirección de unidifusión global IPv6. El prefijo es 2001:db8:acad:1: :/64. Por cierto, use mi dirección local de enlace fe80: :1 como su puerta de enlace predeterminada.*
 
 2. **Mensajes RS:** Un router IPv6 envía un mensaje RA en respuesta a un mensaje de Solicitud de Router (RS) enviado por un host, como PC1, para obtener de forma dinámica su información de dirección IPv6.
 
-![[Telematica I/Curso de Cisco/Módulo 13/ANEXOS/2025-11-01-02-03-18-image.png]]
+![](./ANEXOS/2025-11-01-02-03-18-image.png)
 
 *R1 responde a la RS con un mensaje de RA.*
 
@@ -104,7 +104,7 @@ También incluye un mensaje de redirección, equivalente al de ICMPv4, para opti
    Si no hay respuesta, la dirección se considera única y válida. 
    Aunque no es obligatoria, laRFC 4861 recomienda realizar DAD para las direcciones unicast.
 
-![[Telematica I/Curso de Cisco/Módulo 13/ANEXOS/2025-11-01-02-07-37-image.png]]
+![](./ANEXOS/2025-11-01-02-07-37-image.png)
 
 *PC1 envía un mensaje NS para comprobar la singularidad de una dirección, «¿Quién tiene la dirección IPv6 2001:db8:acad:1::10, me enviará su dirección MAC? «*
 
@@ -135,7 +135,7 @@ El ping al loopback local (127.0.0.1 en IPv4 o ::1 en IPv6) verifica que el prot
 Confirma el funcionamiento de la capa de red, pero no valida la configuración de direcciones, máscaras o puertas de enlace, ni el estado de las capas inferiores. 
 Si aparece un mensaje de error, significa que TCP/IP no funciona correctamente en el dispositivo.
 
-![[Telematica I/Curso de Cisco/Módulo 13/ANEXOS/2025-11-01-19-06-45-image.png]]
+![](./ANEXOS/2025-11-01-19-06-45-image.png)
 
 1. *Hacer ping al host local permite confirmar que el protocolo TCP/IP se encuentra instalado en el host y que funciona.*
 
@@ -155,7 +155,7 @@ El ping a la puerta de enlace predeterminada verifica si el host puede comunicar
 
 - También es posible que el router tenga medidas de seguridad que bloqueen las solicitudes de ping.
 
-![[Telematica I/Curso de Cisco/Módulo 13/ANEXOS/2025-11-01-19-08-56-image.png]]
+![](./ANEXOS/2025-11-01-19-08-56-image.png)
 
 *El host hace ping a su puerta de enlace predeterminada, enviando una solicitud de eco ICMP. La puerta de enlace predeterminada envía una respuesta de eco confirmando la conectividad.*
 
@@ -190,7 +190,7 @@ Cuando el TTL llega a cero, el router envía un mensaje ICMP Time Exceeded, lo q
 
 Entonces, traceroute permite diagnosticar el recorrido y rendimiento de la ruta entre dos hosts, detectando dónde puede estar el problema en la red.
 
-![[Telematica I/Curso de Cisco/Módulo 13/ANEXOS/2025-11-01-19-14-07-image.png]]
+![](./ANEXOS/2025-11-01-19-14-07-image.png)
 
 Traceroute envía paquetes con un TTL inicial de 1, que expira en el primer router, generando un mensaje ICMP “Tiempo excedido". Luego aumenta el TTL (2, 3, 4, …) para descubrir cada salto intermedio.
 

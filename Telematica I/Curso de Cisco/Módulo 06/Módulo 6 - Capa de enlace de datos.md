@@ -50,7 +50,7 @@ La capa de enlace de datos prepara los datos de red para la red física.
   
   - Luego, la trama se transforma en señales entendibles para la capa física (Capa 1), que finalmente la transmite por el medio.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-22-10-42-10-image.png]]
+![](./ANEXOS/2025-09-22-10-42-10-image.png)
 
 #### Subcapas de enlace de datos IEEE 802 LAN/MAN
 
@@ -76,7 +76,7 @@ Dentro de la capa de enlace de datos (Capa 2) se distinguen dos subcapas:
    
    - Está ligado directamente a la capa física (cables, Wi-Fi, etc.).
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-22-10-46-39-image.png]]
+![](./ANEXOS/2025-09-22-10-46-39-image.png)
 
 **Subcapa LLC (Logical Link Control)**
 
@@ -281,7 +281,7 @@ Ese trabajo lo hacen organismos especializados en normas de hardware y transmisi
 
 - El **ANSI** establece normas técnicas para EE. UU. que luego influyen en estándares globales.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-22-11-26-17-image.png]]
+![](./ANEXOS/2025-09-22-11-26-17-image.png)
 
 ---
 
@@ -303,7 +303,7 @@ Se dividen en dos tipos principales:
   
   - **Estrella:** Todos los dispositivos se conectan a un nodo central (switch o hub).
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-13-08-image.png]]
+![](./ANEXOS/2025-09-25-22-13-08-image.png)
 
  **Topología lógica**
 
@@ -313,7 +313,7 @@ Se dividen en dos tipos principales:
 
 - Determina el tipo de tramas y cómo se controla el acceso al medio.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-13-24-image.png]]
+![](./ANEXOS/2025-09-25-22-13-24-image.png)
 
 **Relación con la capa de enlace de datos**
 
@@ -335,7 +335,7 @@ Se dividen en dos tipos principales:
 
 - Ejemplo: Un enlace dedicado entre dos oficinas.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-16-32-image.png]]
+![](./ANEXOS/2025-09-25-22-16-32-image.png)
 
 **Hub and Spoke (En estrella)**
 
@@ -349,7 +349,7 @@ Se dividen en dos tipos principales:
 
 - Ejemplo: Red corporativa con una oficina central y varias sucursales.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-17-46-image.png]]
+![](./ANEXOS/2025-09-25-22-17-46-image.png)
 
 **Malla (Mesh)**
 
@@ -363,7 +363,7 @@ Se dividen en dos tipos principales:
 
 - Ejemplo: Interconexión de datacenters críticos.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-18-34-image.png]]
+![](./ANEXOS/2025-09-25-22-18-34-image.png)
 
 Un híbrido es una variación o combinación de cualquier topología. Por ejemplo, una malla parcial es una topología híbrida en la que algunos, pero no todos, los dispositivos finales están interconectados.
 
@@ -371,11 +371,11 @@ Un híbrido es una variación o combinación de cualquier topología. Por ejempl
 
 En una topología punto a punto, dos nodos están conectados directamente y no necesitan compartir el medio con otros dispositivos. Esto simplifica los protocolos de enlace de datos, ya que todas las tramas enviadas se reciben únicamente en el nodo destino. Cada nodo coloca las tramas en el medio y el otro nodo las recibe directamente, lo que hace que la comunicación sea simple y eficiente.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-24-10-image.png]]
+![](./ANEXOS/2025-09-25-22-24-10-image.png)
 
 Aunque los nodos puedan estar conectados a través de varios dispositivos físicos, la topología lógica puede seguir siendo punto a punto, porque cada nodo se comunica directamente con el otro a nivel de tramas. En Ethernet, incluso en un enlace punto a punto, cada nodo debe verificar si la trama entrante le corresponde.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-26-45-image.png]]
+![](./ANEXOS/2025-09-25-22-26-45-image.png)
 
 #### Topologías de LAN
 
@@ -425,7 +425,7 @@ Antes de las LAN modernas basadas en switches, existían otras topologías:
 
 - Las tramas circulan en una dirección hasta llegar al destino.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-38-08-image.png]]
+![](./ANEXOS/2025-09-25-22-38-08-image.png)
 
 #### Comunicación Dúplex completo y semidúplex
 
@@ -455,7 +455,7 @@ La comunicación dúplex indica cómo se transmiten los datos entre dos disposit
   
   - CSMA/CA (Acceso Múltiple por Detección de Portadora con Prevención de Colisiones) - WLAN, evita colisiones antes de transmitir.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-46-51-image.png]]
+![](./ANEXOS/2025-09-25-22-46-51-image.png)
 
 **2. Acceso controlado**
 
@@ -469,7 +469,7 @@ La comunicación dúplex indica cómo se transmiten los datos entre dos disposit
   
   - **ARCNET** (heredado)
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-47-04-image.png]]
+![](./ANEXOS/2025-09-25-22-47-04-image.png)
 
 *Nota: Las redes Ethernet modernas en dúplex completo ya no requieren métodos de acceso, porque no existen colisiones en el enlace.*
 
@@ -503,7 +503,7 @@ Las redes de acceso por contención (como LAN con hubs o WLAN) no escalan bien c
 
 *Nota: Las LAN Ethernet modernas con switch's no usan contención, porque el switch y las NIC funcionan en dúplex completo, evitando colisiones.*
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-22-54-56-image.png]]
+![](./ANEXOS/2025-09-25-22-54-56-image.png)
 
 ---
 
@@ -531,7 +531,7 @@ Las redes de acceso por contención (como LAN con hubs o WLAN) no escalan bien c
   
   - **WLAN:** Más información para evitar colisiones y garantizar entrega, especialmente en entornos frágiles.
 
-![[Telematica I/Curso de Cisco/Módulo 06/ANEXOS/2025-09-25-23-00-29-image.png]]
+![](./ANEXOS/2025-09-25-23-00-29-image.png)
 
 #### Campos de tramas
 

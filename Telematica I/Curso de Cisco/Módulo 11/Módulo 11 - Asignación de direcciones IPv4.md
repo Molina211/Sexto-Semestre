@@ -35,7 +35,7 @@ Una dirección IPv4 tiene 32 bits y está dividida en dos partes:
 
 Para saber qué parte corresponde a red y cuál a host, se analiza la dirección junto con la máscara de subred, que indica cuántos bits pertenecen a la red y cuántos al host.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-11-08-20-image.png]]
+![](./ANEXOS/2025-10-27-11-08-20-image.png)
 
 Una dirección IPv4 de 32 bits se divide en porción de red y porción de host, y la máscara de subred determina cuántos bits corresponden a cada una.
 
@@ -47,14 +47,14 @@ Como se muestra en la figura, asignar una dirección IPv4 a un host requiere lo 
 
 - **Máscara de subred:** Se usa para identificar la parte de red/host de la dirección IPv4.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-11-11-08-image.png]]
+![](./ANEXOS/2025-10-27-11-11-08-image.png)
 
 Una puerta de enlace predeterminada permite comunicarse con redes remotas y los servidores DNS traducen nombres de dominio a direcciones IPv4.
 
 La máscara de subred se usa para distinguir la porción de red y la porción de host en una dirección IPv4. 
 Al asignar una dirección a un dispositivo, la máscara permite identificar la dirección de red, que representa a todos los dispositivos dentro de la misma red.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-11-13-21-image.png]]
+![](./ANEXOS/2025-10-27-11-13-21-image.png)
 
 La máscara de subred está formada por unos (1) que indican la porción de red y ceros (0) que indican la porción de host. 
 Para determinar qué parte de la dirección IPv4 corresponde a la red y cuál al host, se compara la dirección con la máscara bit por bit, de izquierda a derecha:
@@ -63,7 +63,7 @@ Para determinar qué parte de la dirección IPv4 corresponde a la red y cuál al
 
 - Los bits donde la máscara tiene 0 pertenecen al host.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-11-17-13-image.png]]
+![](./ANEXOS/2025-10-27-11-17-13-image.png)
 
 Tenga en cuenta que la máscara de subred en realidad no contiene la porción de red o host de una dirección IPv4, solo le dice a la computadora dónde buscar la parte de la dirección IPv4 que es la porción de red y qué parte es la porción de host.
 
@@ -95,7 +95,7 @@ En la operación AND, solo 1 AND 1 = 1, y cualquier otra combinación resulta en
 Para encontrar la dirección de red, se compara bit por bit la dirección IPv4 con la máscara de subred usando AND. 
 Por ejemplo, al aplicar AND entre 192.168.10.10 y 255.255.255.0, el resultado es la dirección de red 192.168.10.0.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-11-30-09-image.png]]
+![](./ANEXOS/2025-10-27-11-30-09-image.png)
 
 Para obtener la dirección de red, se realiza una operación AND entre los bits de la dirección IPv4 del host y los bits de la máscara de subred. 
 Solo cuando ambos bits son 1, el resultado es 1. 
@@ -111,7 +111,7 @@ Dentro de cada red hay tres tipos de direcciones IP:
 
 - Dirección de broadcast
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-14-58-02-image.png]]
+![](./ANEXOS/2025-10-27-14-58-02-image.png)
 
 La dirección de red identifica a una red específica. Un dispositivo pertenece a esa red si usa la misma máscara de subred y tiene los mismos bits de red. 
 Para obtener la dirección de red, el host realiza una operación AND entre su dirección IPv4 y la máscara de subred. 
@@ -120,11 +120,11 @@ Ejemplo: 192.168.10.0/24.
 
 | Descripción                                  | Porción de red (Decimal / Binario)                                                | Porción de host (Decimal / Binario)                                               | Bits de host        |
 | :------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------- |
-| **Máscara de subred 255.255.255.0 /24**      | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-49-46-image.png]]   | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-52-57-image.png]]   | Todos los 0         |
-| **Dirección de red 192.168.10.0 /24**        | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-51-26-image.png]]   | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-52-57-image 1.png]] | Todos los 0         |
-| **Primera dirección 192.168.10.1 /24**       | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-51-26-image 1.png]] | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-53-07-image.png]]   | Todos los 0s y un 1 |
-| **Última dirección 192.168.10.254 /24**      | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-51-26-image 2.png]] | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-53-16-image.png]]   | Todos los 1s y un 0 |
-| **Dirección de difusión 192.168.10.255 /24** | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-51-26-image 3.png]] | ![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-27-15-53-29-image.png]]   | Todos los 1s        |
+| **Máscara de subred 255.255.255.0 /24**      | ![](./ANEXOS/2025-10-27-15-49-46-image.png)   | ![](./ANEXOS/2025-10-27-15-52-57-image.png)   | Todos los 0         |
+| **Dirección de red 192.168.10.0 /24**        | ![](./ANEXOS/2025-10-27-15-51-26-image.png)   | ![](<./ANEXOS/2025-10-27-15-52-57-image 1.png>) | Todos los 0         |
+| **Primera dirección 192.168.10.1 /24**       | ![](<./ANEXOS/2025-10-27-15-51-26-image 1.png>) | ![](./ANEXOS/2025-10-27-15-53-07-image.png)   | Todos los 0s y un 1 |
+| **Última dirección 192.168.10.254 /24**      | ![](<./ANEXOS/2025-10-27-15-51-26-image 2.png>) | ![](./ANEXOS/2025-10-27-15-53-16-image.png)   | Todos los 1s y un 0 |
+| **Dirección de difusión 192.168.10.255 /24** | ![](<./ANEXOS/2025-10-27-15-51-26-image 3.png>) | ![](./ANEXOS/2025-10-27-15-53-29-image.png)   | Todos los 1s        |
 
 En una red IPv4, las direcciones de host son las que se asignan a los dispositivos (computadores, teléfonos, impresoras, routers, etc.). 
 Estas direcciones comparten la misma parte de red y la misma máscara, pero tienen una parte de host diferente.
@@ -218,19 +218,19 @@ La multidifusión optimiza el tráfico al enviar un solo paquete a varios hosts 
 
 Las direcciones IPv4 privadas se usan en redes internas (intranets) de hogares y empresas, pero no son enrutables globalmente. Por ello, cuando los dispositivos envían paquetes hacia Internet con direcciones privadas de origen, estos deben ser filtrados o traducidos a direcciones públicas mediante mecanismos como NAT antes de salir hacia el ISP.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-09-20-13-image.png]]
+![](./ANEXOS/2025-10-28-09-20-13-image.png)
 
 El NAT (Traducción de Direcciones de Red) convierte las direcciones IPv4 privadas en públicas para permitir la comunicación con Internet, proceso que realiza el router que conecta la red interna con el ISP. Aunque el NAT evita el acceso directo desde Internet, no es una medida de seguridad real.
 
 Las organizaciones con servicios accesibles desde Internet, como servidores web, usan una DMZ (zona desmilitarizada), donde el router actúa también como firewall y gestiona tanto el enrutamiento como la traducción de direcciones.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-09-24-38-image.png]]
+![](./ANEXOS/2025-10-28-09-24-38-image.png)
 
 #### Direcciones IPv4 de uso especial
 
 Las direcciones de loopback (rango 127.0.0.0/8, comúnmente 127.0.0.1) permiten que un host envíe tráfico a sí mismo. Se usan para probar la configuración TCP/IP y confirmar que la pila de red funciona correctamente. Todas las direcciones dentro de este bloque hacen un bucle interno hacia el mismo dispositivo.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-09-31-49-image.png]]
+![](./ANEXOS/2025-10-28-09-31-49-image.png)
 
 Las direcciones link-local o APIPA (169.254.0.0/16) se asignan automáticamente cuando un cliente DHCP no encuentra un servidor disponible. Permiten la comunicación local dentro de la misma red, aunque no son enrutables ni se usan comúnmente para conexiones punto a punto.
 
@@ -252,7 +252,7 @@ También existían:
 
 Este esquema era útil cuando Internet tenía pocos equipos, pero con el crecimiento de la red se volvió ineficiente, ya que las clases A y B reservaban demasiadas direcciones sin uso, provocando desperdicio del espacio IPv4.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-09-40-00-image.png]]
+![](./ANEXOS/2025-10-28-09-40-00-image.png)
 
 A mediados de los años 90, el crecimiento de Internet hizo que el direccionamiento con clase quedara obsoleto. Fue reemplazado por el direccionamiento sin clase (CIDR), que permite asignar bloques de direcciones IPv4 según la necesidad real y no según clases fijas (A, B o C). Esto optimizó el uso del espacio limitado de direcciones IPv4.
 
@@ -260,7 +260,7 @@ A mediados de los años 90, el crecimiento de Internet hizo que el direccionamie
 
 Las direcciones IPv4 públicas son únicas y enrutables globalmente a través de los routers de los ISP. Su asignación es gestionada por la IANA, que distribuye bloques de direcciones a los Registros Regionales de Internet (RIR). Estos RIR asignan direcciones a los ISP y organizaciones, que luego las reparten a sus usuarios según sus necesidades y políticas.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-10-08-31-image.png]]
+![](./ANEXOS/2025-10-28-10-08-31-image.png)
 
 - **AfriNIC** (African Network Information Centre) - Africa Region
 
@@ -278,11 +278,11 @@ Las direcciones IPv4 públicas son únicas y enrutables globalmente a través de
 
 Un dominio de difusión grande conecta muchos hosts, lo que puede generar exceso de tráfico de difusión. Esto provoca lentitud en la red y en los dispositivos, ya que cada uno debe recibir y procesar todos los paquetes de difusión enviados por los demás.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-10-16-06-image.png]]
+![](./ANEXOS/2025-10-28-10-16-06-image.png)
 
 La división en subredes reduce el tamaño de los dominios de difusión al separar una red grande en subredes más pequeñas. Así, el tráfico de difusión se limita a cada subred, mejorando el rendimiento. Por ejemplo, una red 172.16.0.0/16 puede dividirse en 172.16.0.0/24 y 172.16.1.0/24, evitando que las difusiones de una LAN afecten a la otra.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-10-28-42-image.png]]
+![](./ANEXOS/2025-10-28-10-28-42-image.png)
 
 La división en subredes consiste en tomar bits del campo de host para crear más subredes, aumentando así la longitud del prefijo (por ejemplo, de /16 a /24). En la práctica, los términos red y subred se usan de forma similar, ya que casi todas las redes forman parte de un bloque mayor de direcciones.
 
@@ -296,15 +296,15 @@ División por ubicación, grupo o función y tipo de dispositivo:
 
 - **Ubicación**
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-10-32-36-image.png]]
+![](./ANEXOS/2025-10-28-10-32-36-image.png)
 
 - **Grupo o función**
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-10-33-00-image.png]]
+![](./ANEXOS/2025-10-28-10-33-00-image.png)
 
 - **Tipo de dispositivo**
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-28-10-34-26-image.png]]
+![](./ANEXOS/2025-10-28-10-34-26-image.png)
 
 ---
 
@@ -422,23 +422,23 @@ Al calcular:
 
 - 2⁷ = 128 subredes (suficiente)
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-09-45-36-image.png]]
+![](./ANEXOS/2025-10-29-09-45-36-image.png)
 
 Por tanto, se deben tomar 7 bits prestados del tercer octeto, lo que da una nueva máscara de /23 (255.255.254.0), permitiendo 128 subredes con 510 hosts por cada una.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-09-46-29-image.png]]
+![](./ANEXOS/2025-10-29-09-46-29-image.png)
 
 Al tomar 7 bits prestados del tercer octeto en la red 172.16.0.0/16, la máscara de subred se amplía a /23 (255.255.254.0). 
 Esto significa que el tercer octeto en binario es 11111110, indicando los bits prestados. 
 Como resultado, se obtienen 128 subredes, que van desde 172.16.0.0/23 hasta 172.16.254.0/23, cada una con 510 hosts disponibles.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-09-47-56-image.png]]
+![](./ANEXOS/2025-10-29-09-47-56-image.png)
 
 Al prestar 7 bits para la subred, quedan 9 bits para los hosts, lo que genera 512 direcciones por subred. 
 Al restar las direcciones reservadas (red y difusión), quedan 510 hosts utilizables por cada /23. 
 En la primera subred (172.16.0.0/23), las direcciones de host van desde 172.16.0.1 hasta 172.16.1.254.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-09-49-34-image.png]]
+![](./ANEXOS/2025-10-29-09-49-34-image.png)
 
 #### Cree 1000 subredes con un prefijo Slash 8
 
@@ -446,21 +446,21 @@ Un ISP pequeño con la red 10.0.0.0/8 necesita 1000 subredes.
 Como la dirección tiene 24 bits de host disponibles, se toman prestados 10 bits (8 del segundo octeto y 2 del tercero), lo que permite crear 1024 subredes (2¹⁰ = 1024). 
 Así, la nueva máscara de subred es /18 (255.255.192.0), manteniendo suficiente espacio para hosts dentro de cada subred.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-09-52-23-image.png]]
+![](./ANEXOS/2025-10-29-09-52-23-image.png)
 
 Se muestra la dirección de red y la máscara de subred resultante, la cual se convierte en 255.255.192.0 o un prefijo /18.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-09-52-38-image.png]]
+![](./ANEXOS/2025-10-29-09-52-38-image.png)
 
 Se muestra las subredes resultantes de tomar prestados 10 bits, creando subredes de 10.0.0.0/18 a 10.255.192.0/18.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-09-54-36-image.png]]
+![](./ANEXOS/2025-10-29-09-54-36-image.png)
 
 Al prestar 10 bits para crear subredes en la red 10.0.0.0/8, quedan 14 bits para los hosts, lo que da 16 384 direcciones por subred.
 Al restar las direcciones reservadas (red y difusión), quedan 16 382 hosts utilizables por subred. 
 Así, cada una de las 1000 subredes puede soportar hasta 16 382 dispositivos.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-09-56-55-image.png]]
+![](./ANEXOS/2025-10-29-09-56-55-image.png)
 
 ---
 
@@ -474,7 +474,7 @@ En una red empresarial, se utilizan tanto direcciones IPv4 privadas como públic
 
 - **DMZ (zona desmilitarizada):** Área expuesta a Internet que aloja servicios públicos, como servidores web, y usa direcciones públicas.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-10-07-00-image.png]]
+![](./ANEXOS/2025-10-29-10-07-00-image.png)
 
 La intranet usa direcciones IPv4 privadas, como 10.0.0.0/8, que ofrece gran flexibilidad para crear subredes. 
 Al aplicar una máscara /16, se obtienen 256 subredes, cada una con 65 534 hosts disponibles. 
@@ -540,21 +540,21 @@ Los administradores deben planificar un esquema de direccionamiento que equilibr
 
 El ISP asignó la red 172.16.0.0/22 a la sede central, proporcionando 1022 direcciones de host. Aunque es un ejemplo, esta dirección pertenece al espacio privado IPv4.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-10-22-53-image.png]]
+![](./ANEXOS/2025-10-29-10-22-53-image.png)
 
 La sede y cuatro sucursales necesitan su propio espacio IPv4 público, totalizando 10 subredes de la red 172.16.0.0/22. La subred más grande debe soportar 40 hosts, por lo que se busca optimizar al máximo el uso del espacio de direcciones disponible.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-10-27-10-image.png]]
+![](./ANEXOS/2025-10-29-10-27-10-image.png)
 
 La red 172.16.0.0/22 tiene 10 bits de host disponibles. 
 Como la subred más grande necesita 40 hosts, se requieren 6 bits para los hosts, ya que con la fórmula **2⁶ - 2 = 62** se obtienen suficientes direcciones para cubrirlos.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-10-28-59-image.png]]
+![](./ANEXOS/2025-10-29-10-28-59-image.png)
 
 Al tomar 4 bits prestados de la parte de host (2 del tercer octeto y 2 del cuarto), se obtienen 16 subredes (2⁴ = 16), suficientes para las 10 requeridas y con margen para crecer. 
 La nueva máscara es /26 (255.255.255.192), que permite asignar subredes específicas a cada sede y a las conexiones de los routers con el ISP.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-10-30-33-image.png]]
+![](./ANEXOS/2025-10-29-10-30-33-image.png)
 
 ---
 
@@ -564,19 +564,19 @@ La nueva máscara es /26 (255.255.255.192), que permite asignar subredes especí
 
 El agotamiento del espacio IPv4 hace necesario optimizar el uso de direcciones al crear subredes. El Subneteo tradicional asigna la misma cantidad de direcciones a cada red, lo que resulta ineficiente cuando las necesidades de hosts varían. En redes con varias LAN y conexiones WAN, el uso de Subneteo variable (VLSM) permite asignar solo las direcciones necesarias a cada subred, aprovechando mejor el espacio disponible.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-04-56-image.png]]
+![](./ANEXOS/2025-10-29-11-04-56-image.png)
 
 Al tomar prestados 3 bits de la dirección 192.168.20.0/24, se obtienen 8 subredes con 30 hosts utilizables cada una, cumpliendo así con el requisito de siete subredes y la cantidad necesaria de hosts para la LAN más grande.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-06-11-image.png]]
+![](./ANEXOS/2025-10-29-11-06-11-image.png)
 
 Estas siete subredes podrían asignarse a las redes LAN y WAN.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-11-37-image.png]]
+![](./ANEXOS/2025-10-29-11-11-37-image.png)
 
 La división en subredes tradicional cumple con los requisitos de la LAN, pero genera un gran desperdicio de direcciones. En los enlaces WAN, que solo requieren dos direcciones, se desperdician 28 de las 30 disponibles por subred, sumando un total de 84 direcciones sin usar.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-13-37-image.png]]
+![](./ANEXOS/2025-10-29-11-13-37-image.png)
 
 El uso de la división en subredes tradicional limita la expansión futura y desperdicia direcciones. Para solucionar esto, se creó la máscara de subred de longitud variable (VLSM), que permite dividir una subred en partes más pequeñas y aprovechar mejor las direcciones disponibles.
 
@@ -584,23 +584,23 @@ El uso de la división en subredes tradicional limita la expansión futura y des
 
 En la división en subredes tradicional, todas las subredes tienen el mismo tamaño y usan la misma máscara. En cambio, con VLSM, las subredes pueden tener diferentes tamaños, ya que la máscara varía según las necesidades de cada red, permitiendo un uso más eficiente de las direcciones.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-15-47-image.png]]
+![](./ANEXOS/2025-10-29-11-15-47-image.png)
 
 VLSM permite dividir la red 192.168.20.0/24 en siete subredes de diferentes tamaños, adaptadas a las cuatro LAN y las tres conexiones entre routers, optimizando el uso de direcciones IP.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-18-14-image.png]]
+![](./ANEXOS/2025-10-29-11-18-14-image.png)
 
 La red 192.168.20.0/24 se divide en ocho subredes iguales, cada una con 30 hosts utilizables; cuatro se asignan a las LAN y tres a las conexiones entre routers.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-18-51-image.png]]
+![](./ANEXOS/2025-10-29-11-18-51-image.png)
 
 VLSM permite optimizar direcciones al subdividir la última subred 192.168.20.224/27 en subredes más pequeñas /30, ideales para los enlaces entre routers que solo necesitan dos direcciones por subred.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-22-11-image.png]]
+![](./ANEXOS/2025-10-29-11-22-11-image.png)
 
 Se usa una máscara/30 porque deja solo 2 bits para hosts, lo justo para obtener 2 direcciones utilizables (2² − 2 = 2). A partir de la subred 192.168.20.224/27, se toman 3 bits más prestados, dividiéndola en subredes /30. Así, las cuatro subredes /27 se asignan a las LAN, y tres subredes /30 a los enlaces entre routers, aprovechando al máximo las direcciones sin desperdicio.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-47-52-image.png]]
+![](./ANEXOS/2025-10-29-11-47-52-image.png)
 
 El uso de VLSM permite ajustar el tamaño de cada subred según sus necesidades, reduciendo el desperdicio de direcciones. En este caso, la subred 7 se usa para los enlaces entre routers, dejando libres las subredes 4, 5 y 6, además de cinco más, para futuras expansiones. Al aplicar VLSM, siempre se debe comenzar con la subred más grande y continuar subdividiendo hasta cubrir las más pequeñas.
 
@@ -608,7 +608,7 @@ El uso de VLSM permite ajustar el tamaño de cada subred según sus necesidades,
 
 Usando las subredes VLSM, las redes LAN y entre routers se pueden abordar sin desperdicio innecesario.
 
-![[Telematica I/Curso de Cisco/Módulo 11/ANEXOS/2025-10-29-11-49-06-image.png]]
+![](./ANEXOS/2025-10-29-11-49-06-image.png)
 
 En un esquema de direccionamiento común, la primera dirección de host de cada subred se asigna al router como gateway predeterminado. Los hosts usan direcciones dentro del rango de su subred y la del router como puerta de enlace. La tabla resume las redes, rangos de hosts y sus Gateways correspondientes para las cuatro LAN.
 

@@ -36,7 +36,7 @@ Estos son los componentes de un punto de acceso:
 2. Varios puertos de Switch de Ethernet
 3. Un puerto de internet
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/Pasted image 20251120131652.png]]
+![](<./ANEXOS/Pasted image 20251120131652.png>)
 
 ### Conexión por cable al Router inalámbrico
 
@@ -80,7 +80,7 @@ Organizaciones destacadas:
 
 - **JSA/JIS**: Asociación de Normas Japonesas.
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-08-10-21-51-image.png]]
+![](./ANEXOS/2025-09-08-10-21-51-image.png)
 
 ### Componentes físicos
 
@@ -135,7 +135,7 @@ Es la forma física real que toma la señal (voltajes, luz, ondas) para transpor
 
 El ancho de banda es la capacidad de un medio para transportar datos en un tiempo determinado, expresado en kbps, Mbps o Gbps. No se refiere a la velocidad de los bits (que viajan a la velocidad de la electricidad), sino a la cantidad de bits transmitidos por segundo. Su valor práctico depende de las propiedades del medio físico, la tecnología de señalización y detección, así como de limitaciones físicas y tecnológicas.
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-00-35-55-image.png]]
+![](./ANEXOS/2025-09-15-00-35-55-image.png)
 
 La **terminología del ancho de banda** se entiende a partir de tres conceptos clave:
 
@@ -159,7 +159,7 @@ Los datos viajan como impulsos eléctricos que sufren **atenuación** al recorre
 
 - **Crosstalk (diafonía):** Interferencia entre hilos adyacentes debido a campos eléctricos o magnéticos, provocando fugas de señales, como ocurre en llamadas telefónicas donde se escucha otra conversación.
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-00-48-21-image.png]]
+![](./ANEXOS/2025-09-15-00-48-21-image.png)
 
 Para reducir las interferencias en el **cableado de cobre**, se aplican distintas técnicas:
 
@@ -198,23 +198,23 @@ El **IEEE** establece sus características eléctricas y clasifica los cables po
 
 - **Cat. 8**: Hasta 40 Gbps.
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-14-56-image.png]]
+![](./ANEXOS/2025-09-15-01-14-56-image.png)
 
 ##### Conectores RJ-45 para UTP
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/Pasted image 20251120131815.png]]
+![](<./ANEXOS/Pasted image 20251120131815.png>)
 
 ##### Socket RJ-45 para UTP
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/Pasted image 20251120131826.png]]
+![](<./ANEXOS/Pasted image 20251120131826.png>)
 
 ##### Cable UTP mal terminado
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-16-32-image.png]]
+![](./ANEXOS/2025-09-15-01-16-32-image.png)
 
 ##### Cable UTP correctamente terminado
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-17-23-image.png]]
+![](./ANEXOS/2025-09-15-01-17-23-image.png)
 
 Los **cables UTP** pueden armarse con diferentes convenciones de conexión en el conector **RJ-45**:
 
@@ -226,9 +226,9 @@ Los **cables UTP** pueden armarse con diferentes convenciones de conexión en el
 
 **Auto-MDIX** permite que los equipos de red ajusten automáticamente la conexión, funcionando con cualquier cable Ethernet (directo o cruzado) sin importar el tipo.
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-24-54-image.png]]
+![](./ANEXOS/2025-09-15-01-24-54-image.png)
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-25-08-image.png]]
+![](./ANEXOS/2025-09-15-01-25-08-image.png)
 
 ---
 
@@ -356,23 +356,23 @@ Por último, los cables de conexión de fibra óptica interconectan dispositivos
 
 #### Cable de conexión multimodo SC-SC
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-44-38-image.png]]
+![](./ANEXOS/2025-09-15-01-44-38-image.png)
 
 #### Cable de conexión monomodo LC-LC
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-45-15-image.png]]
+![](./ANEXOS/2025-09-15-01-45-15-image.png)
 
 #### Cable de conexión multimodo ST-LC
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-45-47-image.png]]
+![](./ANEXOS/2025-09-15-01-45-47-image.png)
 
 #### Cable de conexión monomodo SC-ST
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-46-26-image.png]]
+![](./ANEXOS/2025-09-15-01-46-26-image.png)
 
 **Cuadro comparativo entre cobre y fibra**
 
-![[Telematica I/Curso de Cisco/Módulo 04/ANEXOS/2025-09-15-01-47-40-image.png]]
+![](./ANEXOS/2025-09-15-01-47-40-image.png)
 
 ---
 
