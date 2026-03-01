@@ -28,7 +28,7 @@ IPv4 se está quedando sin direcciones, por lo que se creó IPv6 como su sucesor
 
 *Fechas de agotamiento de las direcciones IPv4*
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-29-17-25-10-image.png]]
+![](./ANEXOS/2025-10-29-17-25-10-image.png)
 
 IPv4 tiene un límite de ~4.300 millones de direcciones, y aunque las direcciones privadas y NAT ayudaron a retrasar el agotamiento, NAT presenta problemas de latencia y limita las comunicaciones entre pares. Con el aumento de dispositivos móviles, los principales proveedores de telefonía e Internet han adoptado IPv6, alcanzando altos porcentajes de tráfico en esta versión.
 
@@ -40,15 +40,15 @@ No hay una fecha límite para la adopción de IPv6; IPv4 e IPv6 coexistirán dur
 
 - **Dual-stack:** Permite que un dispositivo use IPv4 e IPv6 al mismo tiempo. Así, la red puede conectarse a Internet usando cualquiera de los dos protocolos, y los dispositivos pueden acceder a contenido en IPv6 sin problemas.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-29-17-29-32-image.png]]
+![](./ANEXOS/2025-10-29-17-29-32-image.png)
 
 - **Tunelización:** Permite enviar paquetes IPv6 a través de redes que solo entienden IPv4. Para hacerlo, el paquete IPv6 se “mete” dentro de un paquete IPv4, como si fuera una caja dentro de otra caja. De esta manera, el paquete puede viajar por la red IPv4 y llegar a su destino, donde se extrae y se entrega como paquete IPv6 normal.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-29-17-30-39-image.png]]
+![](./ANEXOS/2025-10-29-17-30-39-image.png)
 
 - **Traducción:** NAT64 permite que los dispositivos que usan IPv6 hablen con dispositivos que usan IPv4. Funciona traduciendo los paquetes: un paquete IPv6 se convierte en IPv4 para viajar por la red, y un paquete IPv4 se convierte en IPv6 cuando regresa, permitiendo la comunicación entre ambos tipos de redes.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-29-17-31-50-image.png]]
+![](./ANEXOS/2025-10-29-17-31-50-image.png)
 
 *Nota: La tunelización y la traducción son para la transición a IPv6 nativo y solo deben usarse cuando sea necesario. El objetivo debe ser las comunicaciones IPv6 nativas de origen a destino.*
 
@@ -58,7 +58,7 @@ No hay una fecha límite para la adopción de IPv6; IPv4 e IPv6 coexistirán dur
 
 Las direcciones IPv6 tienen una longitud de 128 bits y se escriben como una cadena de 32 dígitos hexadecimales, donde cada 4 bits equivalen a un dígito hexadecimal. No distinguen entre mayúsculas y minúsculas, por lo que pueden escribirse de ambas formas. Estas direcciones son mucho más amplias que las IPv4, lo que hace improbable que se agoten.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-11-18-24-image.png]]
+![](./ANEXOS/2025-10-30-11-18-24-image.png)
 
 El formato preferido de una dirección IPv6 se escribe como:
 
@@ -179,7 +179,7 @@ Por ejemplo:
 
 La longitud del prefijo puede ir de /0 a /128, y la recomendada para redes LAN y la mayoría de redes IPv6 es /64.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-11-43-24-image.png]]
+![](./ANEXOS/2025-10-30-11-43-24-image.png)
 
 Se recomienda encarecidamente utilizar un ID de interfaz de 64 bits para la mayoría de las redes. Esto se debe a que la autoconfiguración de direcciones sin estado (SLAAC) utiliza 64 bits para el Id. de interfaz. También facilita la creación y gestión de subredes.
 
@@ -192,7 +192,7 @@ Los paquetes enviados a una dirección de unidifusión son recibidos solo por es
 Al igual que en IPv4, las direcciones de origen deben ser de unidifusión, mientras que las de destino pueden ser unidifusión o multidifusión. 
 Existen varios tipos de direcciones de unidifusión IPv6, según su alcance y propósito.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-11-46-39-image.png]]
+![](./ANEXOS/2025-10-30-11-46-39-image.png)
 
 Los dispositivos IPv6 suelen tener dos direcciones de unidifusión:
 
@@ -238,11 +238,11 @@ Las direcciones IPv6 de unidifusión global (GUA) son únicas y enrutable en Int
 
 *Nota: La dirección 2001:db8::/32 está reservada para documentación y ejemplos*.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-11-53-15-image.png]]
+![](./ANEXOS/2025-10-30-11-53-15-image.png)
 
 - **Direccion IPv6 con un prefijo de enrutamiento global /48 y un prefijo /64**
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-11-54-09-image.png]]
+![](./ANEXOS/2025-10-30-11-54-09-image.png)
 
 GUA tiene 3 partes:
 
@@ -326,9 +326,9 @@ No pueden usarse para enviar paquetes más allá de ese enlace, es decir, no son
 **Ejemplo:** 
 Un PC y una impresora en la misma red pueden comunicarse directamente usando sus direcciones locales de enlace, sin requerir direcciones globales ni conexión a Internet.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-15-58-05-image.png]]
+![](./ANEXOS/2025-10-30-15-58-05-image.png)
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-15-58-31-image.png]]
+![](./ANEXOS/2025-10-30-15-58-31-image.png)
 
 **Usos principales de las LLA:**
 
@@ -377,7 +377,7 @@ Los comandos de configuración y verificación son casi iguales; solo cambia el 
 
 - `2001:db8:acad:3::/64`
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-16-02-39-image.png]]
+![](./ANEXOS/2025-10-30-16-02-39-image.png)
 
 El ejemplo muestra cómo asignar direcciones IPv6 globales unicast (GUA) a las interfaces de un router Cisco (R1). 
 Se configuran tres interfaces distintas:
@@ -390,7 +390,7 @@ Se configuran tres interfaces distintas:
 
 Cada una recibe una dirección IPv6 GUA con su correspondiente longitud de prefijo para permitir la comunicación en sus redes asignadas.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-16-03-55-image.png]]
+![](./ANEXOS/2025-10-30-16-03-55-image.png)
 
 #### Configuración de GUA estática en un host de Windows
 
@@ -398,7 +398,7 @@ Configurar una dirección IPv6 manualmente en un host es similar a hacerlo con I
 En el ejemplo, la puerta de enlace predeterminada de PC1 es la dirección **2001:db8:acad:1::1**, correspondiente a la interfaz GigabitEthernet del router R1. 
 También puede usarse la dirección local de enlace (LLA) del router como puerta de enlace, lo cual es la práctica recomendada, aunque ambas opciones funcionan correctamente.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-16-05-17-image.png]]
+![](./ANEXOS/2025-10-30-16-05-17-image.png)
 
 Al igual que en IPv4, configurar direcciones IPv6 estáticas en cada cliente no es práctico en redes grandes. 
 Por eso, se usa la asignación dinámica de direcciones IPv6, que permite que los dispositivos obtengan su dirección automáticamente sin intervención manual.
@@ -421,9 +421,9 @@ Para configurarla manualmente, se usa el comando:
 
 La dirección debe comenzar con un valor dentro del rango **fe80 a febf**, que identifica a las direcciones locales de enlace.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-16-08-25-image.png]]
+![](./ANEXOS/2025-10-30-16-08-25-image.png)
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-16-08-37-image.png]]
+![](./ANEXOS/2025-10-30-16-08-37-image.png)
 
 Las LLAs estáticas se configuran para que sean fáciles de reconocer y asociar con un router específico.
 
@@ -445,7 +445,7 @@ Además, cuando un host envía una Solicitud de Enrutador (RS), el router respon
 
 Entonces, los mensajes RA y RS permiten que los dispositivos se autoconfiguren dinámicamente en redes IPv6 sin intervención manual.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-17-45-53-image.png]]
+![](./ANEXOS/2025-10-30-17-45-53-image.png)
 
 Los mensajes RA (Router Advertisement) se envían desde las interfaces Ethernet de un router IPv6 para ayudar a los dispositivos de la red a configurarse automáticamente. 
 Sin embargo, el enrutamiento IPv6 no está habilitado por defecto, por lo que debe activarse con el comando global:
@@ -493,7 +493,7 @@ Cada host se autoconfigura usando los datos recibidos en el mensaje RA.
    
    - **Número aleatorio:** Generado de forma segura por el sistema operativo.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-17-51-22-image.png]]
+![](./ANEXOS/2025-10-30-17-51-22-image.png)
 
 1. *El enrutador envía un mensaje RA con el prefijo para el enlace local.*
 2. *La PC usa SLAAC para obtener un prefijo del mensaje RA y crea su propia ID de interfaz.*
@@ -510,7 +510,7 @@ El enrutador puede configurarse para que los dispositivos obtengan su configurac
 
 SLAAC configura la dirección IPv6, el router actúa como puerta de enlace, y el DHCPv6 sin estado entrega solo la información complementaria de red.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-17-56-28-image.png]]
+![](./ANEXOS/2025-10-30-17-56-28-image.png)
 
 1. *El PC envía un RS a todos los enrutadores IPv6, «Necesito información de direccionamiento».*
 2. *El enrutador envía un mensaje RA a todos los nodos IPv6 con el Método 2 (SLAAC y DHCPv6) especificado. "Aquí esta la información de su prefijo, longitud de prefijo y puerta de enlace predeterminada. Pero tendrá que obtener información DNS de un servidor DHCPv6»*.
@@ -528,7 +528,7 @@ En este caso, el router solo envía un mensaje RA (Router Advertisement) indican
 
 El router solo indica el gateway, y el servidor DHCPv6 gestiona el resto del direccionamiento.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-18-03-40-image.png]]
+![](./ANEXOS/2025-10-30-18-03-40-image.png)
 
 1. *La PC envía un RS a todos los enrutadores IPv6, "Necesito información de direccionamiento"*.
 2. *El enrutador envía un mensaje RA a todos los nodos IPv6 con el Método 3 (DHCPv6 con estado) especificado: "Soy su puerta de enlace predeterminada, pero
@@ -545,7 +545,7 @@ La dirección de puerta de enlace predeterminada no la entrega el servidor DHCPv
 Cuando el mensaje RA usa SLAAC o SLAAC con DHCPv6 sin estado, el cliente genera su propia ID de interfaz, ya que el prefijo se obtiene del mensaje RA, pero la segunda parte (ID de interfaz) debe crearla el dispositivo. 
 Esta ID puede generarse mediante el método EUI-64 o con un número aleatorio de 64 bits.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-18-07-21-image.png]]
+![](./ANEXOS/2025-10-30-18-07-21-image.png)
 
 1. *El enrutador envía un mensaje RA.*
 2. *El PC utiliza el prefijo del mensaje RA y utiliza EUI-64 o un número aleatorio de 64 bits para generar un ID de interfaz.*
@@ -573,7 +573,7 @@ El proceso EUI-64 permite generar una ID de interfaz IPv6 de 64 bits a partir de
 Al final, una ID de interfaz de 64 bits única basada en la dirección MAC. 
 Por ejemplo, a partir de la MAC `fc99:4775:cee0`, el proceso genera una ID extendida que el dispositivo usará para su dirección IPv6.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-18-25-34-image.png]]
+![](./ANEXOS/2025-10-30-18-25-34-image.png)
 
 *Paso 1: Divida la dirección MAC entre la OUI y el identificador del dispositivo.*
 
@@ -593,7 +593,7 @@ Por ejemplo, a partir de la MAC `fc99:4775:cee0`, el proceso genera una ID exten
 
 Por eso, al crear una dirección EUI-64, se invierte este bit para mostrar que la nueva dirección ya no es la original del fabricante, sino una versión modificada localmente.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-18-36-03-image.png]]
+![](./ANEXOS/2025-10-30-18-36-03-image.png)
 
 El comando ipconfig puede mostrar una dirección IPv6 global (GUA) generada dinámicamente mediante SLAAC y el proceso EUI-64, que inserta **“fffe”** en medio de la ID de la interfaz, derivándola de la dirección MAC. 
 Este método facilita rastrear una dirección IPv6 hasta un dispositivo físico, lo que plantea problemas de privacidad. Por ello, se pueden usar IDs de interfaz aleatorias para evitar el rastreo.
@@ -604,7 +604,7 @@ Según el sistema operativo, un dispositivo puede generar su ID de interfaz de f
 Desde Windows Vista, se usa una ID aleatoria, mientras que Windows X y versiones anteriores empleaban EUI-64. 
 Una vez creada la ID (por cualquiera de los métodos), se combina con el prefijo IPv6 recibido en el mensaje RA para formar una dirección GUA.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-30-18-41-25-image.png]]
+![](./ANEXOS/2025-10-30-18-41-25-image.png)
 
 *Nota: Para garantizar la unicidad de cualquier dirección de unidifusión IPv6, el cliente puede usar un proceso conocido como Detección de direcciones duplicadas (DAD). Es similar a una solicitud de ARP para su propia dirección. Si no se obtiene una respuesta, la dirección es única.*
 
@@ -616,7 +616,7 @@ Todos los dispositivos IPv6 deben tener una dirección link-local (LLA). Estas d
 El LLA se genera automáticamente usando el prefijo fe80::/10 y una ID de interfaz, que puede formarse mediante el proceso EUI-64 o con un número aleatorio de 64 bits. 
 Es fundamental verificar la configuración IPv6 para asegurarse de que las direcciones (tanto LLA como GUA) se hayan creado correctamente.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-10-14-28-image.png]]
+![](./ANEXOS/2025-10-31-10-14-28-image.png)
 
 #### LLA dinámicos en Windows
 
@@ -624,21 +624,21 @@ Los sistemas operativos, como Windows, suelen usar el mismo método de generaci�
 
 *ID de interfaz generada mediante EUI-64*
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-10-15-50-image.png]]
+![](./ANEXOS/2025-10-31-10-15-50-image.png)
 
 *ID de interfaz de 64 bits generada aleatoriamente*
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-10-16-27-image.png]]
+![](./ANEXOS/2025-10-31-10-16-27-image.png)
 
 #### LLA dinámicos en enrutadores Cisco
 
 Los routers Cisco generan automáticamente una LLA IPv6 al asignar una GUA a una interfaz, usando el método EUI-64 para crear la ID de interfaz. En interfaces seriales, usan la MAC de una interfaz Ethernet. Aunque estas LLAs son únicas en su enlace, su longitud las hace difíciles de identificar, por lo que es común configurarlas manualmente para facilitar su reconocimiento.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-11-56-02-image.png]]
+![](./ANEXOS/2025-10-31-11-56-02-image.png)
 
 #### Verifique la configuración de la dirección IPv6
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-12-02-38-image.png]]
+![](./ANEXOS/2025-10-31-12-02-38-image.png)
 
 - **Show ipv6 interface brief**
 
@@ -650,7 +650,7 @@ El comando **`show ipv6 interface brief`** muestra las direcciones MAC usadas po
 
 En interfaces seriales, como no tienen MAC propia, Cisco IOS usa la MAC de la primera interfaz Ethernet disponible, lo cual es válido porque las LLA solo deben ser únicas dentro de su enlace.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-12-05-12-image.png]]
+![](./ANEXOS/2025-10-31-12-05-12-image.png)
 
 - **Show ipv6 route**
 
@@ -662,14 +662,14 @@ El comando **`show ipv6 route`** permite verificar las redes IPv6 y las direccio
 
 - Cuando una interfaz con una GUA está en estado up/up, su prefijo IPv6 se agrega como ruta conectada y su dirección individual (/128) como ruta local, lo que permite procesar eficientemente los paquetes destinados al propio router.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-12-05-47-image.png]]
+![](./ANEXOS/2025-10-31-12-05-47-image.png)
 
 - **Ping**
 
 El comando **`ping`** en IPv6 funciona igual que en IPv4, pero utiliza una dirección IPv6. 
 Cuando se hace ping a una dirección link-local (LLA) desde un router, Cisco IOS solicita especificar la interfaz de salida, ya que una misma LLA puede existir en distintos enlaces. Esto permite verificar la conectividad de Capa 3 entre dispositivos como el router y una PC.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-12-08-43-image.png]]
+![](./ANEXOS/2025-10-31-12-08-43-image.png)
 
 ---
 
@@ -694,7 +694,7 @@ Dos de las más comunes son:
 
 - **`ff02::2` (Todos los enrutadores):** Incluye a todos los routers IPv6 del enlace. Los routers se unen automáticamente a este grupo cuando se habilita el enrutamiento IPv6 con `ipv6 unicast-routing`.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-13-16-28-image.png]]
+![](./ANEXOS/2025-10-31-13-16-28-image.png)
 
 *Los dispositivos con IPv6 habilitado envían mensajes ICMPv6 RS (Router Solicitation) a la dirección de multidifusión de todos los enrutadores (`ff02::2`) para pedir información de configuración. En respuesta, el router IPv6 envía un mensaje RA (Router Advertisement) que proporciona los datos necesarios para que el dispositivo configure su dirección IPv6.*
 
@@ -703,7 +703,7 @@ Dos de las más comunes son:
 Una dirección de multidifusión de nodo solicitado funciona como la de todos los nodos, pero tiene una ventaja clave: Se vincula a una dirección MAC de multidifusión especial, lo que permite que la tarjeta de red (NIC) filtre los paquetes directamente a nivel de hardware. 
 Así, solo los paquetes destinados al dispositivo correcto son procesados por IPv6, mejorando la eficiencia de red.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-13-18-30-image.png]]
+![](./ANEXOS/2025-10-31-13-18-30-image.png)
 
 ---
 
@@ -713,7 +713,7 @@ En IPv6, la subredificación es más sencilla que en IPv4 porque fue diseñada d
 A diferencia de IPv4, donde se toman bits del host para crear subredes, en IPv6 existe un campo específico llamado ID de subred dentro de la **GUA (Global Unicast Address)**. 
 Este campo se encuentra entre el prefijo de enrutamiento global y el ID de interfaz, lo que facilita la organización y segmentación de redes sin alterar otras partes de la dirección.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-13-21-36-image.png]]
+![](./ANEXOS/2025-10-31-13-21-36-image.png)
 
 La división en subredes IPv6 es más sencilla que en IPv4 porque el protocolo fue diseñado con subredes en mente.
 
@@ -733,19 +733,19 @@ Cuando a una organización se le asigna el prefijo 2001:db8:acad::/48, los prime
 Luego, la organización puede usar los 16 bits siguientes como ID de subred, lo que permite crear 65.536 subredes /64. 
 Para generar cada nueva subred, simplemente se incrementa el valor hexadecimal del hexteto correspondiente a la subred, mientras el prefijo global se mantiene igual.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-13-45-29-image.png]]
+![](./ANEXOS/2025-10-31-13-45-29-image.png)
 
 #### Asignación de subredes IPv6
 
 Con IPv6, el administrador debe diseñar un esquema lógico de direccionamiento entre más de 65.536 subredes posibles. En el ejemplo, se requieren cinco subredes: una para cada LAN y una para el enlace serie entre R1 y R2. A diferencia de IPv4, todas las subredes, incluso la del enlace serie, usan la misma longitud de prefijo, lo que simplifica la administración, ya que en IPv6 no es necesario preocuparse por conservar direcciones.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-13-54-58-image.png]]
+![](./ANEXOS/2025-10-31-13-54-58-image.png)
 
 Se asignaron cinco subredes IPv6 con los ID de subred del 0001 al 0005. Cada subred tiene un prefijo /64, lo que ofrece una cantidad de direcciones muy superior a las que se podrían necesitar.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-13-55-36-image.png]]
+![](./ANEXOS/2025-10-31-13-55-36-image.png)
 #### Enrutador configurado con subredes IPv6
 
 Al igual que en IPv4, cada interfaz del enrutador en IPv6 se configura dentro de una subred distinta.
 
-![[Telematica I/Curso de Cisco/Módulo 12/ANEXOS/2025-10-31-13-57-54-image.png]]
+![](./ANEXOS/2025-10-31-13-57-54-image.png)

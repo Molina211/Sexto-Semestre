@@ -38,7 +38,7 @@ Sus estándares son IEEE 802.2 y 802.3.
 
 - 100 Gbps
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-15-46-image.png]]
+![](./ANEXOS/2025-09-25-08-15-46-image.png)
 
 Capa de enlace de datos (IEEE 802) se divide en dos subcapas:
 
@@ -60,7 +60,7 @@ Capa de enlace de datos (IEEE 802) se divide en dos subcapas:
 
 El LLC conecta software y protocolos de red con el hardware, mientras que MAC gestiona el acceso al medio y la entrega física de las tramas.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-17-15-image.png]]
+![](./ANEXOS/2025-09-25-08-17-15-image.png)
 
 #### Subcapa MAC
 
@@ -82,7 +82,7 @@ La subcapa MAC (IEEE 802.3) cumple dos funciones principales:
 
 La subcapa MAC organiza los datos en tramas y controla cómo se accede al medio de transmisión.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-19-39-image.png]]
+![](./ANEXOS/2025-09-25-08-19-39-image.png)
 
 **Ethernet heredado (antiguo)**
 
@@ -160,7 +160,7 @@ El rango válido de una trama Ethernet es 64–1518 bytes; fuera de ese rango se
 
 En Data tambien viene la información de pisos superiores, no solo los datos.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-24-47-image.png]]
+![](./ANEXOS/2025-09-25-08-24-47-image.png)
 
 | **Campo**                                   | **Descripción**                                                                                                                                                     |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -183,11 +183,11 @@ Direcciones posibles: 2^48 ≈ 281 billones.
 
 También existe una variante de **64 bits (8 bytes)** llamada **EUI-64**, pero no es la que se usa normalmente en Ethernet/Wi-Fi.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-29-29-image.png]]
+![](./ANEXOS/2025-09-25-08-29-29-image.png)
 
 Un byte puede representarse como dos dígitos hexadecimales.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-30-16-image.png]]
+![](./ANEXOS/2025-09-25-08-30-16-image.png)
 
 En hexadecimal se muestran los ceros iniciales para completar el byte (ej: `00001010` → `0A`). Sus formas  más comunes de escribir hex son:
 
@@ -207,11 +207,11 @@ Una dirección MAC = 48 bits = 6 bytes = 12 dígitos hexadecimales.
 
 Esta dirección sirve para identificar origen y destino en la capa de enlace de datos (OSI). Siendo el “número de identidad” físico de cada tarjeta de red en una LAN.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-33-18-image.png]]
+![](./ANEXOS/2025-09-25-08-33-18-image.png)
 
 Cada MAC debe ser única, con el IEEE se da a cada fabricante un código de 24 bits (3 bytes) llamado OUI. El fabricante usa ese OUI como los primeros 6 dígitos hex de la MAC, con esto, los últimos 6 dígitos los asigna el fabricante para identificar cada dispositivo, o sea, la MAC se compone de OUI (fabricante) + número único del dispositivo.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-25-08-35-26-image.png]]
+![](./ANEXOS/2025-09-25-08-35-26-image.png)
 
 Cada fabricante (ej. **Cisco**) recibe un OUI del IEEE.
 
@@ -369,7 +369,7 @@ Al recibir una trama:
 
 Esto lo diferencia de un hub, que simplemente copia y reenvía todos los bits a todos los puertos sin filtrar, causando congestión.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-35-41-image.png]]
+![](./ANEXOS/2025-09-26-16-35-41-image.png)
 
 #### Switch, Aprendiendo y Reenviando
 
@@ -409,7 +409,7 @@ El switch aprende dinámicamente las direcciones MAC observando la MAC de origen
 
 - Así, el switch ya sabe en qué puerto está PC-A para futuras comunicaciones.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-40-59-image.png]]
+![](./ANEXOS/2025-09-26-16-40-59-image.png)
 
 **Buscar dirección MAC de destino**
 
@@ -451,7 +451,7 @@ Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto c
 
 - Agrega la entrada: `MAC PC-D → Puerto 4`
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-48-24-image.png]]
+![](./ANEXOS/2025-09-26-16-48-24-image.png)
 
 **Switch reenvía hacia PC-A**
 
@@ -459,7 +459,7 @@ Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto c
 
 - Como ya la tiene registrada en la tabla (MAC PC-A → Puerto 1), la envía solo por el puerto 1, evitando mandar la trama a todos los puertos.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-47-56-image.png]]
+![](./ANEXOS/2025-09-26-16-47-56-image.png)
 
 **PC-A envía otra trama a PC-D**
 
@@ -471,7 +471,7 @@ Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto c
 
 - Como ya sabe que PC-D está en el puerto 4, envía la trama directamente por ese puerto.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-26-16-47-42-image 1.png]]
+![](./ANEXOS/2025-09-26-16-47-42-image 1.png)
 
 ---
 
@@ -614,11 +614,11 @@ Cada puerto de un switch puede configurarse en dos aspectos importantes:
 
 - Evita errores de configuración manual.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-30-06-18-06-image.png]]
+![](./ANEXOS/2025-09-30-06-18-06-image.png)
 
 La mayoría de switches Cisco y NIC Ethernet usan negociación automática de velocidad y dúplex por defecto. En Gigabit Ethernet, el funcionamiento siempre es en dúplex completo. Un problema común en redes de 10/100 Mbps es la falta de coincidencia de dúplex, que ocurre cuando un extremo trabaja en medio dúplex y el otro en dúplex completo, lo que genera fallas de rendimiento.
 
-![[Telematica I/Curso de Cisco/Módulo 07/ANEXOS/2025-09-30-06-18-41-image.png]]
+![](./ANEXOS/2025-09-30-06-18-41-image.png)
 
 #### Auto-MDIX (MDIX automático)
 
