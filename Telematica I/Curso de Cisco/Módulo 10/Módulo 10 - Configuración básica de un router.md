@@ -211,7 +211,7 @@ Esto se logra mediante una interfaz virtual de switch (SVI) con dirección IPv4 
 Además, se debe configurar un gateway predeterminado (con el comando `ip default-gateway [dirección IP]`), que corresponde a la interfaz del router conectada al switch. 
 Así, el administrador puede acceder y gestionar el switch desde otra red.
 
-![](./ANEXOS/2025-10-27-10-23-46-image 1.png)
+![](<./ANEXOS/2025-10-27-10-23-46-image 1.png>)
 
 Cuando un host administrador accede a un switch remoto, el tráfico pasa por el router (R1), por lo que el switch S1 necesita una puerta de enlace predeterminada configurada para poder responder y establecer la conexión SSH. 
 Los servidores conectados al switch ya deben tener su gateway configurado en su sistema operativo. 

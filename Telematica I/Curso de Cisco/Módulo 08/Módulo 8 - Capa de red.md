@@ -275,7 +275,7 @@ Un router puede descubrir redes remotas de dos maneras:
 
 Las rutas estáticas se configuran manualmente e indican la red remota y la dirección IP del siguiente salto por donde debe enviarse el paquete.
 
-![](./ANEXOS/2025-10-22-09-38-52-image 1.png)
+![](<./ANEXOS/2025-10-22-09-38-52-image 1.png>)
 
 Las rutas estáticas no se actualizan automáticamente ante cambios en la red; deben modificarse manualmente. Si una ruta deja de estar disponible, el administrador debe reconfigurar el router para establecer una nueva ruta válida hacia el destino.
 
@@ -305,7 +305,7 @@ Es común que algunos routers usen una combinación de rutas estáticas y un pro
 
 R2 está conectado a Internet, por lo que R1 tiene una ruta estática predeterminada que envía los paquetes a R2 cuando no existe una ruta específica. Además, ambos routers usan **OSPF** para anunciar sus redes conectadas directamente.
 
-![](./ANEXOS/2025-10-22-10-01-52-image 1.png)
+![](<./ANEXOS/2025-10-22-10-01-52-image 1.png>)
 
 ![](./ANEXOS/2025-10-22-10-02-05-image.png)
 

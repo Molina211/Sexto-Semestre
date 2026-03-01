@@ -471,7 +471,7 @@ Cuando ya conoce la MAC de destino, filtra la trama y la envía solo al puerto c
 
 - Como ya sabe que PC-D está en el puerto 4, envía la trama directamente por ese puerto.
 
-![](./ANEXOS/2025-09-26-16-47-42-image 1.png)
+![](<./ANEXOS/2025-09-26-16-47-42-image 1.png>)
 
 ---
 

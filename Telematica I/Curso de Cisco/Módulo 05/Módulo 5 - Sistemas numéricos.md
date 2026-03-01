@@ -83,7 +83,7 @@ Convertir el tercer octeto de 00001011 como se muestra en la tabla.
 
 Convertir el cuarto octeto de 00001010 como se muestra en la tabla. Esto completa la dirección IP y produce **192.168.11.10**.
 
-![](./ANEXOS/2025-09-18-10-55-27-image 1.png)
+![](<./ANEXOS/2025-09-18-10-55-27-image 1.png>)
 
 #### Conversión de sistema decimal a binario
 

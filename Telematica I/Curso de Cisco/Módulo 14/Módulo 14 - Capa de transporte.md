@@ -410,7 +410,7 @@ Los procesos del servicio TCP son:
    
    El Cliente 1 esta solicitando servicios web y el Cliente 2 esta solicitando servicio de correo electronico del mismo servidor.
    
-![](./ANEXOS/2025-11-02-14-03-42-image 1.png)
+![](<./ANEXOS/2025-11-02-14-03-42-image 1.png>)
 
 2. **Solicitar puertos de destino:**
    
@@ -446,19 +446,19 @@ En TCP, el establecimiento de una conexión funciona como un apretón de manos: 
 
    El cliente de origen solicita una sesión de comunicación con el servidor.
 
-![](./ANEXOS/Pasted image 20251102235620.png)
+![](<./ANEXOS/Pasted image 20251102235620.png>)
 
 2. **ACK y SYN:**
 
    El servidor acusa recibo de la sesión de comunicación de cliente a servidor y solicita una sesión de comunicación de servidor a cliente.
 
-![](./ANEXOS/Pasted image 20251102235926.png)
+![](<./ANEXOS/Pasted image 20251102235926.png>)
 
 3. **ACK**
 
    El cliente de origen acusa recibo de la sesión de comunicación de servidor a cliente.
 
-![](./ANEXOS/Pasted image 20251103000029.png)
+![](<./ANEXOS/Pasted image 20251103000029.png>)
 
 
 
@@ -472,25 +472,25 @@ Tanto el cliente como el servidor pueden iniciar este proceso.
 
    Cuando el cliente no tiene mas datos para enviar en la transmisión, envía un segmento con el indicador FIN establecido.
 
-![](./ANEXOS/Pasted image 20251103000319.png)
+![](<./ANEXOS/Pasted image 20251103000319.png>)
 
 2. **ACK**
 
    El servidor envía un ACK para acusar recibo del FIN para terminar la sesión de cliente a servidor.
 
-![](./ANEXOS/Pasted image 20251103000416.png)
+![](<./ANEXOS/Pasted image 20251103000416.png>)
 
 3. **FIN**
 
    El servidor envía un FIN al cliente para terminar la sesión de servidor a cliente.
 
-![](./ANEXOS/Pasted image 20251103000458.png)
+![](<./ANEXOS/Pasted image 20251103000458.png>)
 
 4. **ACK**
 
    El cliente responde con un ACK para dar acuse de recibo del FIN desde el servidor.
 
-![](./ANEXOS/Pasted image 20251103000533.png)
+![](<./ANEXOS/Pasted image 20251103000533.png>)
 
 
 
@@ -505,7 +505,7 @@ La conexión se establece con un enlace de tres vías (three-way handshake), que
 
 Una vez terminada la comunicación, las sesiones se cierran para garantizar la confiabilidad del protocolo.
 
-![](./ANEXOS/Pasted image 20251103001234.png)
+![](<./ANEXOS/Pasted image 20251103001234.png>)
 
 Los seis indicadores (flags) del encabezado TCP controlan el estado y el flujo de una conexión:
 
@@ -535,7 +535,7 @@ A medida que se transmiten los datos, TCP incrementa el número de secuencia seg
 - Reensamblar los datos en el orden correcto.
 - Evitar ataques al usar ISN aleatorios.
 
-![](./ANEXOS/Pasted image 20251103020134.png)
+![](<./ANEXOS/Pasted image 20251103020134.png>)
 
 El receptor TCP almacena los segmentos en un búfer de recepción, los ordena según su número de secuencia y los entrega a la capa de aplicación una vez que están completos.  
 Si algunos segmentos llegan fuera de orden, se guardan temporalmente hasta que lleguen los faltantes, y luego se reensamblan correctamente antes de procesarse.
@@ -549,12 +549,12 @@ El número SEQ identifica el primer byte del segmento enviado, y el ACK indica e
 
 Antes de las mejoras modernas, si se perdían algunos segmentos, TCP solo reconocía el siguiente segmento esperado, lo que hacía que el emisor retransmitiera varios segmentos innecesariamente, generando duplicados, retrasos y congestión en la red.
 
-![](./ANEXOS/Pasted image 20251103021025.png)
+![](<./ANEXOS/Pasted image 20251103021025.png>)
 
 La característica SACK (Selective Acknowledgment) permite que TCP reconozca qué segmentos se recibieron correctamente, incluso si llegan fuera de orden.  
 Así, el receptor puede informar exactamente qué datos faltan, y el emisor solo retransmite los segmentos perdidos, evitando duplicaciones y mejorando la eficiencia y velocidad de la comunicación.
 
-![](./ANEXOS/Pasted image 20251103021137.png)
+![](<./ANEXOS/Pasted image 20251103021137.png>)
 
 TCP usa temporizadores para determinar cuánto tiempo esperar antes de retransmitir un segmento no reconocido.  
 Normalmente, envía un ACK por cada dos paquetes, aunque este comportamiento puede variar según las condiciones de la red.
@@ -566,7 +566,7 @@ Normalmente, envía un ACK por cada dos paquetes, aunque este comportamiento pue
 TCP implementa control de flujo para evitar que el emisor envíe más datos de los que el receptor puede manejar.  
 Esto se logra mediante el campo “tamaño de ventana” en el encabezado TCP, que indica la cantidad de datos (en bytes) que el receptor puede aceptar antes de necesitar un nuevo reconocimiento (ACK).
 
-![](./ANEXOS/Pasted image 20251103021744.png)
+![](<./ANEXOS/Pasted image 20251103021744.png>)
 
 El tamaño de la ventana TCP define cuántos bytes puede enviar el emisor sin recibir un reconocimiento del receptor.  
 Durante la conexión, ambos equipos acuerdan este valor inicial, que puede ajustarse dinámicamente según la capacidad del búfer del receptor.
@@ -581,12 +581,12 @@ Si el receptor tiene menos espacio disponible, reduce el tamaño de la ventana p
 El Tamaño Máximo de Segmento (MSS) indica la máxima cantidad de datos (en bytes) que un dispositivo puede recibir en un solo segmento TCP, sin contar el encabezado.  
 Este valor, generalmente de 1.460 bytes, se negocia durante el enlace de tres vías y permite optimizar la transmisión evitando fragmentación en la red.
 
-![](./ANEXOS/Pasted image 20251103022040.png)
+![](<./ANEXOS/Pasted image 20251103022040.png>)
 
 El MSS típico es de 1.460 bytes en IPv4, calculado restando los encabezados IP (20 bytes) y TCP (20 bytes) del MTU de Ethernet (1500 bytes).  
 Así, 1500−20−20=1460, que representa la cantidad máxima de datos que puede enviarse en un segmento TCP sin fragmentación.
 
-![](./ANEXOS/Pasted image 20251103022220.png)
+![](<./ANEXOS/Pasted image 20251103022220.png>)
 
 
 #### Control de flujo de TCP - Prevención de congestiones
@@ -595,7 +595,7 @@ Cuando hay congestión en la red, los routers comienzan a descartar paquetes, lo
 El origen detecta la congestión al notar retrasos o falta de reconocimientos (ACK) y, para evitar empeorarla, reduce la cantidad de datos enviados antes de recibir una nueva confirmación.  
 TCP utiliza algoritmos y temporizadores de control de congestión para ajustar dinámicamente el flujo de datos y evitar saturar la red.
 
-![](./ANEXOS/Pasted image 20251103022355.png)
+![](<./ANEXOS/Pasted image 20251103022355.png>)
 
 Los números de acuse de recibo (ACK) indican el siguiente byte esperado, no un segmento.  
 En caso de congestión, el origen es quien reduce la cantidad de bytes no reconocidos que envía, sin cambiar el tamaño de la ventana definido por el destino.  
@@ -607,7 +607,7 @@ Los detalles de los algoritmos y temporizadores de control de congestión no se 
 
 UDP es ideal para transmisiones rápidas, como VoIP, porque no establece conexión y tiene baja sobrecarga. Su encabezado pequeño y la ausencia de tráfico de control permiten un transporte de datos más ágil y eficiente.
 
-![](./ANEXOS/Pasted image 20251103022826.png)
+![](<./ANEXOS/Pasted image 20251103022826.png>)
 
 
 
@@ -615,7 +615,7 @@ UDP es ideal para transmisiones rápidas, como VoIP, porque no establece conexi�
 
 UDP no controla el orden de los datagramas ni usa números de secuencia como TCP. Los datos se reensamblan en el orden recibido y se envían directamente a la aplicación. Si el orden es importante, la aplicación debe encargarse de organizar los datos correctamente.
 
-![](./ANEXOS/Pasted image 20251103022946.png)
+![](<./ANEXOS/Pasted image 20251103022946.png>)
 
 
 
@@ -624,7 +624,7 @@ UDP no controla el orden de los datagramas ni usa números de secuencia como TCP
 Las aplicaciones de servidor basadas en UDP usan números de puerto conocidos o registrados, al igual que las basadas en TCP.  
 Cuando el servidor recibe un datagrama UDP, este se entrega a la aplicación correspondiente según el número de puerto asignado.
 
-![](./ANEXOS/Pasted image 20251103024233.png)
+![](<./ANEXOS/Pasted image 20251103024233.png>)
 
 El servidor RADIUS ofrece servicios de autenticación, autorización y contabilidad para controlar el acceso de los usuarios, aunque su funcionamiento no se aborda en este curso.
 
@@ -638,29 +638,29 @@ En UDP, la comunicación cliente-servidor comienza cuando el cliente elige un pu
 
    El cliente 1 esta enviando una solicitud DNS utilizando el conocido puerto 53, mientras que el cliente 2 solicita servicios de autenticación RADIUS mediante el puerto registrado 1812.
 
-![](./ANEXOS/Pasted image 20251103024553.png)
+![](<./ANEXOS/Pasted image 20251103024553.png>)
 
 2. **Puertos de destino de solicitud UDP**
 
    Las solicitudes de los clientes generan dinamicamente números de puerto de origen. En este caso, el cliente 1 esta utilizando el puerto de origen 49152 y el cliente 2 esta utilizando el puerto de origen 51152.
 
-![](./ANEXOS/Pasted image 20251103024716.png)
+![](<./ANEXOS/Pasted image 20251103024716.png>)
 
 3. **Puertos de origen de solicitud UDP**
 
    Cuando el servidor responde a las solicitudes del cliente, invierte los puertos de destino y origen de la solicitud inicial.
 
-![](./ANEXOS/Pasted image 20251103024800.png)
+![](<./ANEXOS/Pasted image 20251103024800.png>)
 
 4. **Destino de respuesta UDP**
 
    En la respuesta del servidor a la solicitud DNS ahora es el puerto de destino 49152 y la respuesta de autenticación RADIUS ahora es el puerto de destino 51152.
 
-![](./ANEXOS/Pasted image 20251103024904.png)
+![](<./ANEXOS/Pasted image 20251103024904.png>)
 
 5. **Puertos de origen de respuesta UDP**
 
    Los puertos de origen en la respuesta del servidor son los puertos de destino originales en las solicitudes iniciales.
 
-![](./ANEXOS/Pasted image 20251103024952.png)
+![](<./ANEXOS/Pasted image 20251103024952.png>)
 

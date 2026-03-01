@@ -24,7 +24,7 @@ En los modelos OSI y TCP/IP, la **capa de aplicación** es la más cercana al us
 Su función principal es proporcionar la interfaz entre las aplicaciones que usan los usuarios y la red que transporta los datos.  /
 Los protocolos de aplicación permiten el intercambio de información entre los programas que se ejecutan en los hosts de origen y destino.
 
-![](./ANEXOS/Pasted image 20251103181836.png)
+![](<./ANEXOS/Pasted image 20251103181836.png>)
 
 En el modelo TCP/IP, las tres capas superiores del modelo OSI (aplicación, presentación y sesión) se combinan en una sola: la capa de aplicación.  
 Esta capa define los protocolos y servicios que permiten la comunicación entre programas en red.  
@@ -41,7 +41,7 @@ Ejemplos:
 - **Video:** QuickTime, MPEG
 - **Imágenes:** GIF, JPEG, PNG
 
-![](./ANEXOS/Pasted image 20251103182748.png)
+![](<./ANEXOS/Pasted image 20251103182748.png>)
 
 La **capa de sesión** se encarga de crear, mantener y administrar los diálogos entre las aplicaciones de origen y destino.  
 Controla el inicio, mantenimiento y restablecimiento de las sesiones de comunicación cuando se interrumpen o permanecen inactivas.
@@ -134,7 +134,7 @@ Los protocolos de aplicación definen cómo se formatean y transmiten las solici
 Un ejemplo es el correo electrónico, donde el cliente (como una PC) solicita mensajes al servidor del ISP, que los envía al usuario.  
 La transferencia del cliente al servidor se llama carga (upload), y del servidor al cliente, descarga (download).
 
-![](./ANEXOS/Pasted image 20251104085239.png)
+![](<./ANEXOS/Pasted image 20251104085239.png>)
 
 
 
@@ -145,7 +145,7 @@ Los dispositivos conectados comparten recursos como archivos, impresoras o conex
 Cada par es igual en la comunicación, y las funciones de cliente o servidor se asignan según la solicitud.  
 Este modelo permite compartir datos, jugar en red o imprimir entre equipos de forma sencilla y descentralizada.
 
-![](./ANEXOS/Pasted image 20251104085435.png)
+![](<./ANEXOS/Pasted image 20251104085435.png>)
 
 
 
@@ -154,7 +154,7 @@ Este modelo permite compartir datos, jugar en red o imprimir entre equipos de fo
 Una aplicación P2P permite que cada dispositivo actúe simultáneamente como cliente y servidor, ofreciendo una interfaz para el usuario y un servicio en segundo plano.  
 Algunas usan un modelo híbrido, donde el intercambio de recursos es descentralizado, pero los índices de ubicación de esos recursos se guardan en un servidor central que facilita encontrarlos.
 
-![](./ANEXOS/Pasted image 20251104085623.png)
+![](<./ANEXOS/Pasted image 20251104085623.png>)
 
 
 
@@ -164,7 +164,7 @@ Las aplicaciones P2P permiten que cada PC actúe como cliente y servidor al mism
 Entre las redes P2P más comunes están BitTorrent, Conexión directa, eDonkey y Freenet.  
 Algunas usan el protocolo Gnutella, que permite compartir archivos completos entre usuarios conectados a Internet mediante software compatible como uTorrent, BitComet, DC++, Deluge y eMule.
 
-![](./ANEXOS/Pasted image 20251104085842.png)
+![](<./ANEXOS/Pasted image 20251104085842.png>)
 
 Las aplicaciones P2P permiten compartir partes de varios archivos simultáneamente.  
 El sistema usa un archivo torrent, que contiene información sobre los usuarios con las piezas disponibles y los servidores de seguimiento que coordinan las descargas.  
@@ -186,25 +186,25 @@ El servidor web procesa la solicitud y envía la página solicitada al navegador
    - www.cisco.com (el nombre del servidor)
    - index.html (el nombre de archivo específico solicitado)
 
-![](./ANEXOS/Pasted image 20251104094637.png)
+![](<./ANEXOS/Pasted image 20251104094637.png>)
 
 2. **Paso 2**
 
    El navegador consulta un servidor DNS para convertir el nombre **[www.cisco.com](http://www.cisco.com)** en una dirección IP numérica. Luego, el cliente (navegador) envía una solicitud HTTP tipo GET al servidor web, pidiendo el archivo index.html.
 
-![](./ANEXOS/Pasted image 20251104094757.png)
+![](<./ANEXOS/Pasted image 20251104094757.png>)
 
 3. **Paso 3**
 
    En respuesta a la solicitud, el servidor envía el código HTML de esta página web al navegador.
 
-![](./ANEXOS/Pasted image 20251104095014.png)
+![](<./ANEXOS/Pasted image 20251104095014.png>)
 
 4. **Paso 4**
 
    El navegador descifra el código HTML y da formato a la página para que se pueda visualizar en la ventana del navegador.
 
-![](./ANEXOS/Pasted image 20251104095108.png)
+![](<./ANEXOS/Pasted image 20251104095108.png>)
 
 
 
@@ -217,7 +217,7 @@ Los principales tipos de mensajes son:
 - **POST:** El cliente envía datos o formularios al servidor.
 - **PUT:** El cliente carga recursos o archivos (como imágenes) en el servidor.
 
-![](./ANEXOS/Pasted image 20251104095247.png)
+![](<./ANEXOS/Pasted image 20251104095247.png>)
 
 HTTP no es seguro porque transmite la información en texto sin cifrar, lo que permite que sea interceptada.  
 Para proteger la comunicación se usa HTTP, que agrega autenticación y cifrado mediante SSL (Secure Sockets Layer), garantizando que los datos viajen de forma segura entre cliente y servidor.
@@ -229,7 +229,7 @@ Para proteger la comunicación se usa HTTP, que agrega autenticación y cifrado 
 El correo electrónico es un sistema de almacenamiento y reenvío que permite enviar, guardar y recuperar mensajes a través de una red.  
 Los ISP ofrecen el servicio de hosting de correo, y los mensajes se almacenan en servidores de correo mediante aplicaciones y servicios especializados que gestionan su envío y recepción.
 
-![](./ANEXOS/Pasted image 20251104095518.png)
+![](<./ANEXOS/Pasted image 20251104095518.png>)
 
 Los clientes de correo electrónico no se envían mensajes directamente entre sí; en cambio, usan servidores de correo como intermediarios para enviar y recibir mensajes entre dominios.
 Existen tres protocolos principales para el funcionamiento del correo electrónico:
@@ -249,7 +249,7 @@ Existen tres protocolos principales para el funcionamiento del correo electróni
    Si el servidor de destino está ocupado o fuera de línea, el mensaje se almacena en una cola y el servidor intenta reenviarlo periódicamente.  
    Si después de varios intentos no se puede entregar, el mensaje se devuelve al remitente como no entregado.
 
-![](./ANEXOS/Pasted image 20251104100228.png)
+![](<./ANEXOS/Pasted image 20251104100228.png>)
 
 2. **POP**
 
@@ -258,7 +258,7 @@ Existen tres protocolos principales para el funcionamiento del correo electróni
    Debido a que los mensajes se eliminan del servidor, POP no ofrece almacenamiento centralizado, por lo que no es ideal para empresas que requieren copias de respaldo.  
    La versión más común es POP3.
 
-![](./ANEXOS/Pasted image 20251104100426.png)
+![](<./ANEXOS/Pasted image 20251104100426.png>)
 
 3. **IMAP**
 
@@ -267,7 +267,7 @@ Existen tres protocolos principales para el funcionamiento del correo electróni
    Cuando se elimina un mensaje en el cliente, el servidor sincroniza la acción y borra el mensaje definitivamente.
    A diferencia de POP, IMAP mantiene los correos centralizados y sincronizados entre varios dispositivos.
 
-![](./ANEXOS/Pasted image 20251104101057.png)
+![](<./ANEXOS/Pasted image 20251104101057.png>)
 
 ---
 ### Servicios de direccionamiento IP
@@ -282,31 +282,31 @@ DNS define un servicio automatizado que gestiona estas conversiones mediante un 
 
    El usuario escribe un FQDN en un campo Dirección de aplicación del explorador.
 
-![](./ANEXOS/Pasted image 20251104103044.png)
+![](<./ANEXOS/Pasted image 20251104103044.png>)
 
 2. **Paso 2**
 
    Se envía una consulta DNS al servidor DNS designado para el equipo cliente.
 
-![](./ANEXOS/Pasted image 20251104103139.png)
+![](<./ANEXOS/Pasted image 20251104103139.png>)
 
 3. **Paso 3**
 
    El servidor DNS coincide con el FQDN con su dirección IP.
 
-![](./ANEXOS/Pasted image 20251104103303.png)
+![](<./ANEXOS/Pasted image 20251104103303.png>)
 
 4. **Paso 4**
 
    La respuesta de consulta DNS se envía de nuevo al cliente con la dirección IP del FQDN.
 
-![](./ANEXOS/Pasted image 20251104103352.png)
+![](<./ANEXOS/Pasted image 20251104103352.png>)
 
 5. **Paso 5**
 
    El equipo cliente utiliza la dirección IP para realizar solicitudes del servidor.
 
-![](./ANEXOS/Pasted image 20251104103438.png)
+![](<./ANEXOS/Pasted image 20251104103438.png>)
 
 
 
@@ -344,7 +344,7 @@ Los dominios de nivel superior (TLD) indican el tipo de organización o país, p
 - **.au:** Australia
 - **.co:** Colombia
 
-![](./ANEXOS/Pasted image 20251104104122.png)
+![](<./ANEXOS/Pasted image 20251104104122.png>)
 
 
 
@@ -356,7 +356,7 @@ Cuando una aplicación solicita conectarse a un nombre, el cliente DNS consulta 
 
 Además, los sistemas operativos incluyen la herramienta nslookup, que permite consultar manualmente los servidores DNS, verificar la resolución de nombres y diagnosticar problemas en el proceso DNS mostrando el servidor predeterminado y los resultados de las consultas.
 
-![](./ANEXOS/Pasted image 20251104104556.png)
+![](<./ANEXOS/Pasted image 20251104104556.png>)
 
 
 
@@ -370,7 +370,7 @@ Cuando un host se conecta, solicita una dirección al servidor DHCP, el cual la 
 DHCP es ideal para redes grandes o con usuarios móviles, ya que facilita la conexión automática de nuevos dispositivos.  
 Los servidores DHCP pueden ser servidores dedicados en redes empresariales o estar integrados en routers domésticos que conectan la red local con el ISP.
 
-![](./ANEXOS/Pasted image 20251104105131.png)
+![](<./ANEXOS/Pasted image 20251104105131.png>)
 
 Muchas redes combinan direccionamiento estático y DHCP:
 
@@ -391,7 +391,7 @@ Un servidor DHCP responde con un DHCPOFFER, que incluye:
 - Las direcciones del DNS y del gateway predeterminado.
 - Y la duración de la concesión.
 
-![](./ANEXOS/Pasted image 20251104105435.png)
+![](<./ANEXOS/Pasted image 20251104105435.png>)
 
 Cuando un dispositivo con DHCP se conecta, puede recibir varias ofertas (DHCPOFFER) si hay varios servidores.  
 El cliente elige una oferta y envía un mensaje DHCPREQUEST para indicar qué servidor y dirección acepta.
@@ -418,7 +418,7 @@ El protocolo FTP permite transferir archivos entre un cliente y un servidor dent
 El cliente FTP es una aplicación que se ejecuta en la computadora del usuario y permite subir (insertar) o descargar (extraer) datos desde un servidor FTP.  
 FTP es un protocolo de capa de aplicación, al igual que HTTP o los protocolos de correo electrónico.
 
-![](./ANEXOS/Pasted image 20251104110735.png)
+![](<./ANEXOS/Pasted image 20251104110735.png>)
 
 FTP utiliza dos conexiones TCP entre el cliente y el servidor:
 
@@ -441,14 +441,14 @@ SMB utiliza un formato de mensaje con un encabezado fijo y una parte variable de
 
 **Nota:** Antes de Windows 2000, SMB usaba su propio protocolo para resolver nombres. Desde Windows 2000 en adelante, SMB utiliza TCP/IP y DNS, lo que lo hace más compatible y eficiente en redes modernas.
 
-![](./ANEXOS/Pasted image 20251104111143.png)
+![](<./ANEXOS/Pasted image 20251104111143.png>)
 
 *SMB es un protocolo del tipo cliente-servidor, solicitud-respuesta. Los servidores pueden hacer que sus recursos estén disponibles en la red para que los usen los
 clientes.*
 
 El proceso de intercambio de archivos de SMB entre equipos Windows es así:
 
-![](./ANEXOS/Pasted image 20251104111306.png)
+![](<./ANEXOS/Pasted image 20251104111306.png>)
 
 A diferencia de FTP, el protocolo SMB mantiene una conexión permanente entre el cliente y el servidor, permitiendo acceder a los recursos del servidor como si fueran locales.
 

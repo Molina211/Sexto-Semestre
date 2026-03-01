@@ -36,7 +36,7 @@ Estos son los componentes de un punto de acceso:
 2. Varios puertos de Switch de Ethernet
 3. Un puerto de internet
 
-![](./ANEXOS/Pasted image 20251120131652.png)
+![](<./ANEXOS/Pasted image 20251120131652.png>)
 
 ### Conexión por cable al Router inalámbrico
 
@@ -202,11 +202,11 @@ El **IEEE** establece sus características eléctricas y clasifica los cables po
 
 ##### Conectores RJ-45 para UTP
 
-![](./ANEXOS/Pasted image 20251120131815.png)
+![](<./ANEXOS/Pasted image 20251120131815.png>)
 
 ##### Socket RJ-45 para UTP
 
-![](./ANEXOS/Pasted image 20251120131826.png)
+![](<./ANEXOS/Pasted image 20251120131826.png>)
 
 ##### Cable UTP mal terminado
 

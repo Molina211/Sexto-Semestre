@@ -387,11 +387,11 @@ Para que los dispositivos finales puedan comunicarse entre sí dentro de una red
 
 Las direcciones IPv4 se escriben en notación decimal punteada, compuesta por cuatro números que van de 0 a 255. Junto con la dirección IP también se requiere una máscara de subred, la cual tiene 32 bits y cumple la función de diferenciar la parte de la dirección que corresponde a la red y la que corresponde al host. Además, los dispositivos utilizan una dirección de gateway predeterminado, que normalmente es la dirección IP del router encargado de permitir la conexión hacia redes externas, incluyendo Internet.
 
-![](./ANEXOS/Pasted image 20251120130456.png)
+![](<./ANEXOS/Pasted image 20251120130456.png>)
 
 Las direcciones IPv6 tienen 128 bits y se representan con 32 dígitos hexadecimales agrupados de cuatro en cuatro, separados por dos puntos. No hacen distinción entre mayúsculas y minúsculas.
 
-![](./ANEXOS/Pasted image 20251120130510.png)
+![](<./ANEXOS/Pasted image 20251120130510.png>)
 
 Las redes funcionan gracias a las interfaces de los dispositivos y a los medios que los conectan, cada medio tiene ventajas y desventajas las cuales, generalmente, son: 
 
@@ -419,13 +419,13 @@ En Windows, la configuración manual se realiza desde:
 
 `Panel de control > Centro de redes > Cambiar configuración del adaptador > Propiedades del adaptador > Propiedades de Conexión de área local`.
 
-![](./ANEXOS/Pasted image 20251120130548.png)
+![](<./ANEXOS/Pasted image 20251120130548.png>)
 
 Para configurar una dirección manual en Windows, se debe seleccionar Protocolo de Internet versión 4 (TCP/IPv4) en las propiedades del adaptador y abrir sus propiedades. Allí se ingresan la dirección IPv4, la máscara de subred y el gateway predeterminado.
 
 La configuración de IPv6 es similar al procedimiento de IPv4.
 
-![](./ANEXOS/Pasted image 20251120130559.png)
+![](<./ANEXOS/Pasted image 20251120130559.png>)
 
 La dirección del servidor DNS es la dirección IPv4 del servidor del sistema de nombres de dominio (DNS), que se utiliza para traducir direcciones IP a direcciones web.
 
@@ -441,7 +441,7 @@ Así, la PC obtiene los parámetros de un servidor DHCP.
 
 En IPv6 se emplean DHCPv6 y SLAAC para la configuración automática de direcciones.
 
-![](./ANEXOS/Pasted image 20251120130618.png)
+![](<./ANEXOS/Pasted image 20251120130618.png>)
 
 En Windows se puede verificar la configuración IP usando el comando: `ipconfig`
 

@@ -121,10 +121,10 @@ Ejemplo: 192.168.10.0/24.
 | Descripción                                  | Porción de red (Decimal / Binario)                                                | Porción de host (Decimal / Binario)                                               | Bits de host        |
 | :------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------- |
 | **Máscara de subred 255.255.255.0 /24**      | ![](./ANEXOS/2025-10-27-15-49-46-image.png)   | ![](./ANEXOS/2025-10-27-15-52-57-image.png)   | Todos los 0         |
-| **Dirección de red 192.168.10.0 /24**        | ![](./ANEXOS/2025-10-27-15-51-26-image.png)   | ![](./ANEXOS/2025-10-27-15-52-57-image 1.png) | Todos los 0         |
-| **Primera dirección 192.168.10.1 /24**       | ![](./ANEXOS/2025-10-27-15-51-26-image 1.png) | ![](./ANEXOS/2025-10-27-15-53-07-image.png)   | Todos los 0s y un 1 |
-| **Última dirección 192.168.10.254 /24**      | ![](./ANEXOS/2025-10-27-15-51-26-image 2.png) | ![](./ANEXOS/2025-10-27-15-53-16-image.png)   | Todos los 1s y un 0 |
-| **Dirección de difusión 192.168.10.255 /24** | ![](./ANEXOS/2025-10-27-15-51-26-image 3.png) | ![](./ANEXOS/2025-10-27-15-53-29-image.png)   | Todos los 1s        |
+| **Dirección de red 192.168.10.0 /24**        | ![](./ANEXOS/2025-10-27-15-51-26-image.png)   | ![](<./ANEXOS/2025-10-27-15-52-57-image 1.png>) | Todos los 0         |
+| **Primera dirección 192.168.10.1 /24**       | ![](<./ANEXOS/2025-10-27-15-51-26-image 1.png>) | ![](./ANEXOS/2025-10-27-15-53-07-image.png)   | Todos los 0s y un 1 |
+| **Última dirección 192.168.10.254 /24**      | ![](<./ANEXOS/2025-10-27-15-51-26-image 2.png>) | ![](./ANEXOS/2025-10-27-15-53-16-image.png)   | Todos los 1s y un 0 |
+| **Dirección de difusión 192.168.10.255 /24** | ![](<./ANEXOS/2025-10-27-15-51-26-image 3.png>) | ![](./ANEXOS/2025-10-27-15-53-29-image.png)   | Todos los 1s        |
 
 En una red IPv4, las direcciones de host son las que se asignan a los dispositivos (computadores, teléfonos, impresoras, routers, etc.). 
 Estas direcciones comparten la misma parte de red y la misma máscara, pero tienen una parte de host diferente.

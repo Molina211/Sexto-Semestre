@@ -796,7 +796,7 @@ En pocas palabras:
 
 Si la porción de red de la dirección IP de origen y de destino es **igual**, significa que ambos dispositivos están en la misma red.
 
-![](./ANEXOS/2025-09-04-01-06-26-image 1.png)
+![](<./ANEXOS/2025-09-04-01-06-26-image 1.png>)
 
 ### Función de las direcciones de la capa de enlace de datos (capa 2) - La misma red IP
 
