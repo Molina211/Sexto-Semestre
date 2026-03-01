@@ -23,7 +23,7 @@ En una red Ethernet, cada dispositivo tiene:
 
 Si el destino está en la misma red, la trama usa la MAC del dispositivo destino para la entrega local.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-10-20-50-image.png]]
+![](./ANEXOS/2025-10-22-10-20-50-image.png)
 
 PC1 quiere enviar un paquete a PC2. 
 En la trama Ethernet (Capa 2) se usan las direcciones MAC:
@@ -44,18 +44,18 @@ En el paquete IP (Capa 3) se usan las direcciones IPv4:
 
 Si la dirección IP de destino está en una red remota, el host usa como dirección MAC de destino la del gateway predeterminado (la interfaz del router), no la del dispositivo final.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-10-33-51-image.png]]
+![](./ANEXOS/2025-10-22-10-33-51-image.png)
 
 Cuando PC1 envía un paquete a PC2 en una red remota, usa la dirección MAC del router (gateway predeterminado) como destino. 
 El router recibe la trama, la des encapsula, analiza la IP de destino y luego vuelve a encapsular el paquete con nuevas direcciones MAC para enviarlo al siguiente salto hacia PC2.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-10-35-28-image.png]]
+![](./ANEXOS/2025-10-22-10-35-28-image.png)
 
 En cada enlace del recorrido, el paquete IP se vuelve a encapsular en una trama nueva según la tecnología del enlace (por ejemplo, Ethernet). 
 En este caso, la dirección MAC de destino pasa a ser la de la interfaz R2 G0/0/1, y la MAC de origen la de la interfaz R1 G0/0/1. 
 Si el siguiente salto es el destino final, la MAC de destino será la del NIC del dispositivo receptor.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-10-36-53-image.png]]
+![](./ANEXOS/2025-10-22-10-36-53-image.png)
 
 Las direcciones IP de los paquetes se asocian con las direcciones MAC en cada enlace mediante ARP en IPv4 y ICMPv6 Neighbor Discovery (ND) en IPv6, permitiendo que los dispositivos encuentren la dirección física correspondiente a una dirección IP.
 
@@ -71,7 +71,7 @@ En una red IPv4, ARP (Protocolo de Resolución de Direcciones) se encarga de aso
 
 En pocas palabras: ARP traduce IP a MAC para que los dispositivos puedan comunicarse a nivel de Ethernet.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-14-33-30-image.png]]
+![](./ANEXOS/2025-10-22-14-33-30-image.png)
 
 Para enviar un paquete dentro de la misma red IPv4, un host necesita la IP y la MAC del destino. Mientras que la IP puede conocerse o resolverse por nombre, la MAC se obtiene usando ARP.
 
@@ -165,7 +165,7 @@ Cada dispositivo tiene un temporizador de la cache ARP que elimina automáticame
 
 - Por ejemplo, en Windows recientes, las entradas ARP se mantienen entre 15 y 45 segundos antes de caducar.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-16-10-04-image.png]]
+![](./ANEXOS/2025-10-22-16-10-04-image.png)
 
 Se pueden eliminar manualmente algunas o todas las entradas de la tabla ARP mediante comandos.
 
@@ -177,11 +177,11 @@ Se pueden eliminar manualmente algunas o todas las entradas de la tabla ARP medi
 
 En un router Cisco, el `show ip arp` comando se utiliza para mostrar la tabla ARP, como se muestra en la figura.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-16-15-39-image.png]]
+![](./ANEXOS/2025-10-22-16-15-39-image.png)
 
 En una PC con Windows 10, el `arp -a` comando se usa para mostrar la tabla ARP, como se muestra en la figura.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-16-16-31-image.png]]
+![](./ANEXOS/2025-10-22-16-16-31-image.png)
 
 
 
@@ -189,11 +189,11 @@ En una PC con Windows 10, el `arp -a` comando se usa para mostrar la tabla ARP, 
 
 Todos los dispositivos de la red local reciben las solicitudes ARP porque son tramas de difusión. En una red comercial esto normalmente no afecta el rendimiento. Sin embargo, si muchos dispositivos se conectan al mismo tiempo, puede haber una breve disminución de rendimiento debido al aumento de solicitudes ARP. Una vez que los dispositivos aprenden las direcciones MAC necesarias, el impacto en la red desaparece.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-16-17-46-image.png]]
+![](./ANEXOS/2025-10-22-16-17-46-image.png)
 
 El uso de ARP puede ser aprovechado por atacantes para realizar suplantación o envenenamiento ARP, una técnica en la que un atacante envía respuestas ARP falsas para asociar su dirección MAC con la IP de otro dispositivo, como la puerta de enlace. Esto hace que el tráfico se redirija hacia el atacante. Para evitarlo, los switches empresariales utilizan medidas de protección como la Inspección Dinámica de ARP (DAI), aunque este tema no se profundiza en este curso.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-16-25-29-image.png]]
+![](./ANEXOS/2025-10-22-16-25-29-image.png)
 
 ---
 
@@ -215,11 +215,11 @@ El descubrimiento de vecinos (ND) en IPv6 usa mensajes ICMPv6 para funciones com
 
 Los mensajes NS y NA permiten que los dispositivos obtengan la dirección MAC correspondiente a una dirección IPv6, similar a cómo ARP funciona en IPv4.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-16-41-47-image.png]]
+![](./ANEXOS/2025-10-22-16-41-47-image.png)
 
 Los mensajes RS y RA permiten que los dispositivos descubran routers en la red. Estos mensajes se usan principalmente para asignar direcciones IPv6 de forma automática mediante SLAAC.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-16-42-25-image.png]]
+![](./ANEXOS/2025-10-22-16-42-25-image.png)
 
 El quinto mensaje de ND, llamado Redirect, sirve para indicar a un dispositivo una mejor ruta para enviar sus paquetes, mejorando el tráfico en la red. Aunque existe, no se estudia en este curso. Todo el funcionamiento de ND está definido en el estándar RFC 4861 del IETF.
 
@@ -229,7 +229,7 @@ El quinto mensaje de ND, llamado Redirect, sirve para indicar a un dispositivo u
 
 En IPv6, la resolución de direcciones MAC se hace con el protocolo ND, usando los mensajes **Neighbor Solicitation (NS)** y **Neighbor Advertisement (NA)**, que cumplen la misma función que ARP en IPv4. Por ejemplo, si una PC quiere comunicarse con otra usando su dirección IPv6, primero envía un mensaje NS para averiguar la dirección MAC del destino.
 
-![[Telematica I/Curso de Cisco/Módulo 09/ANEXOS/2025-10-22-16-44-49-image.png]]
+![](./ANEXOS/2025-10-22-16-44-49-image.png)
 
 Los mensajes Neighbor Solicitation se envían a direcciones multicast especiales para que solo el dispositivo correspondiente los procese. Luego, el dispositivo destino responde con un mensaje Neighbor Advertisement que contiene su dirección MAC.
 

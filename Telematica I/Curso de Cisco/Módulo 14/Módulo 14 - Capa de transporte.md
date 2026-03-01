@@ -24,7 +24,7 @@
 
 La capa de transporte permite la comunicación lógica entre aplicaciones en distintos hosts, estableciendo sesiones temporales y garantizando la transmisión confiable de datos. Actúa como enlace entre la capa de aplicación y las capas inferiores encargadas de la transmisión en la red.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-20-45-13-image.png]]
+![](./ANEXOS/2025-11-01-20-45-13-image.png)
 
 La capa de transporte no considera el tipo de host, medio, ruta, congestión ni tamaño de la red. Utiliza dos protocolos principales: TCP, que ofrece transmisión confiable, y UDP, que proporciona una comunicación más rápida pero sin garantía de entrega.
 
@@ -40,7 +40,7 @@ La capa de transporte no considera el tipo de host, medio, ruta, congestión ni 
    **Ejemplo:** 
    Mientras descargas un archivo y haces una videollamada, la capa de transporte mantiene ambas conexiones sin mezclarlas.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-20-51-39-image.png]]
+![](./ANEXOS/2025-11-01-20-51-39-image.png)
 
 2. **Segmentación de datos y rearmado de segmentos:** La capa de transporte divide los datos en bloques más pequeños llamados segmentos (TCP) o datagramas (UDP), según el protocolo usado. 
    Esto permite que la información sea más fácil de enviar, manejar y reconstruir cuando llega al destino, asegurando una comunicación eficiente entre aplicaciones.
@@ -50,7 +50,7 @@ La capa de transporte no considera el tipo de host, medio, ruta, congestión ni 
    **Ejemplo:** 
    Un correo electrónico grande se divide en varios paquetes que se envían por separado y luego se reconstruyen en el destino.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-20-55-52-image.png]]
+![](./ANEXOS/2025-11-01-20-55-52-image.png)
 
 3. **Agregar información de encabezado:** La capa de transporte agrega encabezados a cada bloque de datos, con información que permite administrar y controlar la comunicación. 
    El host receptor usa estos encabezados para reensamblar los datos en el orden correcto y entregarlos a la aplicación correspondiente, asegurando que cada programa reciba su información sin errores ni confusión.
@@ -60,7 +60,7 @@ La capa de transporte no considera el tipo de host, medio, ruta, congestión ni 
    **Ejemplo:** 
    Los paquetes de un archivo descargado se numeran y reordenan al llegar para que el archivo no se dañe.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-20-57-02-image.png]]
+![](./ANEXOS/2025-11-01-20-57-02-image.png)
 
 4. **Identificación de las aplicaciones:** La capa de transporte usa números de puerto para identificar y dirigir los datos a la aplicación correcta dentro de un host. 
    Cada programa que se comunica por la red tiene un número de puerto único, lo que permite manejar varias conexiones simultáneas con distintos requisitos de transporte sin que los datos se mezclen. 
@@ -70,7 +70,7 @@ La capa de transporte no considera el tipo de host, medio, ruta, congestión ni 
    **Ejemplo:** 
    El navegador usa el puerto 80 o 443 (HTTP/HTTPS), mientras el correo usa 25 o 587 (SMTP); ambos pueden funcionar al mismo tiempo.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-20-58-12-image.png]]
+![](./ANEXOS/2025-11-01-20-58-12-image.png)
 
 5. **Multiplexión de conversaciones:** La capa de transporte utiliza segmentación y multiplexación para dividir los datos y enviar múltiples conversaciones simultáneamente sin saturar la red. 
    Esto permite compartir el ancho de banda entre varias aplicaciones y verificar errores en cada segmento, garantizando que los datos no se hayan dañado durante la transmisión.
@@ -80,7 +80,7 @@ La capa de transporte no considera el tipo de host, medio, ruta, congestión ni 
    **Ejemplo:** 
    Puedes ver un video en streaming mientras chateas, y la capa de transporte mantiene ambas transmisiones sin interferencias y detecta si algún paquete se corrompe.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-20-59-14-image.png]]
+![](./ANEXOS/2025-11-01-20-59-14-image.png)
 
 
 
@@ -90,7 +90,7 @@ El protocolo IP se encarga de direccionar y enrutar los paquetes, pero no de su 
 Esa función corresponde a la capa de transporte, que define cómo se transfieren los mensajes entre hosts y gestiona la fiabilidad de la comunicación. 
 Por eso, existen dos protocolos principales: TCP, que ofrece transmisión confiable, y UDP, que brinda una comunicación más rápida pero sin verificación de entrega.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-21-05-40-image.png]]
+![](./ANEXOS/2025-11-01-21-05-40-image.png)
 
 
 
@@ -150,7 +150,7 @@ Por su bajo consumo de recursos y rapidez, UDP se usa en aplicaciones donde la v
 
 - En videos almacenados (como películas bajo demanda), TCP permite pausar la reproducción para almacenar en búfer hasta que la conexión se estabilice.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-21-15-56-image.png]]
+![](./ANEXOS/2025-11-01-21-15-56-image.png)
 
 ---
 
@@ -191,7 +191,7 @@ La sesión con estado comienza cuando se establece la conexión y finaliza cuand
 
 Además, cada segmento TCP incluye un encabezado de 20 bytes que contiene información necesaria para gestionar esta conexión, como números de secuencia, confirmaciones y control de flujo.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-21-20-50-image.png]]
+![](./ANEXOS/2025-11-01-21-20-50-image.png)
 
 
 
@@ -219,7 +219,7 @@ TCP se encarga de gestionar todo el proceso de transmisión de datos, dividiendo
 De esta forma, las aplicaciones no necesitan preocuparse por estos detalles, ya que TCP realiza todas esas funciones automáticamente. 
 Las aplicaciones solo envían los datos a la capa de transporte, y TCP se encarga del resto.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-21-24-35-image.png]]
+![](./ANEXOS/2025-11-01-21-24-35-image.png)
 
 ---
 
@@ -251,7 +251,7 @@ Es ideal para video y voz en vivo, donde la velocidad es más importante que la 
 Los datos se envían en datagramas, transmitidos con entrega de mejor esfuerzo. 
 Además, su encabezado es muy simple, con solo 4 campos y 8 bytes, lo que hace que UDP sea más rápido y liviano que TCP.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-21-29-39-image.png]]
+![](./ANEXOS/2025-11-01-21-29-39-image.png)
 
 
 
@@ -288,7 +288,7 @@ UDP se usa principalmente en tres tipos de aplicaciones:
    
    - Ejemplos: SNMP y TFTP.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-21-31-45-image.png]]
+![](./ANEXOS/2025-11-01-21-31-45-image.png)
 
 Aunque DNS y SNMP usan UDP por defecto, también pueden usar TCP en ciertos casos:
 
@@ -304,7 +304,7 @@ Tanto TCP como UDP usan números de puerto para identificar las aplicaciones que
 
 Cada encabezado de estos protocolos incluye un puerto de origen y un puerto de destino, que permiten dirigir correctamente los datos entre los distintos procesos o servicios de red.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-01-21-34-55-image.png]]
+![](./ANEXOS/2025-11-01-21-34-55-image.png)
 
 El puerto de origen identifica la aplicación que envía los datos desde el host local, mientras que el puerto de destino identifica la aplicación o servicio en el host remoto.
 
@@ -324,7 +324,7 @@ Los puertos de origen y destino van dentro del segmento TCP o UDP, y este segmen
 
 La combinación de una dirección IP y un número de puerto se llama socket, y sirve para identificar de forma única cada conexión entre dos dispositivos.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-02-13-16-38-image.png]]
+![](./ANEXOS/2025-11-02-13-16-38-image.png)
 
 En una comunicación, cada solicitud del cliente incluye direcciones MAC (Capa 2), direcciones IP (Capa 3) y números de puerto (Capa 4).
 
@@ -387,7 +387,7 @@ La IANA mantiene una lista oficial de los números de puerto y las aplicaciones 
 Las conexiones TCP no identificadas pueden ser una amenaza de seguridad, ya que podrían indicar accesos no autorizados al host. 
 La utilidad Netstat permite verificar las conexiones TCP activas, mostrando los protocolos en uso, direcciones locales y remotas, números de puerto y el estado de cada conexión mediante el comando `netstat`.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-02-13-26-34-image.png]]
+![](./ANEXOS/2025-11-02-13-26-34-image.png)
 
 Por defecto, el comando Netstat intenta resolver las direcciones IP y números de puerto a sus nombres de dominio y aplicaciones conocidas. 
 Usar la opción `-n` muestra las direcciones IP y puertos en formato numérico, evitando esa resolución.
@@ -410,31 +410,31 @@ Los procesos del servicio TCP son:
    
    El Cliente 1 esta solicitando servicios web y el Cliente 2 esta solicitando servicio de correo electronico del mismo servidor.
    
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-02-14-03-42-image 1.png]]
+![](./ANEXOS/2025-11-02-14-03-42-image 1.png)
 
 2. **Solicitar puertos de destino:**
    
    Las solicitudes generan dinamicamente un número de puerto de origen. En este caso, el Cliente 1 esta utilizando el puerto de origen 49152 y el cliente 2 esta utilizando el puerto de origen 51152.
    
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-02-14-04-42-image.png]]
+![](./ANEXOS/2025-11-02-14-04-42-image.png)
 
 3. **Solicitar puertos de origen:**
    
    Las solicitudes de Cliente generan dinamicamente un número de puerto de origen. En este caso, el Cliente 1 esta utilizando el puerto de origen 49152 y el Cliente 2 esta utilizando el puerto de origen 51152.
    
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-02-14-05-37-image.png]]
+![](./ANEXOS/2025-11-02-14-05-37-image.png)
 
 4. **Respuesta de puertos de destino:**
    
    Cuando el servidor responde a las solicitudes del Cliente, invierte los puertos de destino y origen de la solicitud inicial. Observe que la respuesta del servidor a la solicitud web ahora tiene el puerto de destino 49152 y la respuesta de correo electrónico ahora tiene el puerto de destino 51152.
    
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-02-14-06-45-image.png]]
+![](./ANEXOS/2025-11-02-14-06-45-image.png)
 
 5. **Respuesta de puertos de origen:**
    
    El puerto de origen en la respuesta del servidor es el puerto de destino original en las solicitudes iniciales.
    
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/2025-11-02-14-08-10-image.png]]
+![](./ANEXOS/2025-11-02-14-08-10-image.png)
 
 
 
@@ -446,19 +446,19 @@ En TCP, el establecimiento de una conexión funciona como un apretón de manos: 
 
    El cliente de origen solicita una sesión de comunicación con el servidor.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251102235620.png]]
+![](./ANEXOS/Pasted image 20251102235620.png)
 
 2. **ACK y SYN:**
 
    El servidor acusa recibo de la sesión de comunicación de cliente a servidor y solicita una sesión de comunicación de servidor a cliente.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251102235926.png]]
+![](./ANEXOS/Pasted image 20251102235926.png)
 
 3. **ACK**
 
    El cliente de origen acusa recibo de la sesión de comunicación de servidor a cliente.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103000029.png]]
+![](./ANEXOS/Pasted image 20251103000029.png)
 
 
 
@@ -472,25 +472,25 @@ Tanto el cliente como el servidor pueden iniciar este proceso.
 
    Cuando el cliente no tiene mas datos para enviar en la transmisión, envía un segmento con el indicador FIN establecido.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103000319.png]]
+![](./ANEXOS/Pasted image 20251103000319.png)
 
 2. **ACK**
 
    El servidor envía un ACK para acusar recibo del FIN para terminar la sesión de cliente a servidor.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103000416.png]]
+![](./ANEXOS/Pasted image 20251103000416.png)
 
 3. **FIN**
 
    El servidor envía un FIN al cliente para terminar la sesión de servidor a cliente.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103000458.png]]
+![](./ANEXOS/Pasted image 20251103000458.png)
 
 4. **ACK**
 
    El cliente responde con un ACK para dar acuse de recibo del FIN desde el servidor.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103000533.png]]
+![](./ANEXOS/Pasted image 20251103000533.png)
 
 
 
@@ -505,7 +505,7 @@ La conexión se establece con un enlace de tres vías (three-way handshake), que
 
 Una vez terminada la comunicación, las sesiones se cierran para garantizar la confiabilidad del protocolo.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103001234.png]]
+![](./ANEXOS/Pasted image 20251103001234.png)
 
 Los seis indicadores (flags) del encabezado TCP controlan el estado y el flujo de una conexión:
 
@@ -535,7 +535,7 @@ A medida que se transmiten los datos, TCP incrementa el número de secuencia seg
 - Reensamblar los datos en el orden correcto.
 - Evitar ataques al usar ISN aleatorios.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103020134.png]]
+![](./ANEXOS/Pasted image 20251103020134.png)
 
 El receptor TCP almacena los segmentos en un búfer de recepción, los ordena según su número de secuencia y los entrega a la capa de aplicación una vez que están completos.  
 Si algunos segmentos llegan fuera de orden, se guardan temporalmente hasta que lleguen los faltantes, y luego se reensamblan correctamente antes de procesarse.
@@ -549,12 +549,12 @@ El número SEQ identifica el primer byte del segmento enviado, y el ACK indica e
 
 Antes de las mejoras modernas, si se perdían algunos segmentos, TCP solo reconocía el siguiente segmento esperado, lo que hacía que el emisor retransmitiera varios segmentos innecesariamente, generando duplicados, retrasos y congestión en la red.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103021025.png]]
+![](./ANEXOS/Pasted image 20251103021025.png)
 
 La característica SACK (Selective Acknowledgment) permite que TCP reconozca qué segmentos se recibieron correctamente, incluso si llegan fuera de orden.  
 Así, el receptor puede informar exactamente qué datos faltan, y el emisor solo retransmite los segmentos perdidos, evitando duplicaciones y mejorando la eficiencia y velocidad de la comunicación.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103021137.png]]
+![](./ANEXOS/Pasted image 20251103021137.png)
 
 TCP usa temporizadores para determinar cuánto tiempo esperar antes de retransmitir un segmento no reconocido.  
 Normalmente, envía un ACK por cada dos paquetes, aunque este comportamiento puede variar según las condiciones de la red.
@@ -566,7 +566,7 @@ Normalmente, envía un ACK por cada dos paquetes, aunque este comportamiento pue
 TCP implementa control de flujo para evitar que el emisor envíe más datos de los que el receptor puede manejar.  
 Esto se logra mediante el campo “tamaño de ventana” en el encabezado TCP, que indica la cantidad de datos (en bytes) que el receptor puede aceptar antes de necesitar un nuevo reconocimiento (ACK).
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103021744.png]]
+![](./ANEXOS/Pasted image 20251103021744.png)
 
 El tamaño de la ventana TCP define cuántos bytes puede enviar el emisor sin recibir un reconocimiento del receptor.  
 Durante la conexión, ambos equipos acuerdan este valor inicial, que puede ajustarse dinámicamente según la capacidad del búfer del receptor.
@@ -581,12 +581,12 @@ Si el receptor tiene menos espacio disponible, reduce el tamaño de la ventana p
 El Tamaño Máximo de Segmento (MSS) indica la máxima cantidad de datos (en bytes) que un dispositivo puede recibir en un solo segmento TCP, sin contar el encabezado.  
 Este valor, generalmente de 1.460 bytes, se negocia durante el enlace de tres vías y permite optimizar la transmisión evitando fragmentación en la red.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103022040.png]]
+![](./ANEXOS/Pasted image 20251103022040.png)
 
 El MSS típico es de 1.460 bytes en IPv4, calculado restando los encabezados IP (20 bytes) y TCP (20 bytes) del MTU de Ethernet (1500 bytes).  
 Así, 1500−20−20=1460, que representa la cantidad máxima de datos que puede enviarse en un segmento TCP sin fragmentación.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103022220.png]]
+![](./ANEXOS/Pasted image 20251103022220.png)
 
 
 #### Control de flujo de TCP - Prevención de congestiones
@@ -595,7 +595,7 @@ Cuando hay congestión en la red, los routers comienzan a descartar paquetes, lo
 El origen detecta la congestión al notar retrasos o falta de reconocimientos (ACK) y, para evitar empeorarla, reduce la cantidad de datos enviados antes de recibir una nueva confirmación.  
 TCP utiliza algoritmos y temporizadores de control de congestión para ajustar dinámicamente el flujo de datos y evitar saturar la red.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103022355.png]]
+![](./ANEXOS/Pasted image 20251103022355.png)
 
 Los números de acuse de recibo (ACK) indican el siguiente byte esperado, no un segmento.  
 En caso de congestión, el origen es quien reduce la cantidad de bytes no reconocidos que envía, sin cambiar el tamaño de la ventana definido por el destino.  
@@ -607,7 +607,7 @@ Los detalles de los algoritmos y temporizadores de control de congestión no se 
 
 UDP es ideal para transmisiones rápidas, como VoIP, porque no establece conexión y tiene baja sobrecarga. Su encabezado pequeño y la ausencia de tráfico de control permiten un transporte de datos más ágil y eficiente.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103022826.png]]
+![](./ANEXOS/Pasted image 20251103022826.png)
 
 
 
@@ -615,7 +615,7 @@ UDP es ideal para transmisiones rápidas, como VoIP, porque no establece conexi�
 
 UDP no controla el orden de los datagramas ni usa números de secuencia como TCP. Los datos se reensamblan en el orden recibido y se envían directamente a la aplicación. Si el orden es importante, la aplicación debe encargarse de organizar los datos correctamente.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103022946.png]]
+![](./ANEXOS/Pasted image 20251103022946.png)
 
 
 
@@ -624,7 +624,7 @@ UDP no controla el orden de los datagramas ni usa números de secuencia como TCP
 Las aplicaciones de servidor basadas en UDP usan números de puerto conocidos o registrados, al igual que las basadas en TCP.  
 Cuando el servidor recibe un datagrama UDP, este se entrega a la aplicación correspondiente según el número de puerto asignado.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103024233.png]]
+![](./ANEXOS/Pasted image 20251103024233.png)
 
 El servidor RADIUS ofrece servicios de autenticación, autorización y contabilidad para controlar el acceso de los usuarios, aunque su funcionamiento no se aborda en este curso.
 
@@ -638,29 +638,29 @@ En UDP, la comunicación cliente-servidor comienza cuando el cliente elige un pu
 
    El cliente 1 esta enviando una solicitud DNS utilizando el conocido puerto 53, mientras que el cliente 2 solicita servicios de autenticación RADIUS mediante el puerto registrado 1812.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103024553.png]]
+![](./ANEXOS/Pasted image 20251103024553.png)
 
 2. **Puertos de destino de solicitud UDP**
 
    Las solicitudes de los clientes generan dinamicamente números de puerto de origen. En este caso, el cliente 1 esta utilizando el puerto de origen 49152 y el cliente 2 esta utilizando el puerto de origen 51152.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103024716.png]]
+![](./ANEXOS/Pasted image 20251103024716.png)
 
 3. **Puertos de origen de solicitud UDP**
 
    Cuando el servidor responde a las solicitudes del cliente, invierte los puertos de destino y origen de la solicitud inicial.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103024800.png]]
+![](./ANEXOS/Pasted image 20251103024800.png)
 
 4. **Destino de respuesta UDP**
 
    En la respuesta del servidor a la solicitud DNS ahora es el puerto de destino 49152 y la respuesta de autenticación RADIUS ahora es el puerto de destino 51152.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103024904.png]]
+![](./ANEXOS/Pasted image 20251103024904.png)
 
 5. **Puertos de origen de respuesta UDP**
 
    Los puertos de origen en la respuesta del servidor son los puertos de destino originales en las solicitudes iniciales.
 
-![[Telematica I/Curso de Cisco/Módulo 14/ANEXOS/Pasted image 20251103024952.png]]
+![](./ANEXOS/Pasted image 20251103024952.png)
 
